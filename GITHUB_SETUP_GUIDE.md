@@ -104,15 +104,40 @@ dir  # Windows
 ls   # Mac/Linux
 ```
 
-You should see:
-- `frontend/` folder
+**IMPORTANT: Correct Structure for GitHub Pages**
+
+You should see HTML files in the ROOT directory:
+- `index.html` ← Must be in root!
+- `about.html`
+- `agencies.html`
+- `faq.html`
+- `guide.html`
+- `news.html`
+- `share-experience.html`
+- `tos.html`
+- `scripts/` folder
+- `styles/` folder
+- `assets/` folder
 - `backend/` folder
 - `docs/` folder
 - `CNAME` file
 - `.gitignore` file
 - `README.md` file
 
-If you don't see these, you're in the wrong folder!
+**⚠️ If you see a `frontend/` folder instead:**
+Your HTML files are in the wrong location! GitHub Pages needs `index.html` in the root directory, not in a subfolder.
+
+**Fix it:**
+```bash
+# Move all files from frontend/ to root
+mv frontend/*.html .
+mv frontend/scripts .
+mv frontend/styles .
+mv frontend/assets .
+rmdir frontend
+```
+
+If you don't see these files in the root, you're in the wrong folder!
 
 ---
 
@@ -513,6 +538,49 @@ git remote add origin https://github.com/YOUR-USERNAME/jamwathq.git
 2. Verify Settings → Pages shows "Your site is live"
 3. Check branch is "main" and folder is "/ (root)"
 4. Check that files are in repository root (not in a subfolder)
+
+---
+
+### Issue 4b: Website Shows Directory Listing Instead of Homepage
+
+**Cause**: `index.html` is in a subfolder (like `frontend/`) instead of root
+**Solution**: Move all frontend files to root directory
+
+```bash
+# Navigate to your Release Version folder
+cd "C:\Users\Dewy\OneDrive\Documents\JamWatHQ\Main\Live Code v.1\Release Version"
+
+# If you have a frontend/ folder, move everything to root
+mv frontend/*.html .
+mv frontend/scripts .
+mv frontend/styles .
+mv frontend/assets .
+rmdir frontend
+
+# Add, commit, and push the changes
+git add -A
+git commit -m "Fix: Move frontend files to root for GitHub Pages"
+git push origin main
+```
+
+**Why this happens**: GitHub Pages looks for `index.html` in the root of your repository, not in subfolders. The correct structure is:
+```
+jamwathq/
+├── index.html        ← Must be here (root)
+├── about.html
+├── scripts/
+├── styles/
+└── assets/
+```
+
+**NOT like this:**
+```
+jamwathq/
+└── frontend/
+    ├── index.html    ← Wrong location!
+    ├── scripts/
+    └── styles/
+```
 
 ---
 
