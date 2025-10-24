@@ -233,7 +233,7 @@ git commit -m "Initial release v1.0.0 - Production ready"
 Replace `YOUR-USERNAME` with your actual GitHub username:
 
 ```bash
-git remote add origin https://github.com/YOUR-USERNAME/jamwathq.git
+git remote add origin https://github.com/DewyHRite/jamwathq.git
 ```
 
 **Example**:
