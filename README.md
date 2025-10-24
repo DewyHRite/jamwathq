@@ -12,18 +12,17 @@ This **Release Version** folder contains ONLY the essential files needed for dep
 ### Folder Structure:
 ```
 Release Version/
-├── frontend/              # Static website files (GitHub Pages)
-│   ├── index.html        # Homepage
-│   ├── about.html        # About page
-│   ├── agencies.html     # Agencies listing
-│   ├── faq.html          # FAQ page
-│   ├── guide.html        # User guide
-│   ├── news.html         # News page
-│   ├── share-experience.html  # Share experience form
-│   ├── tos.html          # Terms of Service
-│   ├── scripts/          # JavaScript files
-│   ├── styles/           # CSS files
-│   └── assets/           # Images, fonts, etc.
+├── index.html            # Homepage (MUST be in root!)
+├── about.html            # About page
+├── agencies.html         # Agencies listing
+├── faq.html              # FAQ page
+├── guide.html            # User guide
+├── news.html             # News page
+├── share-experience.html # Share experience form
+├── tos.html              # Terms of Service
+├── scripts/              # JavaScript files
+├── styles/               # CSS files
+├── assets/               # Images, fonts, etc.
 ├── backend/              # Node.js backend (deploy separately)
 │   ├── config/           # Database & passport config
 │   ├── middleware/       # Auth & security middleware
@@ -40,8 +39,13 @@ Release Version/
 │   └── SECURITY_FIXES_QUICK_REFERENCE.md
 ├── CNAME                 # Custom domain for GitHub Pages
 ├── .gitignore            # Git ignore rules
+├── GITHUB_SETUP_GUIDE.md # Step-by-step GitHub setup
 └── README.md             # This file
 ```
+
+**⚠️ IMPORTANT**: HTML files MUST be in the root directory for GitHub Pages to work!
+- ✅ Correct: `index.html` in root
+- ❌ Wrong: `frontend/index.html` in subfolder
 
 ---
 
@@ -51,14 +55,15 @@ Release Version/
 Perfect for launching the website without backend features (reviews disabled).
 
 1. Create new GitHub repository
-2. Copy `frontend/` contents to repository root
-3. Copy `CNAME` and `.gitignore` to repository root
-4. Push to GitHub
-5. Enable GitHub Pages in repository settings
-6. Configure Hostinger DNS (see docs/HOSTINGER_DNS_SETUP.md)
+2. Initialize Git in Release Version folder (HTML files already in root!)
+3. Push to GitHub
+4. Enable GitHub Pages in repository settings
+5. Configure Hostinger DNS (see docs/HOSTINGER_DNS_SETUP.md)
 
 **Time**: 15-30 minutes
 **Cost**: FREE
+
+**Important**: This Release Version folder is already configured correctly with HTML files in the root directory. Just initialize Git and push!
 
 ---
 
