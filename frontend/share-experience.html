@@ -1,0 +1,3294 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Share Your Experience - JamWatHQ</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+		<link rel="stylesheet" href="styles/main.css" />
+		<link rel="stylesheet" href="styles/nav-fix.css" />
+		<link rel="stylesheet" href="styles/native-ads.css" />
+		<link rel="stylesheet" href="styles/shared-buttons.css" />
+		<link rel="stylesheet" href="styles/video-ad.css" />
+		<!-- Google OAuth Script -->
+		<!-- Google OAuth now handled by backend -->
+		<style>
+			/* Map Container Styles */
+			.map-container {
+				max-width: 1200px;
+				margin: 2em auto;
+				padding: 2em;
+				background: #000000;
+				border: 2px solid #ffee00;
+				border-radius: 10px;
+			}
+
+			.map-container h2 {
+				text-align: center;
+				color: #ffee00;
+				margin-bottom: 1em;
+			}
+
+			.map-container p {
+				text-align: center;
+				color: #ffffff;
+				margin-bottom: 2em;
+			}
+
+			/* State Button Styles */
+			.state-button {
+				background: #1a1a1a;
+				border: 2px solid #ffee00;
+				color: #ffee00;
+				padding: 1em;
+				text-align: center;
+				border-radius: 6px;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				font-weight: bold;
+				font-size: 0.9em;
+			}
+
+			.state-button:hover {
+				background: #ffee00;
+				color: #000000;
+				transform: translateY(-3px);
+				box-shadow: 0 4px 8px rgba(255, 238, 0, 0.3);
+			}
+
+			.state-button.selected {
+				background: #28a745;
+				border-color: #28a745;
+				color: #ffffff;
+			}
+
+			/* Tooltip Styles */
+			.state-tooltip {
+				position: absolute;
+				background: #000000;
+				border: 2px solid #ffee00;
+				padding: 8px 12px;
+				border-radius: 6px;
+				color: #ffee00;
+				font-size: 14px;
+				font-weight: bold;
+				pointer-events: none;
+				opacity: 0;
+				transition: opacity 0.3s ease;
+				z-index: 1000;
+			}
+
+			.state-tooltip.show {
+				opacity: 1;
+			}
+
+			/* Modal Styles - Enhanced for better popup appearance */
+			.modal {
+				display: none;
+				position: fixed;
+				z-index: 2000;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: rgba(0, 0, 0, 0.95); /* Darker backdrop for better focus */
+				backdrop-filter: blur(5px); /* Modern browsers - adds blur effect */
+				-webkit-backdrop-filter: blur(5px); /* Safari support */
+			}
+
+			.modal.show {
+				display: block;
+			}
+
+			.modal-content {
+				background-color: #000000;
+				border: 3px solid #ffee00;
+				border-radius: 10px;
+				margin: 5% auto;
+				padding: 2em;
+				width: 90%;
+				max-width: 600px;
+				position: relative;
+				animation: slideDown 0.3s ease;
+				box-shadow: 0 10px 40px rgba(255, 238, 0, 0.4); /* Glowing effect */
+			}
+
+			@keyframes slideDown {
+				from {
+					transform: translateY(-50px);
+					opacity: 0;
+				}
+				to {
+					transform: translateY(0);
+					opacity: 1;
+				}
+			}
+
+			.close-modal {
+				color: #ffee00;
+				float: right;
+				font-size: 28px;
+				font-weight: bold;
+				cursor: pointer;
+				transition: color 0.3s ease;
+			}
+
+			.close-modal:hover,
+			.close-modal:focus {
+				color: #28a745;
+			}
+
+			.modal-content h2 {
+				color: #ffee00;
+				margin-top: 0;
+				margin-bottom: 1em;
+			}
+
+			/* Form Styles */
+			.review-form {
+				display: flex;
+				flex-direction: column;
+				gap: 1.5em;
+			}
+
+			.form-group {
+				display: flex;
+				flex-direction: column;
+				gap: 0.5em;
+			}
+
+			.form-group label {
+				color: #ffee00;
+				font-weight: bold;
+				font-size: 0.95em;
+			}
+
+			.form-group input,
+			.form-group textarea,
+			.form-group select {
+				padding: 0.75em;
+				border: 2px solid #ffee00;
+				background: #1a1a1a !important;
+				color: #ffffff !important;
+				border-radius: 6px;
+				font-size: 0.95em;
+				transition: all 0.3s ease;
+				-webkit-text-fill-color: #ffffff !important; /* For Safari/Chrome */
+			}
+
+			/* Override browser autofill styling */
+			.form-group input:-webkit-autofill,
+			.form-group input:-webkit-autofill:hover,
+			.form-group input:-webkit-autofill:focus,
+			.form-group input:-webkit-autofill:active,
+			.form-group textarea:-webkit-autofill,
+			.form-group select:-webkit-autofill {
+				-webkit-box-shadow: 0 0 0 1000px #1a1a1a inset !important;
+				-webkit-text-fill-color: #ffffff !important;
+				caret-color: #ffffff !important;
+				border: 2px solid #ffee00 !important;
+			}
+
+			.form-group input:focus,
+			.form-group textarea:focus,
+			.form-group select:focus {
+				outline: none;
+				border-color: #28a745;
+				background: #2a2a2a !important;
+				color: #ffffff !important;
+				-webkit-text-fill-color: #ffffff !important;
+			}
+
+			/* Placeholder text visibility */
+			.form-group input::placeholder,
+			.form-group textarea::placeholder {
+				color: #888888 !important;
+				opacity: 0.8;
+			}
+
+			/* Ensure select dropdown options are visible */
+			.form-group select option {
+				background: #1a1a1a;
+				color: #ffffff;
+			}
+
+			.form-group textarea {
+				min-height: 100px;
+				resize: vertical;
+			}
+
+			/* Star Rating Styles */
+			.star-rating {
+				display: flex;
+				gap: 0.5em;
+				font-size: 2em;
+			}
+
+			.star-rating i {
+				color: #333333;
+				cursor: pointer;
+				transition: color 0.2s ease;
+			}
+
+			.star-rating i:hover,
+			.star-rating i.active {
+				color: #ffee00;
+			}
+
+			/* Usage Frequency Question Styles - Mandatory Field */
+			.usage-frequency-group {
+				background: rgba(255, 238, 0, 0.08);
+				border-left: 3px solid #ffee00;
+				border-radius: 6px;
+				padding: 1em;
+				margin: 1em 0;
+			}
+
+			.usage-frequency-group label {
+				display: block;
+				margin-bottom: 0.6em;
+				font-weight: 600;
+				color: #ffee00 !important; /* Override form-group label color */
+				font-size: 0.95em;
+			}
+
+			.usage-frequency-group label::after {
+				content: " *";
+				color: #ff4d4f;
+				font-weight: bold;
+			}
+
+			.usage-frequency-group select {
+				width: 100%;
+				max-width: 300px;
+				padding: 0.6em 0.8em;
+				font-size: 1em;
+				border: 2px solid #ffee00;
+				background: #1a1a1a;
+				color: #ffffff;
+				border-radius: 6px;
+				cursor: pointer;
+				transition: all 0.2s ease;
+			}
+
+			.usage-frequency-group select:focus {
+				outline: none;
+				border-color: #28a745;
+				box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.25);
+			}
+
+			.usage-frequency-group select:required:invalid {
+				border-color: #ff4d4f;
+			}
+
+			/* Ensure dropdown options are visible with proper contrast */
+			.usage-frequency-group select option {
+				background-color: #1a1a1a !important;
+				color: #ffffff !important;
+				padding: 8px;
+			}
+
+			/* Style for the selected/highlighted option in dropdown */
+			.usage-frequency-group select option:checked,
+			.usage-frequency-group select option:hover {
+				background-color: #ffee00 !important;
+				color: #000000 !important;
+			}
+
+			/* Additional browser-specific fixes for option visibility */
+			#usageFrequency option {
+				background-color: #1a1a1a !important;
+				color: #ffffff !important;
+				-webkit-text-fill-color: #ffffff !important;
+				font-weight: 500;
+			}
+
+			#usageFrequency option:checked {
+				background-color: #ffee00 !important;
+				color: #000000 !important;
+				-webkit-text-fill-color: #000000 !important;
+			}
+
+			/* Responsive adjustments for usage frequency field */
+			@media screen and (max-width: 768px) {
+				.usage-frequency-group select {
+					max-width: 100%;
+				}
+			}
+
+			
+      /* Profile Hub Container - Positioned Above Support Container */
+      .profile-hub-container {
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        z-index: 1000;
+      }
+
+      /* Profile Icon - Matching Gear Icon Style with Yellow Glow */
+      .profile-icon {
+        width: 50px;
+        height: 50px;
+        background: #ffee00;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow:
+          0 4px 12px rgba(255, 238, 0, 0.4),
+          0 0 20px rgba(255, 238, 0, 0.6),
+          0 0 40px rgba(255, 238, 0, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none !important;
+        border: 2px solid #ffee00;
+        position: relative;
+      }
+
+      .profile-icon:hover {
+        background: #fff700;
+        transform: scale(1.1);
+        box-shadow:
+          0 6px 20px rgba(255, 238, 0, 0.6),
+          0 0 30px rgba(255, 238, 0, 0.8),
+          0 0 60px rgba(255, 238, 0, 0.5);
+      }
+
+      .profile-icon i {
+        font-size: 20px;
+        color: #000000;
+        transition: transform 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .profile-icon:hover i {
+        color: #333333;
+      }
+
+      /* Profile Hub Button - Shows Login or Username with Logout */
+      .profile-hub-btn {
+        background: #000000;
+        color: #ffee00;
+        border: 2px solid #ffee00;
+        border-radius: 25px;
+        padding: 12px 20px;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: "Montserrat", Arial, sans-serif;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        box-shadow: 0 4px 12px rgba(255, 238, 0, 0.2);
+        letter-spacing: 1px;
+        white-space: nowrap;
+      }
+
+      .profile-hub-btn:hover {
+        background: #ffee00;
+        color: #000000;
+        border-color: #28a745;
+        box-shadow: 0 6px 20px rgba(255, 238, 0, 0.5);
+        transform: scale(1.05);
+      }
+
+      /* Logged-in state - green accent */
+      .profile-hub-btn.logged-in {
+        border-color: #28a745;
+        box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+      }
+
+      .profile-hub-btn.logged-in:hover {
+        background: #28a745;
+        color: #ffffff;
+        border-color: #ffee00;
+        box-shadow: 0 6px 20px rgba(40, 167, 69, 0.5);
+      }
+
+      /* Username display */
+      .profile-username {
+        font-size: 13px;
+      }
+
+      /* Logout text */
+      .profile-logout {
+        font-size: 11px;
+        opacity: 0.9;
+      }
+
+/* Fixed Support Container - Horizontal Layout with Button Beside Gear Icon */
+			.support-container {
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				gap: 15px;
+				z-index: 1000;
+			}
+
+			/* Report Button - Positioned Beside Gear Icon */
+			.report-problem-btn {
+				background: #000000;
+				color: #ffee00 !important;
+				border: 2px solid #ffee00;
+				border-radius: 25px;
+				padding: 12px 20px;
+				font-size: 13px;
+				font-weight: bold;
+				font-family: "Montserrat", Arial, sans-serif;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				text-decoration: none !important;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				box-shadow: 0 4px 12px rgba(255, 238, 0, 0.2);
+				letter-spacing: 1px;
+			}
+
+			.report-problem-btn:hover {
+				background: #ffee00;
+				color: #000000 !important;
+				border-color: #28a745;
+				box-shadow: 0 6px 20px rgba(255, 238, 0, 0.5);
+				transform: scale(1.05);
+			}
+
+			/* Floating Gear Icon - Positioned Beside Button with Yellow Glow */
+			.floating-gear-icon {
+				width: 50px;
+				height: 50px;
+				background: #ffee00;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				box-shadow:
+					0 4px 12px rgba(255, 238, 0, 0.4),
+					0 0 20px rgba(255, 238, 0, 0.6),
+					0 0 40px rgba(255, 238, 0, 0.3);
+				cursor: pointer;
+				transition: all 0.3s ease;
+				text-decoration: none !important;
+				border: 2px solid #ffee00;
+			}
+
+			.floating-gear-icon:hover {
+				background: #fff700;
+				transform: scale(1.1) rotate(90deg);
+				box-shadow:
+					0 6px 20px rgba(255, 238, 0, 0.6),
+					0 0 30px rgba(255, 238, 0, 0.8),
+					0 0 60px rgba(255, 238, 0, 0.5);
+			}
+
+			.floating-gear-icon i {
+				font-size: 20px;
+				color: #000000;
+				transition: transform 0.3s ease;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.floating-gear-icon:hover i {
+				color: #333333;
+			}
+
+			/* Responsive adjustments */
+			@media (max-width: 768px) {
+				
+        .profile-hub-container {
+          bottom: 75px;
+          right: 15px;
+          gap: 12px;
+        }
+
+        .profile-icon {
+          width: 45px;
+          height: 45px;
+        }
+
+        .profile-icon i {
+          font-size: 18px;
+        }
+
+        .profile-hub-btn {
+          padding: 10px 16px;
+          font-size: 11px;
+        }
+
+        .profile-username {
+          font-size: 11px;
+        }
+
+        .profile-logout {
+          font-size: 10px;
+        }
+
+        .support-container {
+					bottom: 15px;
+					right: 15px;
+					gap: 12px;
+				}
+
+				.report-problem-btn {
+					padding: 10px 16px;
+					font-size: 11px;
+				}
+
+				.floating-gear-icon {
+					width: 45px;
+					height: 45px;
+				}
+
+				.floating-gear-icon i {
+					font-size: 18px;
+				}
+			}
+
+			/* Scoreboard Styles */
+			.scoreboard-list {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1.5em;
+				margin-top: 1em;
+			}
+
+			.scoreboard-item {
+				background: #1a1a1a;
+				border: 2px solid #ffee00;
+				border-radius: 8px;
+				padding: 1.5em;
+				transition: all 0.3s ease;
+				position: relative;
+				line-height: 1.8;
+			}
+
+			.scoreboard-item:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 6px 15px rgba(255, 238, 0, 0.3);
+				border-color: #28a745;
+			}
+
+			.scoreboard-rank {
+				position: absolute;
+				top: -12px;
+				left: 10px;
+				background: #ffee00;
+				color: #000000;
+				font-weight: bold;
+				font-size: 1.2em;
+				padding: 5px 15px;
+				border-radius: 20px;
+				box-shadow: 0 3px 10px rgba(255, 238, 0, 0.5);
+			}
+
+			.scoreboard-rank.top3 {
+				background: linear-gradient(135deg, #ffd700, #ffee00);
+			}
+
+			.scoreboard-state {
+				color: #ffee00;
+				font-size: 1.3em;
+				font-weight: bold;
+				margin: 0.5em 0 0.5em 0;
+			}
+
+			.scoreboard-stats {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-top: 1em;
+			}
+
+			.scoreboard-rating {
+				display: flex;
+				align-items: center;
+				gap: 0.5em;
+				color: #ffee00;
+				font-size: 1.1em;
+			}
+
+			.scoreboard-reviews {
+				color: #ffffff;
+				font-size: 0.9em;
+			}
+
+			.scoreboard-stars {
+				color: #ffee00;
+			}
+
+			.scoreboard-avg-wage {
+				color: #28a745;
+				font-weight: bold;
+				margin-top: 0.5em;
+				font-size: 0.95em;
+			}
+
+			/* Responsive Design */
+			@media screen and (max-width: 1200px) {
+				.scoreboard-list {
+					grid-template-columns: repeat(3, 1fr);
+				}
+			}
+
+			@media screen and (max-width: 768px) {
+				.modal-content {
+					width: 95%;
+					padding: 1.5em;
+					margin: 10% auto;
+				}
+
+				.map-container {
+					padding: 1em;
+				}
+
+				.scoreboard-list {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+
+			@media screen and (max-width: 480px) {
+				.scoreboard-list {
+					grid-template-columns: 1fr;
+				}
+
+				.tos-modal-buttons {
+					flex-direction: row;
+					gap: 0.75em;
+				}
+
+				.btn-accept,
+				.btn-decline {
+					width: 100%;
+					padding: 1em;
+				}
+
+				.tos-checkbox-container {
+					flex-direction: row;
+					gap: 0.5em;
+					text-align: center;
+				}
+
+				.tos-text-box {
+					padding: 1em;
+					font-size: 0.95em;
+				}
+
+				.tos-text-box ul {
+					padding-left: 1.2em;
+				}
+			}
+
+			/* OAuth Modal Styles */
+			.auth-modal-content {
+				text-align: center;
+			}
+
+			/* Login Button Styles - Ensure proper layout with reduced text size */
+			.auth-modal-content button {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: center !important;
+				gap: 0.5em !important;
+				white-space: nowrap !important;
+				overflow: hidden !important;
+				text-overflow: ellipsis !important;
+				box-sizing: border-box !important;
+				font-size: 0.9em !important; /* Reduced by 10% from base 1em */
+				padding: 0.85em 2em !important;
+				width: 300px !important;
+				max-width: 100% !important;
+			}
+
+			.auth-modal-content button i {
+				flex-shrink: 0 !important;
+				font-size: 1.05em !important; /* Proportional icon size */
+			}
+
+			/* Responsive login buttons */
+			@media screen and (max-width: 480px) {
+				.auth-modal-content button {
+					width: 100% !important;
+					max-width: 300px !important;
+					padding: 0.8em 1.5em !important;
+					font-size: 0.85em !important; /* 10% smaller on mobile */
+				}
+			}
+
+			/* Desktop specific - ensure proper sizing */
+			@media screen and (min-width: 481px) {
+				.auth-modal-content button {
+					width: 300px !important;
+					padding: 0.85em 2em !important;
+				}
+			}
+
+			.tos-modal-content {
+				max-width: 700px;
+			}
+
+			/* US-Specific TOS Notice */
+			.us-tos-notice {
+				background: #2a2a00;
+				border: 2px solid #ffee00;
+				border-radius: 8px;
+				padding: 1em;
+				margin: 1em 0;
+				text-align: left;
+			}
+
+			.us-tos-notice h4 {
+				color: #ffee00;
+				margin: 0 0 0.5em 0;
+				font-size: 1.1em;
+			}
+
+			.us-tos-notice p {
+				color: #ffffff;
+				line-height: 1.5;
+				margin: 0.5em 0;
+				font-size: 0.95em;
+			}
+
+			.us-tos-notice ul {
+				margin: 0.5em 0;
+				padding-left: 1.5em;
+			}
+
+			.us-tos-notice li {
+				color: #ffffff;
+				margin-bottom: 0.3em;
+			}
+
+			.tos-text-box {
+				background: #000000;
+				border: 2px solid #ffee00;
+				border-radius: 8px;
+				padding: 1.5em;
+				margin: 1.5em 0;
+				max-height: 400px;
+				overflow-y: auto;
+				text-align: left;
+				color: #ffffff;
+				line-height: 1.8;
+				font-size: 1.05em;
+			}
+
+			.tos-text-box h3 {
+				color: #ffee00;
+				margin-top: 0;
+				text-align: center;
+			}
+
+			.tos-text-box p {
+				color: #ffffff;
+				line-height: 1.6;
+				text-align: center;
+			}
+
+			.tos-text-box ul {
+				color: #ffffff;
+				line-height: 1.8;
+				text-align: left;
+				max-width: 600px;
+				margin-left: auto;
+				margin-right: auto;
+				padding-left: 1.5em;
+			}
+
+			.tos-text-box li {
+				margin-bottom: 0.5em;
+			}
+
+			.tos-checkbox-container {
+				display: flex;
+				align-items: center;
+				gap: 1em;
+				margin: 1.5em 0;
+				justify-content: center;
+			}
+
+			.tos-checkbox-container input[type="checkbox"] {
+				/* Checkbox visibility fix - ensure checkbox is always visible */
+				width: 20px;
+				height: 20px;
+				min-width: 20px;
+				min-height: 20px;
+				cursor: pointer;
+				opacity: 1 !important;
+				position: relative !important;
+				appearance: auto !important;
+				-webkit-appearance: checkbox !important;
+				-moz-appearance: checkbox !important;
+				flex-shrink: 0;
+				margin: 0;
+				accent-color: #ffee00; /* Modern browsers - yellow checkmark */
+			}
+
+			.tos-checkbox-container label {
+				color: #ffffff;
+				font-weight: bold;
+				cursor: pointer;
+			}
+
+			.tos-modal-buttons {
+				display: flex;
+				gap: 1em;
+				justify-content: center;
+			}
+
+			.btn-success,
+			.btn-decline,
+			.btn-danger {
+				--btn-standard-padding-y: 0.8em;
+				--btn-standard-padding-x: 2em;
+				--btn-standard-font-size: 1rem;
+			}
+
+			/* U.S. Legal Protection Banner */
+			.us-legal-banner {
+				background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+				border: 3px solid #ffee00;
+				border-radius: 12px;
+				padding: 1.5em;
+				margin: 2em auto;
+				max-width: 900px;
+				text-align: center;
+				box-shadow: 0 6px 20px rgba(255, 238, 0, 0.3);
+				position: relative;
+				overflow: hidden;
+			}
+
+			.us-legal-banner::before {
+				content: "🇺🇸";
+				position: absolute;
+				top: -20px;
+				right: -20px;
+				font-size: 8em;
+				opacity: 0.1;
+			}
+
+			.us-legal-banner h3 {
+				color: #ffee00;
+				font-size: 1.4em;
+				margin: 0 0 0.5em 0;
+				font-weight: bold;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 0.5em;
+			}
+
+			.us-legal-banner h3 i {
+				color: #ffee00;
+			}
+
+			.us-legal-banner p {
+				color: #ffffff;
+				line-height: 1.7;
+				margin: 0.5em 0;
+				font-size: 1em;
+			}
+
+			.us-legal-banner strong {
+				color: #ffee00;
+				font-weight: bold;
+			}
+
+			.us-legal-banner .learn-more-link {
+				margin-top: 1em;
+				--btn-standard-padding-y: 0.7em;
+				--btn-standard-padding-x: 1.8em;
+				--btn-standard-font-size: 1.05em;
+			}
+
+			/* U.S. Legal Rights Modal */
+			.us-legal-modal .modal-content {
+				max-width: 800px;
+			}
+
+			.us-legal-modal h3 {
+				color: #ffee00;
+				margin-top: 1.5em;
+				margin-bottom: 0.8em;
+				font-size: 1.2em;
+			}
+
+			.us-legal-modal h4 {
+				color: #ffee00;
+				margin-top: 1em;
+				margin-bottom: 0.5em;
+				font-size: 1.1em;
+			}
+
+			.us-legal-modal p {
+				color: #ffffff;
+				line-height: 1.7;
+				margin-bottom: 1em;
+			}
+
+			.us-legal-modal ul {
+				color: #ffffff;
+				line-height: 1.8;
+				margin: 0.5em 0 1em 2em;
+			}
+
+			.us-legal-modal li {
+				margin-bottom: 0.5em;
+			}
+
+			.us-legal-modal strong {
+				color: #ffee00;
+			}
+
+			.us-legal-modal .close-modal-btn {
+				display: block;
+				margin: 2em auto 0;
+				padding: 0.8em 2.5em;
+				background: #28a745;
+				color: #ffffff;
+				border: none;
+				border-radius: 6px;
+				font-weight: bold;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				text-align: center;
+			}
+
+			.us-legal-modal .close-modal-btn:hover,
+			.us-legal-modal .close-modal-btn:focus {
+				background: #218838;
+				transform: translateY(-2px);
+				box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+			}
+
+			/* Responsive adjustments for US banner */
+			@media screen and (max-width: 768px) {
+				.us-legal-banner {
+					padding: 1.2em;
+					margin: 1.5em 1em;
+				}
+
+				.us-legal-banner h3 {
+					font-size: 1.2em;
+				}
+
+				.us-legal-banner p {
+					font-size: 0.95em;
+				}
+
+				.us-legal-banner::before {
+					font-size: 5em;
+				}
+			}
+
+			/* Ad Section Styles */
+			.ad-section {
+				width: 100%;
+				padding: 0 1em;
+			}
+
+			.ad-container {
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+
+			.ad-container:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 8px 20px rgba(255, 238, 0, 0.25) !important;
+			}
+
+			/* Responsive Ad Styles */
+			@media screen and (max-width: 768px) {
+				.ad-section {
+					margin: 2em auto !important;
+					padding: 0 0.5em;
+				}
+
+				#mid-review-scoreboard-ad .ad-container {
+					padding: 1.5em !important;
+				}
+
+				#mid-review-scoreboard-ad h3 {
+					font-size: 1.3em !important;
+				}
+
+				#mid-review-scoreboard-ad p {
+					font-size: 0.95em !important;
+				}
+
+				#mid-review-scoreboard-ad a {
+					width: 100%;
+					text-align: center;
+					padding: 0.8em 1.5em !important;
+				}
+
+				#mid-review-scoreboard-ad .fas.fa-map-marked-alt {
+					font-size: 3em !important;
+				}
+			}
+
+			@media screen and (max-width: 480px) {
+				.ad-section {
+					margin: 1.5em auto !important;
+				}
+
+				#mid-review-scoreboard-ad .ad-container {
+					padding: 1.2em !important;
+				}
+
+				#mid-review-scoreboard-ad h3 {
+					font-size: 1.2em !important;
+				}
+
+				#mid-review-scoreboard-ad p {
+					font-size: 0.9em !important;
+					line-height: 1.5 !important;
+				}
+
+				#mid-review-scoreboard-ad a {
+					font-size: 0.95em !important;
+					padding: 0.8em 1.2em !important;
+				}
+
+				#mid-review-scoreboard-ad > div > div:last-child {
+					display: none;
+				}
+			}
+
+			/* Review Popup Modal Styles */
+			.reviews-popup-modal {
+				display: none;
+				position: fixed;
+				z-index: 2001;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: rgba(0, 0, 0, 0.85);
+			}
+
+			.reviews-popup-modal.show {
+				display: block;
+			}
+
+			.reviews-popup-content {
+				background-color: #000000;
+				border: 3px solid #ffee00;
+				border-radius: 10px;
+				margin: 3% auto;
+				padding: 2em;
+				width: 90%;
+				max-width: 900px;
+				position: relative;
+				animation: slideDown 0.3s ease;
+				max-height: 85vh;
+				overflow-y: auto;
+			}
+
+			.reviews-popup-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 1.5em;
+				border-bottom: 2px solid #ffee00;
+				padding-bottom: 1em;
+			}
+
+			.reviews-popup-header h2 {
+				color: #ffee00;
+				margin: 0;
+				font-size: 1.8em;
+			}
+
+			.reviews-popup-header .close-modal {
+				font-size: 32px;
+			}
+
+			.review-item {
+				background: #1a1a1a;
+				border: 2px solid #333333;
+				border-radius: 8px;
+				padding: 1.5em;
+				margin-bottom: 1.5em;
+				transition: all 0.3s ease;
+			}
+
+			.review-item:hover {
+				border-color: #ffee00;
+				transform: translateX(5px);
+			}
+
+			.review-header {
+				display: flex;
+				align-items: center;
+				gap: 1em;
+				margin-bottom: 1em;
+				padding-bottom: 0.8em;
+				border-bottom: 1px solid #333333;
+			}
+
+			.review-user-icon {
+				font-size: 2em;
+				color: #ffee00;
+				min-width: 40px;
+				text-align: center;
+			}
+
+			.review-user-info {
+				flex: 1;
+			}
+
+			.review-user-name {
+				color: #ffee00;
+				font-weight: bold;
+				font-size: 1.1em;
+				margin-bottom: 0.3em;
+			}
+
+			.review-metadata {
+				color: #888888;
+				font-size: 0.85em;
+			}
+
+			.review-rating {
+				color: #ffee00;
+				font-size: 1.2em;
+			}
+
+			.review-details {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1em;
+				margin-bottom: 1em;
+				padding: 1em;
+				background: rgba(255, 238, 0, 0.05);
+				border-radius: 6px;
+			}
+
+			.review-detail-item {
+				display: flex;
+				flex-direction: row;
+				gap: 0.3em;
+			}
+
+			.review-detail-label {
+				color: #888888;
+				font-size: 0.85em;
+				font-weight: bold;
+			}
+
+			.review-detail-value {
+				color: #ffffff;
+				font-size: 1em;
+			}
+
+			.review-experience-text {
+				color: #ffffff;
+				line-height: 1.6;
+				padding: 1em;
+				background: rgba(0, 0, 0, 0.3);
+				border-radius: 6px;
+				border-left: 3px solid #28a745;
+			}
+
+			.review-experience-label {
+				color: #28a745;
+				font-weight: bold;
+				margin-bottom: 0.5em;
+				display: block;
+			}
+
+			.pagination-controls {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 1em;
+				margin-top: 2em;
+				padding-top: 1.5em;
+				border-top: 2px solid #333333;
+			}
+
+			.pagination-btn {
+				--btn-standard-padding-y: 0.6em;
+				--btn-standard-padding-x: 1.6em;
+				--btn-standard-font-size: 0.95rem;
+				--btn-standard-font-weight: 600;
+			}
+
+			.pagination-btn:disabled,
+			.pagination-btn[disabled] {
+				background: #333333;
+				color: #aaaaaa;
+				box-shadow: none;
+				cursor: not-allowed;
+				transform: none;
+			}
+
+			.pagination-info {
+				color: #ffffff;
+				font-size: 1em;
+			}
+
+			.no-reviews-message {
+				text-align: center;
+				padding: 3em;
+				color: #888888;
+				font-size: 1.1em;
+			}
+
+			.no-reviews-message i {
+				font-size: 3em;
+				margin-bottom: 0.5em;
+				color: #333333;
+			}
+
+			/* Responsive adjustments */
+			@media screen and (max-width: 768px) {
+				.reviews-popup-content {
+					width: 95%;
+					padding: 1.5em;
+					margin: 5% auto;
+				}
+
+				.reviews-popup-header h2 {
+					font-size: 1.4em;
+				}
+
+				.review-details {
+					grid-template-columns: 1fr;
+				}
+
+				.pagination-controls {
+					flex-direction: row;
+					gap: 0.8em;
+				}
+			}
+			/* User HUD (Heads-Up Display) Styles */
+			.user-hud {
+				position: fixed;
+				top: 20px;
+				right: 20px;
+				z-index: 9999;
+				animation: slideInFromRight 0.4s ease-out;
+			}
+
+			@keyframes slideInFromRight {
+				from {
+					opacity: 0;
+					transform: translateX(100px);
+				}
+				to {
+					opacity: 1;
+					transform: translateX(0);
+				}
+			}
+
+			.hud-content {
+				background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+				border: 2px solid #ffee00;
+				border-radius: 8px;
+				padding: 0.8em 1.5em;
+				display: flex;
+				align-items: center;
+				gap: 1.2em;
+				box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 238, 0, 0.2);
+				backdrop-filter: blur(10px);
+			}
+
+			.hud-greeting {
+				color: #ffffff;
+				font-size: 0.95em;
+				font-weight: 500;
+				white-space: nowrap;
+			}
+
+			.hud-greeting strong {
+				color: #ffee00;
+				font-weight: 700;
+			}
+
+			.hud-logout-btn {
+				--btn-standard-font-size: 0.9rem;
+				--btn-standard-padding-y: 0.55em;
+				--btn-standard-padding-x: 1.4em;
+				display: inline-flex;
+				align-items: center;
+				gap: 0.45em;
+				white-space: nowrap;
+				box-shadow: 0 2px 8px rgba(255, 238, 0, 0.3);
+			}
+
+			.hud-logout-btn:hover,
+			.hud-logout-btn:focus {
+				box-shadow: 0 4px 12px rgba(255, 238, 0, 0.5);
+			}
+
+			.hud-logout-btn i {
+				font-size: 1.05em;
+			}
+
+			/* Responsive HUD Styles */
+			@media screen and (max-width: 768px) {
+				.user-hud {
+					top: 15px;
+					right: 15px;
+				}
+
+				.hud-content {
+					padding: 0.7em 1.2em;
+					gap: 1em;
+				}
+
+				.hud-greeting {
+					font-size: 0.85em;
+				}
+
+				.hud-logout-btn {
+					--btn-standard-padding-y: 0.5em;
+					--btn-standard-padding-x: 1.2em;
+					--btn-standard-font-size: 0.85rem;
+				}
+			}
+
+			@media screen and (max-width: 480px) {
+				.user-hud {
+					top: 10px;
+					right: 10px;
+					left: 10px;
+				}
+
+				.hud-content {
+					flex-direction: row;
+					align-items: stretch;
+					gap: 0.8em;
+					padding: 0.8em 1em;
+				}
+
+				.hud-greeting {
+					text-align: center;
+					font-size: 0.85em;
+				}
+
+				.hud-logout-btn {
+					width: 100%;
+					justify-content: center;
+					--btn-standard-padding-y: 0.7em;
+					--btn-standard-padding-x: 1em;
+				}
+			}
+
+		</style>
+	</head>
+	<body class="right-sidebar is-preload">
+		<div id="page-wrapper">
+
+		<!-- User HUD (Heads-Up Display) -->
+		<!-- OLD HUD REMOVED - Now using Profile Hub at bottom-right instead -->
+
+			<!-- Header -->
+			<section id="header" class="wrapper" style="background-image: url('assets/images/wp4013673.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+
+				<!-- Logo -->
+				<div id="logo">
+					<h1>
+						<a href="index.html" class="logo-link">
+							<span id="word1">Jamaican</span>
+							<span id="word2">Work</span>
+							<span id="word3">and</span>
+							<span id="word4">Travel</span>
+							<span id="word5">HQ</span>
+						</a>
+					</h1>
+					<p class="logo-tagline">
+						<span id="tagline1">Straightforward.</span>
+						<span id="tagline2">Reliable.</span>
+						<span id="tagline3">Your</span>
+						<span id="tagline4">#1</span>
+						<span id="tagline5">Jamaican</span>
+						<span id="tagline6">J1</span>
+						<span id="tagline7">Info</span>
+						<span id="tagline8">Hub.</span>
+					</p>
+				</div>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="agencies.html">Agencies</a></li>
+						<li><a href="news.html">J-1 News</a></li>
+						<li>
+							<a href="https://jm.usembassy.gov/" target="_blank">Embassy Websites</a>
+							<ul>
+								<li><a href="https://ceac.state.gov/GenNIV/Default.aspx" target="_blank">DS-160 Website</a></li>
+								<li><a href="https://ais.usvisa-info.com/en-jm/niv" target="_blank">Visa Appointment Website</a></li>
+								<li><a href="https://i94.cbp.dhs.gov/home" target="_blank">I-94 Website</a></li>
+								<li>
+									<a href="https://www.fmjfee.com/i901fee/index.html?content=status/checkStatus" target="_blank">
+										I-901 website
+									</a>
+								</li>
+								<li>
+									<a href="https://ceac.state.gov/CEACStatTracker/Status.aspx" target="_blank">Visa Status Check</a>
+								</li>
+								<li><a href="https://j1visa.state.gov/contacts/" target="_blank">J-1 Visa Emergency Hotline!!!</a></li>
+							</ul>
+						</li>
+						<li><a href="guide.html">J-1 Guides & Tips</a></li>
+						<li><a href="faq.html">FAQs</a></li>
+						<li><a href="#">J-1 Testimonials</a></li>
+						<li class="current"><a href="share-experience.html">Share your Experience</a></li>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="tos.html">Terms of Service</a></li>
+					</ul>
+				</nav>
+			</section>
+
+			<!-- Main -->
+			<section id="main" class="wrapper style2">
+				<div class="title">Share Your Experience</div>
+				<div class="container">
+
+					<!-- Content -->
+					<div id="content">
+						<article class="box post">
+							<header class="style1">
+								<h2 align="center">Where Did You Work?</h2>
+								<p align="center" style="color: #ffffff;">Click on the state where you worked to share your experience</p>
+							</header>
+
+							<!-- U.S. Legal Protection Banner -->
+							<div class="us-legal-banner" role="complementary" aria-label="U.S. Legal Protection Notice">
+								<h3>
+									<i class="fas fa-shield-alt" aria-hidden="true"></i>
+									Protected by U.S. Law: Your Right to Share
+								</h3>
+								<p>
+									<strong>Your voice matters.</strong> When you share honest experiences about U.S. employers and work conditions,
+									your rights to free expression are protected by the <strong>First Amendment</strong> of the U.S. Constitution
+									and <strong>Section 230</strong> of the Communications Decency Act.
+								</p>
+								<p>
+									You have the legal right to post truthful reviews, even if they're critical. We stand by your right to share
+									authentic experiences that help future J-1 participants make informed decisions.
+								</p>
+								<a href="#" class="learn-more-link btn-standard btn-primary" onclick="openUSLegalModal(event)"
+								   role="button" aria-label="Learn more about your U.S. legal protections">
+									<i class="fas fa-info-circle" aria-hidden="true"></i> Learn More About Your Rights
+								</a>
+							</div>
+
+							<!-- Login is now handled via modal when user tries to submit -->
+
+							<!-- Map Container -->
+							<div id="state-selection">
+							<!-- Map Container -->
+							<div class="map-container">
+								<h2>United States</h2>
+								<p>Click on the state where you worked during your J-1 program</p>
+
+								<!-- US States Grid -->
+								<div id="states-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 2em;">
+									<!-- States will be added via JavaScript -->
+								</div>
+							</div>
+
+							<!-- Tooltip -->
+							<div class="state-tooltip" id="tooltip"></div>
+
+							<!-- Modal for Review Form -->
+							<div id="reviewModal" class="modal">
+								<div class="modal-content">
+									<span class="close-modal" onclick="closeModal()">&times;</span>
+									<h2 id="modalTitle">Share Your Experience in [State]</h2>
+
+									<form class="review-form" id="experienceForm" onsubmit="submitExperience(event)">
+										<div class="form-group">
+											<label for="jobTitle">Position *</label>
+											<select id="jobTitle" name="jobTitle" required>
+												<option value="" disabled selected>Select your position...</option>
+
+												<!-- HOSPITALITY & LODGING -->
+												<optgroup label="Hotels & Resorts">
+													<option value="Front Desk Associate">Front Desk Associate</option>
+													<option value="Bell Attendant / Bellhop">Bell Attendant / Bellhop</option>
+													<option value="Guest Services Representative">Guest Services Representative</option>
+													<option value="Concierge Assistant">Concierge Assistant</option>
+													<option value="Room Attendant / Housekeeper">Room Attendant / Housekeeper</option>
+													<option value="Laundry Attendant">Laundry Attendant</option>
+													<option value="Valet Parking Attendant">Valet Parking Attendant</option>
+													<option value="Hotel Porter">Hotel Porter</option>
+													<option value="Night Auditor">Night Auditor</option>
+													<option value="Reservation Agent">Reservation Agent</option>
+												</optgroup>
+
+												<optgroup label="Vacation Rentals & Resorts">
+													<option value="Resort Activities Coordinator">Resort Activities Coordinator</option>
+													<option value="Recreation Assistant">Recreation Assistant</option>
+													<option value="Pool Attendant / Lifeguard">Pool Attendant / Lifeguard</option>
+													<option value="Beach Attendant">Beach Attendant</option>
+													<option value="Towel Attendant">Towel Attendant</option>
+													<option value="Cabana Attendant">Cabana Attendant</option>
+													<option value="Resort Guest Services">Resort Guest Services</option>
+												</optgroup>
+
+												<!-- FOOD & BEVERAGE SERVICE -->
+												<optgroup label="Restaurants">
+													<option value="Server / Waiter / Waitress">Server / Waiter / Waitress</option>
+													<option value="Host / Hostess">Host / Hostess</option>
+													<option value="Busser">Busser</option>
+													<option value="Food Runner">Food Runner</option>
+													<option value="Barback">Barback</option>
+													<option value="Dishwasher">Dishwasher</option>
+													<option value="Prep Cook">Prep Cook</option>
+													<option value="Line Cook">Line Cook</option>
+													<option value="Kitchen Assistant">Kitchen Assistant</option>
+													<option value="Expeditor">Expeditor</option>
+												</optgroup>
+
+												<optgroup label="Fast Food & Quick Service">
+													<option value="Cashier">Cashier</option>
+													<option value="Counter Service Associate">Counter Service Associate</option>
+													<option value="Drive-Thru Operator">Drive-Thru Operator</option>
+													<option value="Food Preparation Worker">Food Preparation Worker</option>
+													<option value="Kitchen Team Member">Kitchen Team Member</option>
+												</optgroup>
+
+												<optgroup label="Cafes & Coffee Shops">
+													<option value="Barista">Barista</option>
+													<option value="Cafe Attendant">Cafe Attendant</option>
+													<option value="Bakery Assistant">Bakery Assistant</option>
+													<option value="Counter Server">Counter Server</option>
+												</optgroup>
+
+												<optgroup label="Catering">
+													<option value="Catering Server">Catering Server</option>
+													<option value="Banquet Server">Banquet Server</option>
+													<option value="Event Setup Staff">Event Setup Staff</option>
+													<option value="Buffet Attendant">Buffet Attendant</option>
+												</optgroup>
+
+												<optgroup label="Bars & Lounges">
+													<option value="Bar Server">Bar Server</option>
+													<option value="Bar Back">Bar Back</option>
+													<option value="Bar Porter">Bar Porter</option>
+													<option value="Cocktail Server">Cocktail Server</option>
+												</optgroup>
+
+												<!-- RETAIL & SALES -->
+												<optgroup label="General Retail">
+													<option value="Sales Associate">Sales Associate</option>
+													<option value="Stock Associate">Stock Associate</option>
+													<option value="Merchandise Stocker">Merchandise Stocker</option>
+													<option value="Gift Shop Associate">Gift Shop Associate</option>
+													<option value="Fitting Room Attendant">Fitting Room Attendant</option>
+													<option value="Customer Service Representative">Customer Service Representative</option>
+													<option value="Store Greeter">Store Greeter</option>
+												</optgroup>
+
+												<optgroup label="Souvenir & Tourist Shops">
+													<option value="Souvenir Shop Clerk">Souvenir Shop Clerk</option>
+													<option value="Tourist Information Assistant">Tourist Information Assistant</option>
+													<option value="Retail Sales (tourist locations)">Retail Sales (tourist locations)</option>
+												</optgroup>
+
+												<optgroup label="Food Retail">
+													<option value="Ice Cream Scooper">Ice Cream Scooper</option>
+													<option value="Candy Shop Associate">Candy Shop Associate</option>
+													<option value="Bakery Counter Staff">Bakery Counter Staff</option>
+													<option value="Specialty Food Sales">Specialty Food Sales</option>
+												</optgroup>
+
+												<!-- AMUSEMENT PARKS & ENTERTAINMENT -->
+												<optgroup label="Theme Parks">
+													<option value="Ride Operator">Ride Operator</option>
+													<option value="Games Operator">Games Operator</option>
+													<option value="Ticket Sales Associate">Ticket Sales Associate</option>
+													<option value="Park Greeter">Park Greeter</option>
+													<option value="Photo Services Associate">Photo Services Associate</option>
+													<option value="Merchandise Sales">Merchandise Sales</option>
+													<option value="Food Service (in-park)">Food Service (in-park)</option>
+													<option value="Guest Relations Assistant">Guest Relations Assistant</option>
+													<option value="Park Attendant">Park Attendant</option>
+												</optgroup>
+
+												<optgroup label="Water Parks">
+													<option value="Lifeguard">Lifeguard</option>
+													<option value="Slide Attendant">Slide Attendant</option>
+													<option value="Wave Pool Monitor">Wave Pool Monitor</option>
+													<option value="Water Park Cashier">Water Park Cashier</option>
+												</optgroup>
+
+												<optgroup label="Entertainment Venues">
+													<option value="Box Office Clerk">Box Office Clerk</option>
+													<option value="Usher">Usher</option>
+													<option value="Concessions Worker">Concessions Worker</option>
+													<option value="Venue Attendant">Venue Attendant</option>
+													<option value="Event Staff">Event Staff</option>
+												</optgroup>
+
+												<optgroup label="Arcades & Gaming">
+													<option value="Arcade Attendant">Arcade Attendant</option>
+													<option value="Prize Counter Associate">Prize Counter Associate</option>
+													<option value="Game Technician Assistant">Game Technician Assistant</option>
+												</optgroup>
+
+												<!-- OUTDOOR RECREATION & TOURISM -->
+												<optgroup label="National Parks & Recreation">
+													<option value="Visitor Services Assistant">Visitor Services Assistant</option>
+													<option value="Trail Maintenance Assistant">Trail Maintenance Assistant</option>
+													<option value="Park Store Associate">Park Store Associate</option>
+													<option value="Campground Attendant">Campground Attendant</option>
+													<option value="Recreation Equipment Rental">Recreation Equipment Rental</option>
+												</optgroup>
+
+												<optgroup label="Beach & Water Sports">
+													<option value="Beach Equipment Rental">Beach Equipment Rental</option>
+													<option value="Water Sports Equipment Rental">Water Sports Equipment Rental</option>
+													<option value="Marina Attendant">Marina Attendant</option>
+													<option value="Kayak/Paddleboard Rental Staff">Kayak/Paddleboard Rental Staff</option>
+												</optgroup>
+
+												<optgroup label="Ski Resorts">
+													<option value="Lift Operator">Lift Operator</option>
+													<option value="Rental Shop Associate">Rental Shop Associate</option>
+													<option value="Lodge Staff">Lodge Staff</option>
+													<option value="Ski Equipment Rental">Ski Equipment Rental</option>
+													<option value="Resort Food Service">Resort Food Service</option>
+												</optgroup>
+
+												<optgroup label="Golf Courses">
+													<option value="Starter / Ranger">Starter / Ranger</option>
+													<option value="Cart Attendant">Cart Attendant</option>
+													<option value="Pro Shop Associate">Pro Shop Associate</option>
+													<option value="Golf Course Marshal">Golf Course Marshal</option>
+													<option value="Driving Range Attendant">Driving Range Attendant</option>
+												</optgroup>
+
+												<optgroup label="Adventure Tourism">
+													<option value="Zip Line Ground Crew">Zip Line Ground Crew</option>
+													<option value="Equipment Check-In Staff">Equipment Check-In Staff</option>
+													<option value="Adventure Tour Desk Associate">Adventure Tour Desk Associate</option>
+												</optgroup>
+
+												<!-- EVENT & VENUE SERVICES -->
+												<optgroup label="Convention Centers">
+													<option value="Event Setup Crew">Event Setup Crew</option>
+													<option value="Registration Desk Attendant">Registration Desk Attendant</option>
+													<option value="Information Booth Staff">Information Booth Staff</option>
+													<option value="Event Services Assistant">Event Services Assistant</option>
+												</optgroup>
+
+												<optgroup label="Stadiums & Arenas">
+													<option value="Concession Stand Worker">Concession Stand Worker</option>
+													<option value="Stadium Attendant">Stadium Attendant</option>
+													<option value="Ticket Taker">Ticket Taker</option>
+												</optgroup>
+
+												<optgroup label="Wedding & Event Venues">
+													<option value="Setup/Breakdown Crew">Setup/Breakdown Crew</option>
+													<option value="Event Server">Event Server</option>
+													<option value="Coat Check Attendant">Coat Check Attendant</option>
+													<option value="Parking Attendant">Parking Attendant</option>
+												</optgroup>
+
+												<!-- TRANSPORTATION & PARKING -->
+												<optgroup label="Parking Services">
+													<option value="Parking Lot Attendant">Parking Lot Attendant</option>
+													<option value="Parking Cashier">Parking Cashier</option>
+													<option value="Valet Parker">Valet Parker</option>
+													<option value="Parking Garage Attendant">Parking Garage Attendant</option>
+												</optgroup>
+
+												<!-- TOURISM & VISITOR SERVICES -->
+												<optgroup label="Tourist Attractions">
+													<option value="Ticket Booth Operator">Ticket Booth Operator</option>
+													<option value="Attraction Attendant">Attraction Attendant</option>
+													<option value="Museum Shop Associate">Museum Shop Associate</option>
+													<option value="Tour Desk Associate">Tour Desk Associate</option>
+													<option value="Visitor Center Assistant">Visitor Center Assistant</option>
+												</optgroup>
+
+												<optgroup label="Information Services">
+													<option value="Brochure Distribution">Brochure Distribution</option>
+													<option value="Welcome Center Staff">Welcome Center Staff</option>
+												</optgroup>
+
+												<!-- GROUNDS & FACILITIES MAINTENANCE -->
+												<optgroup label="Landscaping & Grounds">
+													<option value="Grounds Crew Member">Grounds Crew Member</option>
+													<option value="Landscape Assistant">Landscape Assistant</option>
+													<option value="Golf Course Groundskeeper Assistant">Golf Course Groundskeeper Assistant</option>
+													<option value="Park Maintenance Assistant">Park Maintenance Assistant</option>
+												</optgroup>
+
+												<optgroup label="Facility Support">
+													<option value="General Maintenance Assistant">General Maintenance Assistant</option>
+													<option value="Facilities Support Staff">Facilities Support Staff</option>
+													<option value="Cleaning Crew Member">Cleaning Crew Member</option>
+													<option value="Janitor">Janitor</option>
+												</optgroup>
+
+												<!-- WAREHOUSE & DISTRIBUTION -->
+												<optgroup label="Logistics Support">
+													<option value="Warehouse Associate">Warehouse Associate</option>
+													<option value="Package Handler">Package Handler</option>
+													<option value="Inventory Assistant">Inventory Assistant</option>
+													<option value="Stock Room Associate">Stock Room Associate</option>
+													<option value="Shipping/Receiving Clerk">Shipping/Receiving Clerk</option>
+												</optgroup>
+
+												<optgroup label="Retail Support Centers">
+													<option value="E-commerce Fulfillment Associate">E-commerce Fulfillment Associate</option>
+													<option value="Order Picker">Order Picker</option>
+													<option value="Distribution Center Associate">Distribution Center Associate</option>
+												</optgroup>
+
+												<!-- SPECIALTY POSITIONS -->
+												<optgroup label="Farm Markets & Agricultural Tourism">
+													<option value="Farm Stand Attendant">Farm Stand Attendant</option>
+													<option value="Pumpkin Patch Staff">Pumpkin Patch Staff</option>
+													<option value="U-Pick Farm Worker">U-Pick Farm Worker</option>
+													<option value="Farm Market Cashier">Farm Market Cashier</option>
+													<option value="Agricultural Tourism Guide">Agricultural Tourism Guide</option>
+												</optgroup>
+
+												<optgroup label="Seasonal Decorations & Events">
+													<option value="Holiday Decoration Installer">Holiday Decoration Installer</option>
+													<option value="Seasonal Display Assistant">Seasonal Display Assistant</option>
+													<option value="Event Decoration Crew">Event Decoration Crew</option>
+												</optgroup>
+
+												<optgroup label="Photography">
+													<option value="Photo Assistant">Photo Assistant</option>
+													<option value="Photo Lab Assistant">Photo Lab Assistant</option>
+													<option value="Photo Sales Associate">Photo Sales Associate</option>
+												</optgroup>
+
+												<!-- OTHER -->
+												<optgroup label="Other">
+													<option value="Other (specify in experience)">Other (specify in experience)</option>
+												</optgroup>
+											</select>
+										</div>
+
+										<div class="form-group">
+											<label for="employer">Employer/Company (Optional)</label>
+											<input type="text" id="employer" name="employer" placeholder="Company name (optional)">
+										</div>
+
+										<div class="form-group">
+											<label for="city">City *</label>
+											<select id="city" name="city" required>
+												<option value="" disabled selected>Select state first...</option>
+											</select>
+										</div>
+
+										<div class="form-group">
+											<label for="wages">Hourly Wage *</label>
+											<input type="text"
+												id="wages"
+												name="wages"
+												required
+												placeholder="e.g., $15.00"
+												pattern="^\$?[0-9]+(\.[0-9]{1,2})?$"
+												title="Please enter a valid dollar amount (e.g., $15.00)"
+												inputmode="decimal">
+										</div>
+
+										<div class="form-group">
+											<label for="hoursPerWeek">Hours per Week *</label>
+											<input type="number" id="hoursPerWeek" name="hoursPerWeek" required placeholder="e.g., 40" min="1" max="80">
+										</div>
+
+										<div class="form-group">
+											<label>Overall Experience (1-5 stars) *</label>
+											<div class="star-rating" id="starRating">
+												<i class="far fa-star" data-rating="1" onclick="setRating(1)"></i>
+												<i class="far fa-star" data-rating="2" onclick="setRating(2)"></i>
+												<i class="far fa-star" data-rating="3" onclick="setRating(3)"></i>
+												<i class="far fa-star" data-rating="4" onclick="setRating(4)"></i>
+												<i class="far fa-star" data-rating="5" onclick="setRating(5)"></i>
+											</div>
+											<input type="hidden" id="rating" name="rating" required>
+										</div>
+
+										<!-- Mandatory Question: Usage Frequency -->
+										<div class="usage-frequency-group">
+											<label for="usageFrequency">
+												How many times have you worked in this state?
+											</label>
+											<select id="usageFrequency" name="usageFrequency" required>
+												<option value="" disabled selected>Please select...</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5+</option>
+											</select>
+										</div>
+
+										<div class="form-group">
+											<label for="experience">Tell us about your experience *</label>
+											<textarea id="experience" name="experience" required placeholder="Share your experience, tips, and advice for future participants..."></textarea>
+										</div>
+
+										<button type="submit" class="btn-standard btn-primary">Submit Experience</button>
+									</form>
+								</div>
+							</div>
+
+
+		<!-- Mid-Review Scoreboard Ad Unit -->
+		<div id="mid-review-scoreboard-ad" class="ad-section" style="margin: 3em auto; max-width: 1200px;">
+			<div class="native-ad native-ad-banner" style="background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);">
+				<img
+					src="https://via.placeholder.com/250x180/ffee00/000000?text=Scoreboard"
+					alt="Top J-1 destinations"
+					class="ad-image"
+				/>
+				<div class="ad-content">
+					<h2 class="ad-title">
+						<a href="share-experience.html#scoreboard-container" rel="noopener sponsored">
+							Explore Top J-1 Work Destinations
+						</a>
+					</h2>
+					<p class="ad-description">
+						Discover the best states for your J-1 Summer Work & Travel experience. Compare wages, reviews, and insights shared by Jamaican participants.
+					</p>
+					<p class="ad-description">
+						Track 50+ destinations, shortlist your favorites, and jump straight to the scoreboard rankings.
+					</p>
+				</div>
+			</div>
+		</div>
+							<!-- State Scoreboard Section -->
+							<div class="map-container" style="margin-top: 3em;">
+								<h2>State Scoreboard - Top Rated J-1 Destinations</h2>
+								<p>See where other Jamaican participants had the best experiences</p>
+
+								<div id="scoreboard-container" style="margin-top: 2em;">
+									<!-- Scoreboard will be populated via JavaScript -->
+								</div>
+							</div>
+
+							<!-- Native Ad Section -->
+							<div style="margin-top: 3em; margin-bottom: 3em;">
+								<div class="native-ad native-ad-card" style="background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);">
+									<img src="assets/images/wp4013673.jpg" alt="J-1 Consulting" class="ad-image" />
+									<div class="ad-content">
+										<h2 class="ad-title">
+											<a href="#" rel="noopener sponsored">Need Help with Your J-1 Application?</a>
+										</h2>
+										<p class="ad-description">
+											Get expert guidance from certified J-1 consultants. We help Jamaican students navigate agency selection, visa preparation, and housing planning with confidence.
+										</p>
+										<p class="ad-description">
+											Schedule a free strategy call and receive a personalized checklist before you depart.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							</div>
+							<!-- End of state-selection div -->
+
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<section id="footer" class="wrapper">
+				<div class="title">Summary</div>
+				<div class="container">
+					<header class="style1">
+						<h2>Connect. Explore. Thrive—Prepare for Your J-1 Journey</h2>
+						<p>
+							Your J-1 Summer Work and Travel program is more than just a job abroad—it's a chance to explore the United States,
+							gain meaningful work experience, and create unforgettable memories. Whether you're preparing to embark on this adventure
+							or just exploring your options, JamWatHQ is here to guide you every step of the way. From choosing the right agency to
+							navigating visa requirements, we're your trusted source for accurate and practical information tailored to Jamaican
+							participants. Let's make your J-1 experience the journey of a lifetime.
+						</p>
+					</header>
+					<div class="row">
+						<div class="col-12">
+
+							<!-- Contact -->
+							<section class="feature-list small">
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<section>
+											<h3 class="icon solid fa-home">Mailing Address</h3>
+											<p>
+												Jamaica<br>
+												1234 Somewhere Rd<br>
+											</p>
+										</section>
+									</div>
+									<div class="col-6 col-12-small">
+										<section>
+											<h3 class="icon solid fa-comment">Social</h3>
+											<p>
+												<a href="https://www.instagram.com/jamwathq?utm_source=qr&igsh=MWgxdTlpY3NpcWx3bw==" target="_blank">instagram/JamWatHQ</a><br>
+												<a href="https://www.facebook.com/profile.php?id=61575307395932" target="_blank">facebook.com/JamWat</a>
+											</p>
+										</section>
+									</div>
+									<div class="col-6 col-12-small">
+										<section>
+											<h3 class="icon solid fa-envelope">Email</h3>
+											<p>
+												<a href="#">jamwathq@outlook.com</a>
+											</p>
+										</section>
+									</div>
+									<div class="col-6 col-12-small">
+										<section>
+											<h3 class="icon solid fa-phone">Phone</h3>
+											<p>
+												(876) 555-0000
+											</p>
+										</section>
+									</div>
+								</div>
+							</section>
+
+						</div>
+					</div>
+					<div id="copyright">
+						<ul>
+							<li>© JamWatHQ.</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="scripts/jquery.min.js"></script>
+		<script src="scripts/jquery.dropotron.min.js"></script>
+		<script src="scripts/browser.min.js"></script>
+		<script src="scripts/breakpoints.min.js"></script>
+		<script src="scripts/util.js"></script>
+		<script src="scripts/main.js"></script>
+		<script src="scripts/auth-client.js"></script>
+    <script src="scripts/login-init.js"></script>
+		<script src="scripts/video-ad.js"></script>
+
+		<!-- US Map and Experience Form Script -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-usmap/1.0.0/jquery.usmap.min.js"></script>
+
+		<script>
+			// ========================================
+			// CONFIGURATION
+			// ========================================
+
+			// Backend API base URL is already defined in auth-client.js
+			// No need to redeclare it here
+
+			// ========================================
+			// OAUTH AUTHENTICATION
+			// ========================================
+
+			// Store pending review data for TOS confirmation
+			let pendingReviewData = null;
+
+			// User authentication status
+			let isUserLoggedIn = false;
+
+			// Current user info from Google OAuth
+			let currentUser = {
+				firstName: '',
+				profilePic: '',
+				email: '',
+				googleId: ''
+			};
+
+			// Check if user is already logged in from server session
+			async function checkExistingSession() {
+				try {
+					const status = await window.authManager.checkAuthStatus();
+					if (status.authenticated && status.user) {
+						isUserLoggedIn = true;
+						currentUser = {
+							firstName: status.user.firstName || '',
+							profilePic: status.user.profilePicture || `https://ui-avatars.com/api/?name=${encodeURIComponent(status.user.firstName || 'User')}&background=ffee00&color=000`,
+							email: status.user.email || '',
+							userId: status.user._id || status.user.id || ''
+						};
+						console.log('User session restored from server:', currentUser);
+					} else {
+						isUserLoggedIn = false;
+						currentUser = {
+							firstName: '',
+							profilePic: '',
+							email: '',
+							userId: ''
+						};
+						console.log('No active session on server');
+					}
+					// updateHUD() call removed - now using Profile Hub instead
+				} catch (error) {
+					console.error('Error checking session:', error);
+					isUserLoggedIn = false;
+				}
+			}
+
+			// Handle OAuth login redirect - use centralized auth manager
+			function initiateGoogleLogin() {
+				window.authManager.loginWithGoogle();
+			}
+
+			function initiateFacebookLogin() {
+				window.authManager.loginWithFacebook();
+			}
+
+			// Logout function - use centralized auth manager
+			function logout() {
+				window.authManager.logout();
+			}
+			// OLD updateHUD() function removed - now using Profile Hub instead
+
+
+			// Login Modal Functions
+			function openLoginModal() {
+				const modal = document.getElementById("loginModal");
+				modal.style.display = "block";
+				// Focus first focusable element (Google sign-in button)
+				setTimeout(() => {
+					const focusableElement = modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+					if (focusableElement) focusableElement.focus();
+				}, 100);
+			}
+
+			function closeLoginModal() {
+				const modal = document.getElementById("loginModal");
+				modal.style.display = "none";
+			}
+
+			// TOS Modal Functions
+			function openTOSModal() {
+				const modal = document.getElementById("tosModal");
+				const checkbox = document.getElementById("tosCheckbox");
+				checkbox.checked = false;
+				toggleTOSAcceptButton();
+				modal.style.display = "block";
+				// Focus checkbox for accessibility
+				setTimeout(() => {
+					if (checkbox) checkbox.focus();
+				}, 100);
+			}
+
+			function closeTOSModal() {
+				const modal = document.getElementById("tosModal");
+				modal.style.display = "none";
+			}
+
+			function toggleTOSAcceptButton() {
+				const checkbox = document.getElementById("tosCheckbox");
+				const acceptBtn = document.getElementById("tosAcceptBtn");
+				acceptBtn.disabled = !checkbox.checked;
+			}
+
+			function acceptTOS() {
+				closeTOSModal();
+
+				if (!pendingReviewData) {
+					alert("No pending experience data found.");
+					return;
+				}
+
+				// Execute the actual submit function
+				submitExperienceConfirmed(pendingReviewData);
+				pendingReviewData = null;
+			}
+
+			function declineTOS() {
+				closeTOSModal();
+				pendingReviewData = null;
+				alert('Experience submission cancelled. Your experience has not been saved.');
+			}
+
+			// U.S. Legal Modal Functions
+			function openUSLegalModal(event) {
+				if (event) event.preventDefault();
+				const modal = document.getElementById("usLegalModal");
+				modal.style.display = "block";
+				// Focus close button for accessibility
+				setTimeout(() => {
+					const closeBtn = modal.querySelector('.close-modal-btn');
+					if (closeBtn) closeBtn.focus();
+				}, 100);
+			}
+
+			function closeUSLegalModal() {
+				const modal = document.getElementById("usLegalModal");
+				modal.style.display = "none";
+			}
+
+			// ========================================
+			// STATE SELECTION & FORM
+			// ========================================
+
+			// Simpler approach using list-based selection
+			const usStates = [
+				'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware',
+				'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky',
+				'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi',
+				'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico',
+				'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania',
+				'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+				'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+			];
+
+			// US State to Cities mapping - Comprehensive city list for J-1 programs
+			const stateToCities = {
+				'Alabama': ['Birmingham', 'Montgomery', 'Mobile', 'Huntsville', 'Tuscaloosa', 'Hoover', 'Dothan', 'Auburn', 'Decatur', 'Madison'],
+				'Alaska': ['Anchorage', 'Fairbanks', 'Juneau', 'Sitka', 'Ketchikan', 'Wasilla', 'Kenai', 'Kodiak', 'Bethel', 'Palmer'],
+				'Arizona': ['Phoenix', 'Tucson', 'Mesa', 'Chandler', 'Scottsdale', 'Glendale', 'Gilbert', 'Tempe', 'Peoria', 'Surprise', 'Yuma', 'Flagstaff', 'Sedona', 'Lake Havasu City'],
+				'Arkansas': ['Little Rock', 'Fort Smith', 'Fayetteville', 'Springdale', 'Jonesboro', 'North Little Rock', 'Conway', 'Rogers', 'Pine Bluff', 'Bentonville'],
+				'California': ['Los Angeles', 'San Diego', 'San Jose', 'San Francisco', 'Fresno', 'Sacramento', 'Long Beach', 'Oakland', 'Bakersfield', 'Anaheim', 'Santa Ana', 'Riverside', 'Stockton', 'Irvine', 'Chula Vista', 'Fremont', 'San Bernardino', 'Modesto', 'Fontana', 'Oxnard', 'Moreno Valley', 'Huntington Beach', 'Glendale', 'Santa Clarita', 'Garden Grove', 'Oceanside', 'Rancho Cucamonga', 'Santa Rosa', 'Ontario', 'Lancaster', 'Elk Grove', 'Corona', 'Palmdale', 'Salinas', 'Pomona', 'Hayward', 'Escondido', 'Torrance', 'Sunnyvale', 'Orange', 'Fullerton', 'Pasadena', 'Thousand Oaks', 'Visalia', 'Simi Valley', 'Concord', 'Roseville', 'Victorville', 'Santa Clara', 'Vallejo', 'Berkeley', 'El Monte', 'Downey', 'Costa Mesa', 'Inglewood', 'Carlsbad', 'San Buenaventura (Ventura)', 'Fairfield', 'West Covina', 'Murrieta', 'Richmond', 'Norwalk', 'Antioch', 'Temecula', 'Burbank', 'Daly City', 'Rialto', 'Santa Maria', 'El Cajon', 'San Mateo', 'Clovis', 'Compton', 'Jurupa Valley', 'Vista', 'South Gate', 'Mission Viejo', 'Vacaville', 'Carson', 'Hesperia', 'Santa Monica', 'Westminster', 'Redding', 'Santa Barbara', 'Chico', 'Newport Beach', 'San Marcos', 'Whittier', 'Hawthorne', 'Citrus Heights', 'Tracy', 'Alhambra', 'Livermore', 'Buena Park', 'Menifee', 'Hemet', 'Lakewood', 'Merced', 'Chino', 'Indio', 'Redwood City', 'Lake Forest', 'Napa', 'Tustin', 'Bellflower', 'Mountain View', 'Chino Hills', 'Baldwin Park', 'Alameda', 'Upland', 'San Ramon', 'Folsom', 'Pleasanton', 'Union City', 'Perris', 'Manteca', 'Lynwood', 'Apple Valley', 'Redlands', 'Turlock', 'Milpitas', 'Redondo Beach', 'Rancho Cordova', 'Yorba Linda', 'Palo Alto', 'Davis', 'Camarillo', 'Walnut Creek', 'Pittsburg', 'South San Francisco', 'Yuba City', 'San Clemente', 'Laguna Niguel', 'Pico Rivera', 'Montebello', 'Lodi', 'Madera', 'Santa Cruz', 'La Habra', 'Encinitas', 'Monterey Park', 'Tulare', 'Cupertino', 'Gardena', 'National City', 'Rocklin', 'Petaluma', 'Huntington Park', 'San Rafael', 'La Mesa', 'Arcadia', 'Fountain Valley', 'Diamond Bar', 'Woodland', 'Santee', 'Lake Elsinore', 'Porterville', 'Paramount', 'Eastvale', 'Rosemead', 'Hanford', 'Highland', 'Brentwood', 'Novato', 'Colton', 'Cathedral City', 'Delano', 'Yucaipa', 'Watsonville', 'Placentia', 'Glendora', 'Gilroy', 'Palm Desert', 'Cerritos', 'West Sacramento', 'Aliso Viejo', 'Poway', 'La Mirada', 'Rancho Santa Margarita', 'Cypress', 'Dublin', 'Covina', 'Azusa', 'La Puente', 'Gardena', 'Monrovia', 'Millbrae'],
+				'Colorado': ['Denver', 'Colorado Springs', 'Aurora', 'Fort Collins', 'Lakewood', 'Thornton', 'Arvada', 'Westminster', 'Pueblo', 'Centennial', 'Boulder', 'Greeley', 'Longmont', 'Loveland', 'Grand Junction', 'Broomfield', 'Castle Rock', 'Commerce City', 'Parker', 'Littleton', 'Northglenn'],
+				'Connecticut': ['Bridgeport', 'New Haven', 'Stamford', 'Hartford', 'Waterbury', 'Norwalk', 'Danbury', 'New Britain', 'Bristol', 'Meriden', 'Milford', 'West Haven', 'Middletown', 'Norwich', 'Shelton'],
+				'Delaware': ['Wilmington', 'Dover', 'Newark', 'Middletown', 'Smyrna', 'Milford', 'Seaford', 'Georgetown', 'Elsmere', 'New Castle'],
+				'Florida': ['Jacksonville', 'Miami', 'Tampa', 'Orlando', 'St. Petersburg', 'Hialeah', 'Port St. Lucie', 'Cape Coral', 'Tallahassee', 'Fort Lauderdale', 'Pembroke Pines', 'Hollywood', 'Miramar', 'Coral Springs', 'Clearwater', 'Miami Gardens', 'Palm Bay', 'West Palm Beach', 'Pompano Beach', 'Lakeland', 'Davie', 'Miami Beach', 'Sunrise', 'Plantation', 'Boca Raton', 'Deltona', 'Largo', 'Deerfield Beach', 'Palm Coast', 'Melbourne', 'Boynton Beach', 'Lauderhill', 'Weston', 'Fort Myers', 'Kissimmee', 'Homestead', 'Tamarac', 'Delray Beach', 'Daytona Beach', 'North Miami', 'Wellington', 'North Port', 'Jupiter', 'Ocala', 'Port Orange', 'Margate', 'Coconut Creek', 'Sanford', 'Sarasota', 'Pensacola', 'Bradenton', 'Palm Beach Gardens', 'Pinellas Park', 'Coral Gables', 'Doral', 'Bonita Springs', 'Apopka', 'Titusville', 'North Miami Beach', 'Oakland Park', 'Fort Pierce', 'North Lauderdale', 'Cutler Bay', 'Altamonte Springs', 'St. Cloud', 'Greenacres', 'Ormond Beach', 'Ocoee', 'Hallandale Beach', 'Winter Garden', 'Aventura', 'Winter Springs', 'Key West', 'Key Largo', 'Marathon', 'Islamorada', 'Naples', 'Panama City Beach', 'Destin', 'Fort Walton Beach', 'Cocoa Beach', 'Vero Beach', 'St. Augustine', 'Amelia Island'],
+				'Georgia': ['Atlanta', 'Columbus', 'Augusta', 'Savannah', 'Athens', 'Sandy Springs', 'Roswell', 'Macon', 'Johns Creek', 'Albany', 'Warner Robins', 'Alpharetta', 'Marietta', 'Valdosta', 'Smyrna', 'Dunwoody', 'Rome', 'East Point', 'Milton', 'Gainesville', 'Hinesville', 'Peachtree Corners', 'Newnan', 'Duluth', 'Brookhaven'],
+				'Hawaii': ['Honolulu', 'Pearl City', 'Hilo', 'Kailua', 'Waipahu', 'Kaneohe', 'Mililani', 'Kahului', 'Ewa Gentry', 'Kihei', 'Mililani Town', 'Makakilo', 'Wahiawa', 'Schofield Barracks', 'Halawa', 'Waikiki', 'Lahaina', 'Kona', 'Waimea', 'Princeville', 'Kaanapali', 'Wailea', 'Poipu'],
+				'Idaho': ['Boise', 'Meridian', 'Nampa', 'Idaho Falls', 'Pocatello', 'Caldwell', 'Coeur d\'Alene', 'Twin Falls', 'Lewiston', 'Post Falls', 'Rexburg', 'Eagle', 'Moscow', 'Kuna', 'Ammon'],
+				'Illinois': ['Chicago', 'Aurora', 'Naperville', 'Joliet', 'Rockford', 'Springfield', 'Elgin', 'Peoria', 'Champaign', 'Waukegan', 'Cicero', 'Bloomington', 'Arlington Heights', 'Evanston', 'Decatur', 'Schaumburg', 'Bolingbrook', 'Palatine', 'Skokie', 'Des Plaines', 'Orland Park', 'Tinley Park', 'Oak Lawn', 'Berwyn', 'Mount Prospect', 'Normal', 'Wheaton', 'Hoffman Estates', 'Oak Park', 'Downers Grove', 'Elmhurst', 'Glenview', 'DeKalb', 'Lombard', 'Belleville', 'Moline', 'Buffalo Grove', 'Bartlett', 'Urbana', 'Quincy', 'Crystal Lake', 'Plainfield', 'Streamwood', 'Carol Stream', 'Romeoville', 'Rock Island', 'Hanover Park', 'Carpentersville', 'Wheeling', 'Park Ridge', 'Addison', 'Calumet City'],
+				'Indiana': ['Indianapolis', 'Fort Wayne', 'Evansville', 'South Bend', 'Carmel', 'Fishers', 'Bloomington', 'Hammond', 'Gary', 'Muncie', 'Lafayette', 'Terre Haute', 'Kokomo', 'Anderson', 'Noblesville', 'Greenwood', 'Elkhart', 'Mishawaka', 'Lawrence', 'Jeffersonville', 'Columbus', 'Portage'],
+				'Iowa': ['Des Moines', 'Cedar Rapids', 'Davenport', 'Sioux City', 'Iowa City', 'Waterloo', 'Council Bluffs', 'Ames', 'West Des Moines', 'Dubuque', 'Ankeny', 'Urbandale', 'Cedar Falls', 'Marion', 'Bettendorf'],
+				'Kansas': ['Wichita', 'Overland Park', 'Kansas City', 'Olathe', 'Topeka', 'Lawrence', 'Shawnee', 'Manhattan', 'Lenexa', 'Salina', 'Hutchinson', 'Leavenworth', 'Leawood', 'Dodge City', 'Garden City'],
+				'Kentucky': ['Louisville', 'Lexington', 'Bowling Green', 'Owensboro', 'Covington', 'Richmond', 'Georgetown', 'Florence', 'Elizabethtown', 'Hopkinsville', 'Nicholasville', 'Henderson', 'Jeffersontown', 'Frankfort', 'Paducah'],
+				'Louisiana': ['New Orleans', 'Baton Rouge', 'Shreveport', 'Lafayette', 'Lake Charles', 'Kenner', 'Bossier City', 'Monroe', 'Alexandria', 'Houma', 'New Iberia', 'Slidell', 'Prairieville', 'Central', 'Ruston'],
+				'Maine': ['Portland', 'Lewiston', 'Bangor', 'South Portland', 'Auburn', 'Biddeford', 'Sanford', 'Augusta', 'Saco', 'Westbrook', 'Waterville', 'Presque Isle', 'Brewer', 'Bath', 'Caribou'],
+				'Maryland': ['Baltimore', 'Columbia', 'Germantown', 'Silver Spring', 'Waldorf', 'Glen Burnie', 'Ellicott City', 'Frederick', 'Dundalk', 'Rockville', 'Bethesda', 'Gaithersburg', 'Towson', 'Bowie', 'Aspen Hill', 'Wheaton', 'Potomac', 'Catonsville', 'Severn', 'Odenton'],
+				'Massachusetts': ['Boston', 'Worcester', 'Springfield', 'Cambridge', 'Lowell', 'Brockton', 'Quincy', 'Lynn', 'New Bedford', 'Fall River', 'Newton', 'Lawrence', 'Somerville', 'Framingham', 'Haverhill', 'Waltham', 'Malden', 'Brookline', 'Plymouth', 'Medford', 'Taunton', 'Chicopee', 'Weymouth', 'Revere', 'Peabody', 'Methuen', 'Barnstable', 'Pittsfield', 'Attleboro', 'Arlington'],
+				'Michigan': ['Detroit', 'Grand Rapids', 'Warren', 'Sterling Heights', 'Ann Arbor', 'Lansing', 'Flint', 'Dearborn', 'Livonia', 'Clinton Township', 'Canton Township', 'Westland', 'Troy', 'Farmington Hills', 'Macomb Township', 'Kalamazoo', 'Shelby Township', 'Wyoming', 'Southfield', 'Rochester Hills', 'Taylor', 'St. Clair Shores', 'Pontiac', 'Royal Oak', 'Novi', 'Dearborn Heights', 'Battle Creek', 'Saginaw', 'Kentwood', 'East Lansing', 'Roseville', 'Portage', 'Midland', 'Lincoln Park', 'Muskegon', 'Traverse City', 'Holland', 'Bay City', 'Jackson', 'Marquette', 'Alpena', 'Petoskey', 'Mackinaw City', 'Escanaba', 'Sault Ste. Marie'],
+				'Minnesota': ['Minneapolis', 'St. Paul', 'Rochester', 'Duluth', 'Bloomington', 'Brooklyn Park', 'Plymouth', 'St. Cloud', 'Eagan', 'Woodbury', 'Maple Grove', 'Eden Prairie', 'Coon Rapids', 'Burnsville', 'Blaine', 'Lakeville', 'Minnetonka', 'Apple Valley', 'Edina', 'St. Louis Park', 'Moorhead', 'Mankato', 'Shakopee', 'Maplewood', 'Cottage Grove'],
+				'Mississippi': ['Jackson', 'Gulfport', 'Southaven', 'Hattiesburg', 'Biloxi', 'Meridian', 'Tupelo', 'Olive Branch', 'Greenville', 'Horn Lake', 'Pearl', 'Clinton', 'Madison', 'Ridgeland', 'Starkville'],
+				'Missouri': ['Kansas City', 'St. Louis', 'Springfield', 'Columbia', 'Independence', 'Lee\'s Summit', 'O\'Fallon', 'St. Joseph', 'St. Charles', 'St. Peters', 'Blue Springs', 'Florissant', 'Joplin', 'Chesterfield', 'Jefferson City', 'Cape Girardeau', 'Oakville', 'Wildwood', 'University City', 'Ballwin', 'Raytown', 'Liberty', 'Wentzville', 'Nixa', 'Mehlville'],
+				'Montana': ['Billings', 'Missoula', 'Great Falls', 'Bozeman', 'Butte', 'Helena', 'Kalispell', 'Havre', 'Anaconda', 'Miles City', 'Belgrade', 'Livingston', 'Laurel', 'Whitefish', 'Lewistown'],
+				'Nebraska': ['Omaha', 'Lincoln', 'Bellevue', 'Grand Island', 'Kearney', 'Fremont', 'Hastings', 'Norfolk', 'Columbus', 'Papillion', 'North Platte', 'La Vista', 'Scottsbluff', 'South Sioux City', 'Beatrice'],
+				'Nevada': ['Las Vegas', 'Henderson', 'Reno', 'North Las Vegas', 'Sparks', 'Carson City', 'Fernley', 'Elko', 'Mesquite', 'Boulder City', 'Fallon', 'Winnemucca', 'West Wendover', 'Ely', 'Yerington'],
+				'New Hampshire': ['Manchester', 'Nashua', 'Concord', 'Derry', 'Dover', 'Rochester', 'Salem', 'Merrimack', 'Hudson', 'Londonderry', 'Keene', 'Bedford', 'Portsmouth', 'Goffstown', 'Laconia'],
+				'New Jersey': ['Newark', 'Jersey City', 'Paterson', 'Elizabeth', 'Edison', 'Woodbridge', 'Lakewood', 'Toms River', 'Hamilton Township', 'Trenton', 'Clifton', 'Camden', 'Brick Township', 'Cherry Hill', 'Passaic', 'Union City', 'Old Bridge', 'Gloucester Township', 'East Orange', 'Bayonne', 'Franklin Township', 'North Bergen', 'Vineland', 'Union', 'Piscataway', 'New Brunswick', 'Jackson Township', 'Wayne', 'Irvington', 'Parsippany-Troy Hills', 'Howell', 'Perth Amboy', 'Hoboken', 'Plainfield', 'West New York', 'Washington Township', 'Hackensack', 'Sayreville', 'Kearny', 'Linden', 'Atlantic City'],
+				'New Mexico': ['Albuquerque', 'Las Cruces', 'Rio Rancho', 'Santa Fe', 'Roswell', 'Farmington', 'South Valley', 'Clovis', 'Hobbs', 'Alamogordo', 'Carlsbad', 'Gallup', 'Deming', 'Los Lunas', 'Chaparral'],
+				'New York': ['New York City (Manhattan, Brooklyn, Queens, Bronx, Staten Island)', 'Buffalo', 'Yonkers', 'Rochester', 'Syracuse', 'Albany', 'New Rochelle', 'Mount Vernon', 'Schenectady', 'Utica', 'White Plains', 'Hempstead', 'Troy', 'Niagara Falls', 'Binghamton', 'Freeport', 'Valley Stream', 'Long Beach', 'Spring Valley', 'Poughkeepsie', 'West Seneca', 'Glens Falls', 'Rome', 'Ithaca', 'North Tonawanda', 'Jamestown'],
+				'North Carolina': ['Charlotte', 'Raleigh', 'Greensboro', 'Durham', 'Winston-Salem', 'Fayetteville', 'Cary', 'Wilmington', 'High Point', 'Concord', 'Greenville', 'Asheville', 'Gastonia', 'Jacksonville', 'Chapel Hill', 'Rocky Mount', 'Burlington', 'Wilson', 'Huntersville', 'Kannapolis', 'Apex', 'Hickory', 'Goldsboro', 'Indian Trail', 'Mooresville'],
+				'North Dakota': ['Fargo', 'Bismarck', 'Grand Forks', 'Minot', 'West Fargo', 'Williston', 'Dickinson', 'Mandan', 'Jamestown', 'Wahpeton', 'Devils Lake', 'Valley City', 'Grafton', 'Watford City', 'Lincoln'],
+				'Ohio': ['Columbus', 'Cleveland', 'Cincinnati', 'Toledo', 'Akron', 'Dayton', 'Parma', 'Canton', 'Youngstown', 'Lorain', 'Hamilton', 'Springfield', 'Kettering', 'Elyria', 'Lakewood', 'Cuyahoga Falls', 'Middletown', 'Euclid', 'Newark', 'Mansfield', 'Mentor', 'Beavercreek', 'Cleveland Heights', 'Strongsville', 'Dublin', 'Fairfield', 'Warren', 'Findlay', 'Lancaster', 'Lima', 'Huber Heights', 'Westerville', 'Marion', 'Grove City'],
+				'Oklahoma': ['Oklahoma City', 'Tulsa', 'Norman', 'Broken Arrow', 'Edmond', 'Lawton', 'Moore', 'Midwest City', 'Enid', 'Stillwater', 'Muskogee', 'Bartlesville', 'Owasso', 'Shawnee', 'Ponca City', 'Ardmore', 'Duncan', 'Bixby', 'Del City', 'Yukon'],
+				'Oregon': ['Portland', 'Eugene', 'Salem', 'Gresham', 'Hillsboro', 'Beaverton', 'Bend', 'Medford', 'Springfield', 'Corvallis', 'Albany', 'Tigard', 'Lake Oswego', 'Keizer', 'Grants Pass', 'Oregon City', 'McMinnville', 'Redmond', 'Tualatin', 'West Linn'],
+				'Pennsylvania': ['Philadelphia', 'Pittsburgh', 'Allentown', 'Erie', 'Reading', 'Scranton', 'Bethlehem', 'Lancaster', 'Harrisburg', 'Altoona', 'York', 'State College', 'Wilkes-Barre', 'Chester', 'Williamsport', 'Easton', 'Lebanon', 'Hazleton', 'New Castle', 'Johnstown', 'McKeesport', 'Hermitage', 'Greensburg', 'Lower Merion', 'Monroeville'],
+				'Rhode Island': ['Providence', 'Warwick', 'Cranston', 'Pawtucket', 'East Providence', 'Woonsocket', 'Coventry', 'Cumberland', 'North Providence', 'South Kingstown', 'West Warwick', 'Johnston', 'North Kingstown', 'Bristol', 'Westerly'],
+				'South Carolina': ['Columbia', 'Charleston', 'North Charleston', 'Mount Pleasant', 'Rock Hill', 'Greenville', 'Summerville', 'Sumter', 'Goose Creek', 'Hilton Head Island', 'Florence', 'Spartanburg', 'Myrtle Beach', 'Aiken', 'Anderson', 'Greer', 'Mauldin', 'Greenwood', 'North Augusta', 'Easley'],
+				'South Dakota': ['Sioux Falls', 'Rapid City', 'Aberdeen', 'Brookings', 'Watertown', 'Mitchell', 'Yankton', 'Pierre', 'Huron', 'Vermillion', 'Box Elder', 'Spearfish', 'Brandon', 'Sturgis', 'Harrisburg'],
+				'Tennessee': ['Nashville', 'Memphis', 'Knoxville', 'Chattanooga', 'Clarksville', 'Murfreesboro', 'Franklin', 'Jackson', 'Johnson City', 'Bartlett', 'Hendersonville', 'Kingsport', 'Collierville', 'Smyrna', 'Cleveland', 'Brentwood', 'Germantown', 'Columbia', 'Spring Hill', 'La Vergne'],
+				'Texas': ['Houston', 'San Antonio', 'Dallas', 'Austin', 'Fort Worth', 'El Paso', 'Arlington', 'Corpus Christi', 'Plano', 'Laredo', 'Lubbock', 'Garland', 'Irving', 'Amarillo', 'Grand Prairie', 'Brownsville', 'Pasadena', 'McKinney', 'Mesquite', 'McAllen', 'Killeen', 'Frisco', 'Waco', 'Carrollton', 'Denton', 'Midland', 'Abilene', 'Beaumont', 'Round Rock', 'Odessa', 'Wichita Falls', 'Richardson', 'Lewisville', 'Tyler', 'College Station', 'Pearland', 'San Angelo', 'Allen', 'League City', 'Sugar Land', 'Edinburg', 'Longview', 'Mission', 'Bryan', 'Baytown', 'Pharr', 'Temple', 'Missouri City', 'Flower Mound', 'Harlingen', 'North Richland Hills', 'Victoria', 'Conroe', 'New Braunfels', 'Mansfield', 'Cedar Park', 'Rowlett', 'Port Arthur', 'Euless', 'Georgetown', 'Pflugerville', 'DeSoto', 'San Marcos', 'Grapevine', 'Bedford', 'Galveston', 'Cedar Hill', 'Texas City', 'Wylie', 'Haltom City', 'Keller', 'Coppell', 'Rockwall', 'Huntsville', 'Duncanville', 'Sherman', 'The Colony', 'Burleson', 'Hurst', 'Lancaster', 'Texarkana', 'Friendswood', 'Weslaco'],
+				'Utah': ['Salt Lake City', 'West Valley City', 'Provo', 'West Jordan', 'Orem', 'Sandy', 'Ogden', 'St. George', 'Layton', 'Taylorsville', 'South Jordan', 'Lehi', 'Logan', 'Murray', 'Draper', 'Bountiful', 'Riverton', 'Roy', 'Spanish Fork', 'Pleasant Grove'],
+				'Vermont': ['Burlington', 'Essex', 'South Burlington', 'Colchester', 'Rutland', 'Bennington', 'Brattleboro', 'Hartford', 'Milton', 'Barre', 'Montpelier', 'Middlebury', 'St. Albans', 'Winooski', 'Williston'],
+				'Virginia': ['Virginia Beach', 'Norfolk', 'Chesapeake', 'Richmond', 'Newport News', 'Alexandria', 'Hampton', 'Roanoke', 'Portsmouth', 'Suffolk', 'Lynchburg', 'Harrisonburg', 'Leesburg', 'Charlottesville', 'Blacksburg', 'Danville', 'Manassas', 'Petersburg', 'Fredericksburg', 'Winchester', 'Salem', 'Staunton', 'Herndon', 'Waynesboro', 'Christiansburg'],
+				'Washington': ['Seattle', 'Spokane', 'Tacoma', 'Vancouver', 'Bellevue', 'Kent', 'Everett', 'Renton', 'Spokane Valley', 'Federal Way', 'Yakima', 'Bellingham', 'Kennewick', 'Auburn', 'Pasco', 'Marysville', 'Lakewood', 'Redmond', 'Shoreline', 'Richland', 'Kirkland', 'Burien', 'Sammamish', 'Olympia', 'Lacey', 'Edmonds', 'Bremerton', 'Puyallup', 'Pullman', 'Wenatchee'],
+				'West Virginia': ['Charleston', 'Huntington', 'Morgantown', 'Parkersburg', 'Wheeling', 'Weirton', 'Fairmont', 'Beckley', 'Martinsburg', 'Clarksburg', 'South Charleston', 'St. Albans', 'Vienna', 'Bluefield', 'Bridgeport'],
+				'Wisconsin': ['Milwaukee', 'Madison', 'Green Bay', 'Kenosha', 'Racine', 'Appleton', 'Waukesha', 'Eau Claire', 'Oshkosh', 'Janesville', 'West Allis', 'La Crosse', 'Sheboygan', 'Wauwatosa', 'Fond du Lac', 'New Berlin', 'Wausau', 'Brookfield', 'Greenfield', 'Beloit', 'Franklin', 'Oak Creek', 'Manitowoc', 'West Bend', 'Sun Prairie'],
+				'Wyoming': ['Cheyenne', 'Casper', 'Laramie', 'Gillette', 'Rock Springs', 'Sheridan', 'Green River', 'Evanston', 'Riverton', 'Jackson', 'Cody', 'Rawlins', 'Lander', 'Torrington', 'Powell']
+			};
+
+			// Currently selected state
+			let selectedState = null;
+			let selectedRating = 0;
+
+			// State review data (sample data - in production this would come from a database)
+			let stateReviews = {};
+
+			// Initialize with zero data (no reviews yet)
+			function initializeStateData() {
+				usStates.forEach(state => {
+					stateReviews[state] = {
+						reviewCount: 0,
+						avgRating: 0,
+						avgWage: 0,
+						totalRating: 0
+					};
+				});
+			}
+
+			// Initialize the state grid
+			function initializeMap() {
+				const grid = document.getElementById('states-grid');
+
+				usStates.forEach(stateName => {
+					const button = document.createElement('div');
+					button.className = 'state-button';
+					button.textContent = stateName;
+					button.setAttribute('data-state', stateName);
+
+					button.addEventListener('click', function() {
+						openModal(stateName);
+					});
+
+					grid.appendChild(button);
+				});
+			}
+
+			// Populate city dropdown based on selected state
+			function populateCityDropdown(stateName) {
+				const citySelect = document.getElementById('city');
+				const cities = stateToCities[stateName] || [];
+
+				// Clear existing options
+				citySelect.innerHTML = '';
+
+				// Add placeholder option
+				const placeholderOption = document.createElement('option');
+				placeholderOption.value = '';
+				placeholderOption.disabled = true;
+				placeholderOption.selected = true;
+				placeholderOption.textContent = cities.length > 0 ? 'Select a city...' : 'No cities available';
+				citySelect.appendChild(placeholderOption);
+
+				// Add city options
+				cities.forEach(city => {
+					const option = document.createElement('option');
+					option.value = city;
+					option.textContent = city;
+					citySelect.appendChild(option);
+				});
+
+				// Add "Other" option to allow custom input
+				const otherOption = document.createElement('option');
+				otherOption.value = 'Other';
+				otherOption.textContent = 'Other (not listed)';
+				citySelect.appendChild(otherOption);
+			}
+
+			// Modal functions
+			function openModal(stateName) {
+				selectedState = stateName;
+				const modal = document.getElementById('reviewModal');
+				const modalTitle = document.getElementById('modalTitle');
+				modalTitle.textContent = `Share Your Experience in ${stateName}`;
+				modal.classList.add('show');
+
+				// Populate city dropdown for this state
+				populateCityDropdown(stateName);
+
+				// Highlight selected state button
+				document.querySelectorAll('.state-button').forEach(button => {
+					button.classList.remove('selected');
+				});
+				const selectedButton = document.querySelector(`.state-button[data-state="${stateName}"]`);
+				if (selectedButton) {
+					selectedButton.classList.add('selected');
+				}
+			}
+
+			function closeModal() {
+				const modal = document.getElementById('reviewModal');
+				modal.classList.remove('show');
+				resetForm();
+			}
+
+			// Star rating function
+			function setRating(rating) {
+				selectedRating = rating;
+				document.getElementById('rating').value = rating;
+
+				const stars = document.querySelectorAll('.star-rating i');
+				stars.forEach((star, index) => {
+					if (index < rating) {
+						star.classList.remove('far');
+						star.classList.add('fas', 'active');
+					} else {
+						star.classList.remove('fas', 'active');
+						star.classList.add('far');
+					}
+				});
+			}
+
+			// Form submission - Step 1: Validate and check login
+			async function submitExperience(event) {
+				event.preventDefault();
+
+				// STEP 1: Validate rating is selected
+				if (selectedRating === 0) {
+					alert('Please select a rating before submitting.');
+					return;
+				}
+
+				// STEP 2: Check if user is logged in
+				if (!isUserLoggedIn) {
+					console.log('User not logged in - showing login modal');
+
+					// Store pending review data
+					const formData = {
+						state: selectedState,
+						jobTitle: document.getElementById('jobTitle').value,
+						employer: document.getElementById('employer').value,
+						city: document.getElementById('city').value,
+						wages: document.getElementById('wages').value,
+						hoursPerWeek: document.getElementById('hoursPerWeek').value,
+						rating: selectedRating,
+						usageFrequency: document.getElementById('usageFrequency').value,
+						experience: document.getElementById('experience').value
+					};
+
+					pendingReviewData = formData;
+
+					// Store in sessionStorage to persist through OAuth redirect
+					sessionStorage.setItem('pendingReviewData', JSON.stringify(formData));
+
+					// Show login modal
+					openLoginModal();
+					return;
+				}
+
+				// STEP 3: User is logged in, collect form data
+				const formData = {
+					state: selectedState,
+					jobTitle: document.getElementById('jobTitle').value,
+					employer: document.getElementById('employer').value,
+					city: document.getElementById('city').value,
+					wages: document.getElementById('wages').value,
+					hoursPerWeek: document.getElementById('hoursPerWeek').value,
+					rating: selectedRating,
+					usageFrequency: document.getElementById('usageFrequency').value,
+					experience: document.getElementById('experience').value
+				};
+
+				// Store pending review data for TOS confirmation
+				pendingReviewData = formData;
+
+				// Show TOS modal - user must accept before submission
+				openTOSModal();
+			}
+
+			// Form submission - Step 2: Actually submit after TOS acceptance
+			async function submitExperienceConfirmed(formData) {
+				try {
+					// Add user info and TOS acceptance to formData
+					const submissionData = {
+						state: formData.state,
+						jobTitle: formData.jobTitle,
+						employer: formData.employer,
+						city: formData.city,
+						wages: formData.wages,
+						hoursPerWeek: formData.hoursPerWeek,
+						rating: formData.rating,
+						experience: formData.experience,
+						timesUsed: parseInt(formData.usageFrequency),
+						tosAccepted: true  // User accepted TOS in modal
+					};
+
+					console.log('Submitting experience to backend:', submissionData);
+
+					// Get CSRF token first
+					const csrfResponse = await fetch(`${API_BASE_URL}/api/csrf-token`, {
+						method: 'GET',
+						credentials: 'include'
+					});
+					const csrfData = await csrfResponse.json();
+					const csrfToken = csrfData.csrfToken;
+
+					// Submit to backend API
+					const response = await fetch(`${API_BASE_URL}/api/reviews`, {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json',
+							'CSRF-Token': csrfToken
+						},
+						credentials: 'include',
+						body: JSON.stringify(submissionData)
+					});
+
+					const result = await response.json();
+
+					if (result.success) {
+						// Extract numeric wage value for local update
+						const wageValue = parseFloat(formData.wages.replace(/[^0-9.]/g, '')) || 0;
+
+						// Update local scoreboard
+						updateStateReview(selectedState, selectedRating, wageValue);
+
+						alert(`Thank you for sharing your experience in ${selectedState}! Your experience has been submitted successfully.`);
+						closeModal();
+
+						// Reload stats from server
+						await loadStatsFromServer();
+					} else {
+						alert(`Failed to submit experience: ${result.message || 'Please try again.'}`);
+					}
+				} catch (error) {
+					console.error('Error submitting experience:', error);
+					alert('An error occurred while submitting your experience. Please check your internet connection and try again.');
+				}
+			}
+
+			// Hourly wage input validation and formatting
+			function formatWageInput(event) {
+				const input = event.target;
+				let value = input.value;
+
+				// Remove all non-numeric characters except period and dollar sign
+				value = value.replace(/[^0-9.]/g, '');
+
+				// Ensure only one decimal point
+				const parts = value.split('.');
+				if (parts.length > 2) {
+					value = parts[0] + '.' + parts.slice(1).join('');
+				}
+
+				// Limit to 2 decimal places
+				if (parts.length === 2 && parts[1].length > 2) {
+					value = parts[0] + '.' + parts[1].substring(0, 2);
+				}
+
+				// Add dollar sign prefix if there's a value
+				if (value && !value.startsWith('$')) {
+					value = '$' + value;
+				}
+
+				input.value = value;
+			}
+
+			// Prevent non-numeric keypress on wage input
+			function validateWageKeyPress(event) {
+				const char = String.fromCharCode(event.which);
+				// Allow: numbers, period, backspace, delete, tab, arrow keys
+				if (!/[0-9.]/.test(char) && event.which !== 8 && event.which !== 46 && event.which !== 9 && !(event.which >= 37 && event.which <= 40)) {
+					event.preventDefault();
+					return false;
+				}
+				return true;
+			}
+
+			// Reset form
+			function resetForm() {
+				document.getElementById('experienceForm').reset();
+				selectedRating = 0;
+				document.querySelectorAll('.star-rating i').forEach(star => {
+					star.classList.remove('fas', 'active');
+					star.classList.add('far');
+				});
+				document.querySelectorAll('.state-button').forEach(button => {
+					button.classList.remove('selected');
+				});
+			}
+
+			// Close modal when clicking outside
+			window.onclick = function(event) {
+				const modal = document.getElementById('reviewModal');
+				if (event.target == modal) {
+					closeModal();
+				}
+			}
+
+			// Load stats from server
+			async function loadStatsFromServer() {
+				try {
+					// Fetch stats from backend API
+					const response = await fetch(`${API_BASE_URL}/api/reviews/stats`, {
+						method: 'GET',
+						credentials: 'include'
+					});
+
+					if (!response.ok) {
+						throw new Error('Failed to fetch stats');
+					}
+
+					const data = await response.json();
+
+					if (data.success && data.stats) {
+						// Update local stateReviews with server data
+						data.stats.forEach(stat => {
+							if (stateReviews[stat.state]) {
+								stateReviews[stat.state] = {
+									reviewCount: stat.reviewCount,
+									avgRating: parseFloat(stat.avgRating),
+									avgWage: parseFloat(stat.avgWage),
+									totalRating: stat.avgRating * stat.reviewCount
+								};
+							}
+						});
+					}
+
+					// Render scoreboard with updated data
+					renderScoreboard();
+				} catch (error) {
+					console.error('Error loading stats from server:', error);
+					// Fall back to local data
+					renderScoreboard();
+				}
+			}
+
+			// Load analytics from server (visitor count and average revisit)
+			async function loadAnalyticsFromServer() {
+				try {
+					const response = await fetch(`${API_BASE_URL}/api/reviews/analytics`, {
+						method: 'GET',
+						credentials: 'include'
+					});
+
+					if (!response.ok) {
+						throw new Error('Failed to fetch analytics');
+					}
+
+					const data = await response.json();
+
+					if (data.success && data.analytics) {
+						// Store analytics data globally for display
+						window.stateAnalytics = {};
+						data.analytics.forEach(analytic => {
+							window.stateAnalytics[analytic.state] = {
+								totalVisitors: analytic.totalVisitors,
+								avgRevisit: analytic.avgRevisit
+							};
+						});
+
+						// Re-render scoreboard with analytics data
+						renderScoreboard();
+					}
+				} catch (error) {
+					console.error('Error loading analytics from server:', error);
+					window.stateAnalytics = {};
+				}
+			}
+
+			// Render scoreboard with top 25 states (5x5 grid) ranked by rating
+			function renderScoreboard() {
+				const container = document.getElementById('scoreboard-container');
+
+				// Sort states by average rating (descending) and take only first 25
+				const sortedStates = Object.entries(stateReviews)
+					.sort((a, b) => b[1].avgRating - a[1].avgRating)
+					.slice(0, 25);
+
+				const scoreboardHTML = `
+					<div class="scoreboard-list">
+						${sortedStates.map((entry, index) => {
+							const [state, data] = entry;
+							const rank = index + 1;
+							const isTop3 = rank <= 3;
+
+							// Get analytics data if available
+							const analytics = window.stateAnalytics && window.stateAnalytics[state];
+							const visitorInfo = analytics
+								? `<div style="color: #28a745; font-size: 0.9em; margin-top: 0.3em;">
+									<i class="fas fa-users"></i> ${analytics.totalVisitors} visitors |
+									<i class="fas fa-redo"></i> Avg. ${analytics.avgRevisit}x revisit
+								   </div>`
+								: '';
+
+							// Generate star display
+							const fullStars = Math.floor(data.avgRating);
+							const hasHalfStar = data.avgRating % 1 >= 0.5;
+							let starsHTML = '';
+
+							for (let i = 0; i < fullStars; i++) {
+								starsHTML += '<i class="fas fa-star"></i>';
+							}
+							if (hasHalfStar) {
+								starsHTML += '<i class="fas fa-star-half-alt"></i>';
+							}
+							for (let i = fullStars + (hasHalfStar ? 1 : 0); i < 5; i++) {
+								starsHTML += '<i class="far fa-star"></i>';
+							}
+
+							return `
+								<div class="scoreboard-item" onclick="openReviewsPopup('${state}')" style="cursor: pointer;" role="button" tabindex="0" aria-label="View reviews for ${state}">
+									<div class="scoreboard-rank ${isTop3 ? 'top3' : ''}">#${rank}</div>
+									<div class="scoreboard-state">${state}</div>
+									<div class="scoreboard-stats">
+										<div class="scoreboard-rating">
+											<span class="scoreboard-stars">${starsHTML}</span>
+											<span>${data.avgRating.toFixed(1)}</span>
+										</div>
+										<div class="scoreboard-reviews">${data.reviewCount} reviews</div>
+									</div>
+									<div class="scoreboard-avg-wage">Avg. Wage: $${data.avgWage}/hr</div>
+									${visitorInfo}
+								</div>
+							`;
+						}).join('')}
+					</div>
+				`;
+
+				container.innerHTML = scoreboardHTML;
+			}
+
+			// Update state data when new review is submitted
+			function updateStateReview(state, rating, wage) {
+				if (stateReviews[state]) {
+					const data = stateReviews[state];
+					const totalRating = (data.avgRating * data.reviewCount) + rating;
+					const totalWage = (data.avgWage * data.reviewCount) + parseFloat(wage);
+
+					data.reviewCount += 1;
+					data.avgRating = totalRating / data.reviewCount;
+					data.avgWage = totalWage / data.reviewCount;
+				}
+
+				// Re-render scoreboard with updated data
+				renderScoreboard();
+			}
+
+			// ========================================
+			// REVIEW POPUP FUNCTIONALITY
+			// ========================================
+
+			// State for review popup
+			let currentPopupState = null;
+			let currentPage = 1;
+			const reviewsPerPage = 10;
+			let allStateReviews = [];
+
+			// Gender icon mapping
+			function getGenderIcon(gender) {
+				switch (gender) {
+					case 'male':
+						return '<i class="fas fa-mars"></i>';
+					case 'female':
+						return '<i class="fas fa-venus"></i>';
+					case 'other':
+						return '<i class="fas fa-transgender"></i>';
+					default:
+						return '<i class="fas fa-user"></i>';
+				}
+			}
+
+			// Open reviews popup for a state
+			async function openReviewsPopup(stateName) {
+				currentPopupState = stateName;
+				currentPage = 1;
+
+				// Update modal title
+				document.getElementById('reviewsStateName').textContent = stateName;
+
+				// Show modal
+				const modal = document.getElementById('reviewsPopupModal');
+				modal.classList.add('show');
+
+				// Fetch reviews for this state
+				await fetchStateReviews(stateName);
+			}
+
+			// Close reviews popup
+			function closeReviewsPopup() {
+				const modal = document.getElementById('reviewsPopupModal');
+				modal.classList.remove('show');
+				currentPopupState = null;
+				currentPage = 1;
+				allStateReviews = [];
+			}
+
+			// Fetch reviews for a specific state
+			async function fetchStateReviews(stateName) {
+				try {
+					const response = await fetch(`${API_BASE_URL}/api/reviews/state/${encodeURIComponent(stateName)}`, {
+						method: 'GET',
+						credentials: 'include'
+					});
+
+					if (!response.ok) {
+						throw new Error('Failed to fetch reviews');
+					}
+
+					const data = await response.json();
+
+					if (data.success) {
+						allStateReviews = data.reviews;
+						renderReviews();
+					} else {
+						showNoReviewsMessage();
+					}
+				} catch (error) {
+					console.error('Error fetching state reviews:', error);
+					showNoReviewsMessage();
+				}
+			}
+
+			// Render reviews with pagination
+			function renderReviews() {
+				const container = document.getElementById('reviewsListContainer');
+
+				if (allStateReviews.length === 0) {
+					showNoReviewsMessage();
+					return;
+				}
+
+				// Calculate pagination
+				const totalPages = Math.ceil(allStateReviews.length / reviewsPerPage);
+				const startIndex = (currentPage - 1) * reviewsPerPage;
+				const endIndex = startIndex + reviewsPerPage;
+				const pageReviews = allStateReviews.slice(startIndex, endIndex);
+
+				// Render reviews
+				const reviewsHTML = pageReviews.map(review => {
+					// Format date
+					const date = new Date(review.createdAt);
+					const formattedDate = date.toLocaleDateString('en-US', {
+						year: 'numeric',
+						month: 'short',
+						day: 'numeric'
+					});
+
+					// Generate star rating
+					const stars = Array.from({ length: 5 }, (_, i) =>
+						i < review.rating ? '<i class="fas fa-star"></i>' : '<i class="far fa-star"></i>'
+					).join('');
+
+					return `
+						<div class="review-item">
+							<div class="review-header">
+								<div class="review-user-icon">
+									${getGenderIcon(review.userGender)}
+								</div>
+								<div class="review-user-info">
+									<div class="review-user-name">${review.userFirstName}</div>
+									<div class="review-metadata">${review.jobTitle}${review.employer ? ' at ' + review.employer : ''} • ${formattedDate}</div>
+								</div>
+								<div class="review-rating">
+									${stars}
+								</div>
+							</div>
+							<div class="review-details">
+								<div class="review-detail-item">
+									<div class="review-detail-label">Location</div>
+									<div class="review-detail-value">${review.city || 'Not specified'}</div>
+								</div>
+								<div class="review-detail-item">
+									<div class="review-detail-label">Hourly Wage</div>
+									<div class="review-detail-value">$${review.wages.toFixed(2)}</div>
+								</div>
+								<div class="review-detail-item">
+									<div class="review-detail-label">Hours/Week</div>
+									<div class="review-detail-value">${review.hoursPerWeek} hrs</div>
+								</div>
+								<div class="review-detail-item">
+									<div class="review-detail-label">Times Visited</div>
+									<div class="review-detail-value">${review.timesUsed}x</div>
+								</div>
+								<div class="review-detail-item">
+									<div class="review-detail-label">Overall Rating</div>
+									<div class="review-detail-value">${review.rating}/5 stars</div>
+								</div>
+							</div>
+							<div class="review-experience-text">
+								<span class="review-experience-label">Experience:</span>
+								${review.experience}
+							</div>
+						</div>
+					`;
+				}).join('');
+
+				container.innerHTML = reviewsHTML;
+
+				// Update pagination
+				updatePagination(totalPages);
+			}
+
+			// Update pagination controls
+			function updatePagination(totalPages) {
+				const paginationContainer = document.getElementById('paginationContainer');
+				const prevBtn = document.getElementById('prevPageBtn');
+				const nextBtn = document.getElementById('nextPageBtn');
+				const paginationInfo = document.getElementById('paginationInfo');
+
+				if (totalPages <= 1) {
+					paginationContainer.style.display = 'none';
+					return;
+				}
+
+				paginationContainer.style.display = 'flex';
+				paginationInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+
+				// Enable/disable buttons
+				prevBtn.disabled = currentPage === 1;
+				nextBtn.disabled = currentPage === totalPages;
+			}
+
+			// Change page
+			function changePage(direction) {
+				const totalPages = Math.ceil(allStateReviews.length / reviewsPerPage);
+				const newPage = currentPage + direction;
+
+				if (newPage >= 1 && newPage <= totalPages) {
+					currentPage = newPage;
+					renderReviews();
+					// Scroll to top of reviews container
+					document.getElementById('reviewsListContainer').scrollTop = 0;
+				}
+			}
+
+			// Show no reviews message
+			function showNoReviewsMessage() {
+				const container = document.getElementById('reviewsListContainer');
+				container.innerHTML = `
+					<div class="no-reviews-message">
+						<i class="fas fa-inbox"></i>
+						<p>No reviews yet for ${currentPopupState}.</p>
+						<p>Be the first to share your experience!</p>
+					</div>
+				`;
+				document.getElementById('paginationContainer').style.display = 'none';
+			}
+
+			// Keyboard accessibility - Escape key closes modals (except TOS which requires explicit action)
+			document.addEventListener('keydown', function(event) {
+				if (event.key === 'Escape' || event.keyCode === 27) {
+					const loginModal = document.getElementById('loginModal');
+					const reviewsPopup = document.getElementById('reviewsPopupModal');
+					const usLegalModal = document.getElementById('usLegalModal');
+
+					// Close U.S. Legal modal with Escape
+					if (usLegalModal && usLegalModal.style.display === 'block') {
+						closeUSLegalModal();
+						return;
+					}
+
+					// Close reviews popup with Escape
+					if (reviewsPopup && reviewsPopup.classList.contains('show')) {
+						closeReviewsPopup();
+						return;
+					}
+
+					// Only close login modal with Escape - TOS requires explicit decline
+					if (loginModal && loginModal.style.display === 'block') {
+						closeLoginModal();
+						pendingReviewData = null; // Clear pending data when user cancels
+					}
+				}
+			});
+
+			// Initialize map when page loads
+			document.addEventListener('DOMContentLoaded', async function() {
+				// Check URL parameters for auth status
+				const urlParams = new URLSearchParams(window.location.search);
+				const authStatus = urlParams.get('auth');
+
+				// Restore pending review data from sessionStorage
+				const savedPendingData = sessionStorage.getItem('pendingReviewData');
+				if (savedPendingData) {
+					try {
+						pendingReviewData = JSON.parse(savedPendingData);
+						console.log('Restored pending review data');
+					} catch (error) {
+						console.error('Error restoring pending data:', error);
+						sessionStorage.removeItem('pendingReviewData');
+					}
+				}
+
+				if (authStatus === 'success') {
+					// Clear URL parameter
+					window.history.replaceState({}, document.title, window.location.pathname);
+					// Show success message after checking session
+				} else if (authStatus === 'failed') {
+					alert('Login failed. Please try again.');
+					window.history.replaceState({}, document.title, window.location.pathname);
+					// Clear pending data on auth failure
+					sessionStorage.removeItem('pendingReviewData');
+					pendingReviewData = null;
+				}
+
+				// Check for existing login session
+				await checkExistingSession();
+				// OLD updateHUD() call removed - Profile Hub handles this automatically
+
+				// Ensure state selector and scoreboard are always visible on this page
+				const stateSelection = document.getElementById('state-selection');
+				if (stateSelection) {
+					stateSelection.style.display = 'block';
+				}
+
+				if (isUserLoggedIn) {
+					console.log('User is logged in:', currentUser.firstName);
+
+					// If user just logged in and has pending data, show TOS modal
+					if (authStatus === 'success' && pendingReviewData) {
+						alert(`Welcome, ${currentUser.firstName}! You are now logged in.`);
+						// Clear from storage since we're about to process it
+						sessionStorage.removeItem('pendingReviewData');
+						openTOSModal();
+					}
+				} else {
+					console.log('User is not logged in');
+				}
+
+				// Initialize local data
+				initializeStateData();
+				initializeMap();
+
+				// Load stats and analytics from server
+				await loadStatsFromServer();
+				await loadAnalyticsFromServer();
+
+				// Add wage input validation event listeners
+				const wagesInput = document.getElementById('wages');
+				if (wagesInput) {
+					// Format on input (as user types)
+					wagesInput.addEventListener('input', formatWageInput);
+					// Prevent non-numeric on keypress
+					wagesInput.addEventListener('keypress', validateWageKeyPress);
+					// Format on blur (when field loses focus)
+					wagesInput.addEventListener('blur', function(event) {
+						const input = event.target;
+						let value = input.value.replace(/[^0-9.]/g, '');
+						if (value) {
+							// Ensure 2 decimal places
+							const numValue = parseFloat(value);
+							if (!isNaN(numValue)) {
+								input.value = '$' + numValue.toFixed(2);
+							}
+						}
+					});
+				}
+			});
+		</script>        <!-- Profile Hub JavaScript -->
+    <script>
+      // Update profile hub based on login status
+      function updateProfileHub() {
+        const profileBtn = document.getElementById('profile-hub-btn');
+        if (!profileBtn) return;
+
+        // Check if user is logged in using authManager
+        if (window.authManager) {
+          window.authManager.checkAuthStatus().then(status => {
+            if (status.authenticated && status.user) {
+              // User is logged in - show username and logout option
+              const username = status.user.firstName || status.user.name || status.user.email.split('@')[0];
+              profileBtn.innerHTML = `<span class="profile-username">${username}</span><span class="profile-logout">(Logout)</span>`;
+              profileBtn.classList.add('logged-in');
+              profileBtn.title = `Logged in as ${status.user.email}`;
+            } else {
+              // User is not logged in - show login button
+              profileBtn.textContent = 'Login';
+              profileBtn.classList.remove('logged-in');
+              profileBtn.title = 'Click to login';
+            }
+          }).catch(err => {
+            console.error('Error checking auth status:', err);
+            profileBtn.textContent = 'Login';
+            profileBtn.classList.remove('logged-in');
+          });
+        } else {
+          // authManager not available yet - show login
+          profileBtn.textContent = 'Login';
+          profileBtn.classList.remove('logged-in');
+        }
+      }
+
+      // Handle login/logout button click
+      function handleProfileHub() {
+        const profileBtn = document.getElementById('profile-hub-btn');
+        if (!profileBtn) return;
+
+        if (profileBtn.classList.contains('logged-in')) {
+          // User is logged in - perform logout
+          if (window.authManager) {
+            window.authManager.logout();
+          }
+        } else {
+          // User is not logged in - show login modal
+          const loginModal = document.getElementById('loginModal');
+          if (loginModal) {
+            loginModal.style.display = 'flex';
+          }
+        }
+      }
+
+      // Initialize profile hub on page load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+          // Wait a bit for authManager to initialize
+          setTimeout(updateProfileHub, 500);
+        });
+      } else {
+        setTimeout(updateProfileHub, 500);
+      }
+
+      // Listen for auth state changes
+      window.addEventListener('authStateChanged', function(event) {
+        console.log('Auth state changed:', event.detail);
+        updateProfileHub();
+      });
+
+      // Also update when page becomes visible (user returns to tab)
+      document.addEventListener('visibilitychange', function() {
+        if (!document.hidden) {
+          updateProfileHub();
+        }
+      });
+    </script>
+
+    <!-- Profile Hub Container - Positioned Above Support Container -->
+    <div class="profile-hub-container">
+      <!-- Profile Hub Button (Left) -->
+      <button id="profile-hub-btn" class="profile-hub-btn" >
+        Login
+      </button>
+      <!-- Profile Icon with Yellow Glow (Right) -->
+      <div class="profile-icon" title="User Profile">
+        <i class="fa fa-user"></i>
+      </div>
+    </div>
+
+
+
+		<!-- Support Container - Horizontal Layout with Report Button Beside Gear Icon -->
+		<div class="support-container">
+			<!-- Report Problem Button -->
+			<a href="report-problem.html" class="report-problem-btn" title="Report a problem">
+				Report a problem
+			</a>
+			<!-- Floating Gear Icon with Yellow Glow -->
+			<a href="report-problem.html" class="floating-gear-icon" title="Report a problem">
+				<i class="fa fa-cog" aria-hidden="true"></i>
+			</a>
+		</div>
+
+		<!-- Login Modal -->
+		<div id="loginModal" class="modal" role="dialog" aria-labelledby="loginModalTitle" aria-describedby="loginModalDesc" aria-modal="true">
+			<div class="modal-content auth-modal-content" style="max-width: 500px; background: #1a1a1a; border: 3px solid #ffee00; padding: 2em; text-align: center; border-radius: 8px;">
+				<h2 id="loginModalTitle" style="color: #ffee00; margin-bottom: 1em;"><i class="fas fa-sign-in-alt" aria-hidden="true"></i> Login Required</h2>
+				<p id="loginModalDesc" style="color: #ffffff; margin-bottom: 1em;">You must be logged in to submit your experience. This helps us maintain authentic and trustworthy feedback from real J-1 participants.</p>
+				<p style="color: #ffffff; margin-bottom: 1.5em;">Please log in with Google or Facebook to continue.</p>
+				<div style="display: flex; flex-direction: column; align-items: center; gap: 1em;">
+					<button onclick="initiateGoogleLogin()" class="btn-standard btn-google" aria-label="Sign in with Google" style="width: 280px;">
+						<i class="fab fa-google"></i> Sign in with Google
+					</button>
+					<button onclick="initiateFacebookLogin()" class="btn-standard btn-facebook" aria-label="Sign in with Facebook" style="width: 280px;">
+						<i class="fab fa-facebook"></i> Sign in with Facebook
+					</button>
+					<button id="btn-cancel-login" class="btn-standard btn-secondary" aria-label="Cancel login and close modal" style="width: 280px;">Cancel</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- TOS Modal -->
+		<div id="tosModal" class="modal" role="dialog" aria-labelledby="tosModalTitle" aria-describedby="tosModalDesc" aria-modal="true">
+			<div class="modal-content tos-modal-content" style="max-width: 650px;">
+				<h2 id="tosModalTitle"><i class="fas fa-file-contract" aria-hidden="true"></i> Review Submission Agreement</h2>
+				<div id="tosModalDesc" class="tos-text-box" style="max-height: 300px;">
+					<p><strong>By submitting, you confirm:</strong></p>
+					<ul style="line-height: 1.6; margin-bottom: 0.5em;">
+						<li>Your experience is <strong>genuine</strong> and information is <strong>accurate</strong></li>
+						<li>Content is <strong>respectful</strong> (no profanity, hate speech, or false claims)</li>
+						<li>You grant JamWatHQ rights to <strong>publish, edit, or remove</strong> your review</li>
+						<li>Work was conducted per <strong>J-1 visa regulations</strong></li>
+						<li>Your data contributes to <strong>public statistics</strong> to help future participants</li>
+					</ul>
+					<p style="font-size: 0.9em; margin-top: 1em;"><strong>Disclaimer:</strong> JamWatHQ provides informational content only, not legal advice. Past experiences don't guarantee similar outcomes.</p>
+				</div>
+				<div class="tos-checkbox-container">
+					<input type="checkbox" id="tosCheckbox" onchange="toggleTOSAcceptButton()" aria-required="true" aria-label="I have read and agree to comply with the Terms of Service">
+					<label for="tosCheckbox">I have read and agree to comply with the Terms of Service</label>
+				</div>
+				<div class="tos-modal-buttons">
+					<button class="btn-standard btn-success" id="tosAcceptBtn" disabled onclick="acceptTOS()" aria-label="Accept Terms of Service and submit experience">
+						<i class="fas fa-check-circle" aria-hidden="true"></i> Accept & Submit Experience
+					</button>
+					<button class="btn-standard btn-danger" onclick="declineTOS()" aria-label="Decline Terms of Service and cancel submission">
+						<i class="fas fa-times-circle" aria-hidden="true"></i> Decline
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Reviews Popup Modal -->
+		<div id="reviewsPopupModal" class="reviews-popup-modal" role="dialog" aria-labelledby="reviewsPopupTitle" aria-modal="true">
+			<div class="reviews-popup-content">
+				<div class="reviews-popup-header">
+					<h2 id="reviewsPopupTitle">Reviews for <span id="reviewsStateName"></span></h2>
+					<span class="close-modal" onclick="closeReviewsPopup()" aria-label="Close reviews popup">&times;</span>
+				</div>
+				<div id="reviewsListContainer">
+					<!-- Reviews will be dynamically inserted here -->
+				</div>
+				<div id="paginationContainer" class="pagination-controls" style="display: none;">
+					<button id="prevPageBtn" class="pagination-btn btn-standard btn-primary btn-small" onclick="changePage(-1)" aria-label="Previous page">
+						<i class="fas fa-chevron-left"></i> Previous
+					</button>
+					<span id="paginationInfo" class="pagination-info"></span>
+					<button id="nextPageBtn" class="pagination-btn btn-standard btn-primary btn-small" onclick="changePage(1)" aria-label="Next page">
+						Next <i class="fas fa-chevron-right"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- U.S. Legal Rights Information Modal -->
+		<div id="usLegalModal" class="modal us-legal-modal" role="dialog" aria-labelledby="usLegalModalTitle" aria-modal="true">
+			<div class="modal-content">
+				<span class="close-modal" onclick="closeUSLegalModal()" aria-label="Close U.S. legal rights information">&times;</span>
+				<h2 id="usLegalModalTitle" style="color: #4a90e2; text-align: center;">
+					<i class="fas fa-gavel" aria-hidden="true"></i> Your U.S. Legal Protections
+				</h2>
+
+				<h3>First Amendment Protection</h3>
+				<p>
+					The <strong>First Amendment</strong> of the U.S. Constitution protects your freedom of speech, including the right
+					to share honest opinions and experiences about employers, work conditions, and agencies.
+				</p>
+
+				<h4>What This Means for You:</h4>
+				<ul>
+					<li><strong>Truthful reviews are protected:</strong> You have the constitutional right to post honest, factual reviews of your experiences.</li>
+					<li><strong>Critical opinions are allowed:</strong> Even negative reviews are protected speech when based on your genuine experience.</li>
+					<li><strong>No retaliation:</strong> Employers cannot legally retaliate against you for posting truthful reviews.</li>
+					<li><strong>Public interest:</strong> Sharing workplace experiences serves the public interest and helps future workers.</li>
+				</ul>
+
+				<h3>Section 230 of the Communications Decency Act</h3>
+				<p>
+					<strong>Section 230</strong> protects online platforms like JamWatHQ from liability for user-generated content,
+					ensuring platforms can host honest reviews without fear of legal action from businesses that receive criticism.
+				</p>
+
+				<h4>How This Protects You:</h4>
+				<ul>
+					<li><strong>Platform support:</strong> JamWatHQ can safely host your reviews without removing them due to pressure from employers or agencies.</li>
+					<li><strong>Open dialogue:</strong> Section 230 enables honest, uncensored conversations about work experiences.</li>
+					<li><strong>Community benefit:</strong> Legal protection allows platforms to maintain authentic, unfiltered user reviews.</li>
+				</ul>
+
+				<h3>Your Responsibilities</h3>
+				<p>While these laws protect your right to share experiences, they don't protect:</p>
+				<ul>
+					<li><strong>False statements:</strong> Deliberately posting false information (defamation) is not protected.</li>
+					<li><strong>Harassment:</strong> Abusive, threatening, or hateful content is not protected speech.</li>
+					<li><strong>Private information:</strong> Sharing others' personal information without consent may violate privacy laws.</li>
+					<li><strong>Illegal activity:</strong> Speech encouraging illegal acts is not protected.</li>
+				</ul>
+
+				<h3>Best Practices</h3>
+				<p><strong>To ensure your reviews are protected:</strong></p>
+				<ul>
+					<li>✅ Be <strong>honest and truthful</strong> – base reviews on your actual experiences</li>
+					<li>✅ Use <strong>respectful language</strong> – avoid profanity and personal attacks</li>
+					<li>✅ Focus on <strong>facts and observations</strong> – describe what happened objectively</li>
+					<li>✅ Express <strong>genuine opinions</strong> – it's okay to be critical if it reflects your experience</li>
+					<li>❌ Don't fabricate experiences or exaggerate for effect</li>
+					<li>❌ Don't include others' personal information</li>
+				</ul>
+
+				<h3>Legal Resources</h3>
+				<p>For more information about your rights:</p>
+				<ul>
+					<li><strong>First Amendment:</strong> <a href="https://www.uscourts.gov/about-federal-courts/educational-resources/about-educational-outreach/activity-resources/what-does" target="_blank" rel="noopener noreferrer" style="color: #4a90e2; text-decoration: underline;">U.S. Courts - First Amendment</a></li>
+					<li><strong>Section 230:</strong> <a href="https://www.eff.org/issues/cda230" target="_blank" rel="noopener noreferrer" style="color: #4a90e2; text-decoration: underline;">Electronic Frontier Foundation - Section 230</a></li>
+					<li><strong>Review Rights:</strong> <a href="https://www.ftc.gov/business-guidance/blog/2022/01/consumer-review-fairness-act-what-businesses-need-know" target="_blank" rel="noopener noreferrer" style="color: #4a90e2; text-decoration: underline;">FTC - Consumer Review Fairness Act</a></li>
+				</ul>
+
+				<p style="text-align: center; margin-top: 2em; color: #4a90e2;">
+					<strong>JamWatHQ stands by your right to share authentic experiences.</strong>
+				</p>
+
+				<button class="close-modal-btn btn-standard" onclick="closeUSLegalModal()" aria-label="Close modal">
+					<i class="fas fa-check-circle" aria-hidden="true"></i> I Understand My Rights
+				</button>
+			</div>
+		</div>
+
+		<!-- Video Ad Container - Bottom Left (Desktop Only) -->
+		<div id="video-ad-container" class="video-ad-container">
+			<!-- Header with Controls -->
+			<div class="video-ad-header">
+				<span class="video-ad-label">Sponsored</span>
+				<div class="video-ad-controls">
+					<button class="video-ad-btn video-ad-minimize" title="Minimize">
+						<i class="fa fa-minus"></i>
+					</button>
+					<button class="video-ad-btn video-ad-close" title="Close">
+						<i class="fa fa-times"></i>
+					</button>
+				</div>
+			</div>
+
+			<!-- Video Content Area -->
+			<div class="video-ad-content">
+				<!-- Ad Badge -->
+				<div class="video-ad-badge">AD</div>
+
+				<!-- Video Player -->
+				<video class="video-ad-player" controls muted loop>
+					<!-- Video source will be loaded dynamically via JavaScript -->
+					<!-- Example: <source src="path/to/video.mp4" type="video/mp4"> -->
+				</video>
+
+				<!-- Placeholder (shown when no video loaded or error) -->
+				<div class="video-ad-placeholder">
+					<i class="fa fa-video"></i>
+					<div class="video-ad-placeholder-text">
+						Video ad loading...
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer with Info -->
+			<div class="video-ad-footer">
+				<div class="video-ad-info">
+					<span class="video-ad-sponsor-label">Sponsor:</span>
+					<a href="#" class="video-ad-sponsor" target="_blank" rel="noopener">
+						Advertisement
+					</a>
+				</div>
+				<button class="video-ad-sound muted" title="Unmute">
+					<i class="fa fa-volume-mute"></i>
+				</button>
+			</div>
+
+			<!-- Restore Button (shown when minimized) -->
+			<div class="video-ad-restore" title="Click to restore video ad">
+				<i class="fa fa-play-circle"></i>
+			</div>
+		</div>
+
+		<!-- Video Ad Initialization Script -->
+		<script>
+			// Example: Load a video ad when page loads (desktop only)
+			document.addEventListener('DOMContentLoaded', function() {
+				// Check if desktop
+				if (window.innerWidth > 1024 && window.VideoAdController) {
+					// Example video ad - replace with actual ad network integration
+					/*
+					VideoAdController.loadVideo('path/to/your/video-ad.mp4', {
+						sponsor: 'Your Sponsor Name',
+						sponsorUrl: 'https://sponsor-website.com',
+						duration: '0:30',
+						autoplay: false  // Set to true for autoplay (will be muted)
+					});
+					*/
+
+					// For now, the placeholder will show until a video is loaded
+					console.log('Video ad container ready for desktop view');
+				}
+			});
+		</script>
+
+	</body>
+</html>

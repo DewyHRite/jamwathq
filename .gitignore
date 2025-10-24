@@ -1,0 +1,178 @@
+# ============================================
+# JamWatHQ - Git Ignore Configuration
+# ============================================
+
+# Environment Variables (CRITICAL - Contains Secrets)
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+
+# Node Modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Dependencies
+/backend/node_modules/
+/frontend/node_modules/
+
+# Build Output
+dist/
+build/
+.cache/
+
+# Database Files
+*.db
+*.sqlite
+*.sqlite3
+/data/
+/mongodb/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Session Storage
+sessions/
+.session/
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.classpath
+
+# Backup Files
+backups/
+*.backup
+*.bak
+*.old
+*.orig
+*.tmp
+
+# Temporary Files
+tmp/
+temp/
+*.temp
+.tmp/
+
+# Coverage Reports
+coverage/
+*.lcov
+.nyc_output/
+
+# Testing
+.env.test.local
+
+# Uploads (User Generated Content)
+uploads/
+/frontend/uploads/
+/backend/uploads/
+
+# SSL Certificates (if stored locally)
+*.pem
+*.key
+*.cert
+*.crt
+*.csr
+ssl/
+certs/
+
+# Deployment
+.deployments/
+.serverless/
+
+# MacOS
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# Email Templates Cache
+.email-cache/
+
+# Redis Dump
+dump.rdb
+
+# Webpack
+.webpack/
+
+# Parcel
+.parcel-cache/
+
+# Next.js
+.next/
+
+# Nuxt.js
+.nuxt/
+
+# Gatsby
+.cache/
+public/
+
+# Documentation Builds
+/docs/build/
+
+# AWS
+.aws/
+
+# Firebase
+.firebase/
+firebase-debug.log
+
+# Sentry
+.sentryclirc
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
+# Sensitive Documentation
+SECURITY_NOTES.md
+CREDENTIALS.md
+PASSWORDS.txt
+
+# Local Development
+.local/
+local.config.js
+
+# OAuth Credentials Backup
+oauth_backup/
+
+# DO NOT IGNORE - Keep These
+!.env.example
+!.gitignore
+!README.md

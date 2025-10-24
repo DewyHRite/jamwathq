@@ -1,0 +1,92 @@
+/* Desktop navigation fixes */
+
+/* Fix for main navigation border and spacing */
+#nav {
+    border: 1px solid #000000 !important;       /* Fixed border width */
+    border-radius: 10px !important;
+
+    /* Shrink-wrap to content and center */
+    width: fit-content !important;
+    margin: 0 auto !important;
+
+    /* Remove internal excess space */
+    padding: 0 !important;
+    line-height: normal !important;
+
+    /* Visuals and stacking */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+    z-index: 1000 !important;
+    position: relative !important;
+}
+
+/* Reposition the header section to accommodate the new nav position */
+#header {
+    padding-top: 0 !important;
+    position: relative !important;
+}
+
+/* Ensure the logo always appears below the navigation */
+#logo {
+    margin-top: 4em !important; /* Space below the navigation */
+    position: relative !important;
+    z-index: 100 !important;
+    clear: both !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+
+/* Improve the appearance of navigation items */
+#nav > ul > li {
+    padding: 0 !important;                /* Remove extra padding around items */
+}
+
+#nav > ul > li > a {
+    display: block !important;            /* Make link fill the hit area */
+    padding: 0.75em 1.25em !important;    /* Controlled internal padding */
+    border-radius: 0 !important;          /* Keep border box clean */
+}
+
+/* Ensure proper spacing between navigation items */
+#nav > ul {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    flex-wrap: nowrap !important;         /* Keep items on one line on desktop */
+    gap: 0 !important;                     /* Remove gaps that create excess width */
+    margin: 0 !important;                  /* Remove default ul margin */
+}
+
+/* Improve dropdown menu appearance */
+#nav > ul > li > ul {
+    border-radius: 5px !important;
+    border: 1px solid #000000 !important;
+    overflow: hidden !important;
+}
+
+/* Media queries to ensure responsiveness */
+@media screen and (max-width: 980px) {
+    #nav {
+        position: relative !important;
+        top: 0 !important;
+        width: auto !important;            /* Allow full width on small screens */
+        margin: 0 1em !important;          /* Keep a little side breathing room */
+    }
+
+    #nav > ul {
+        flex-wrap: wrap !important;        /* Avoid overflow by wrapping */
+        justify-content: center !important;
+    }
+
+    #nav > ul > li > a {
+        padding: 0.75em 1em !important;    /* Slightly tighter on small screens */
+    }
+
+    #logo {
+        margin-top: 2em !important;
+    }
+}
+
+/* Additional fix for mobile view */
+#titleBar {
+    z-index: 1001 !important; /* Ensure mobile menu button is above everything */
+}
