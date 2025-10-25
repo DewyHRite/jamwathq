@@ -9,7 +9,13 @@
     <title>JamWatHQ</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        <!-- Security Headers -->
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; img-src 'self' data: https: http:; font-src 'self' https://cdnjs.cloudflare.com data:; connect-src 'self' http://localhost:3000 https://localhost:3000; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/nav-fix.css" />
     <link rel="stylesheet" href="styles/native-ads.css" />
@@ -465,7 +471,18 @@
             if (status.authenticated && status.user) {
               // User is logged in - show username and logout option
               const username = status.user.firstName || status.user.name || status.user.email.split('@')[0];
-              profileBtn.innerHTML = `<span class="profile-username">${username}</span><span class="profile-logout">(Logout)</span>`;
+
+              // SECURITY FIX: Use safe DOM manipulation instead of innerHTML
+              profileBtn.textContent = ''; // Clear existing content
+              const usernameSpan = document.createElement('span');
+              usernameSpan.className = 'profile-username';
+              usernameSpan.textContent = username; // textContent auto-escapes HTML
+              const logoutSpan = document.createElement('span');
+              logoutSpan.className = 'profile-logout';
+              logoutSpan.textContent = '(Logout)';
+              profileBtn.appendChild(usernameSpan);
+              profileBtn.appendChild(logoutSpan);
+
               profileBtn.classList.add('logged-in');
               profileBtn.title = `Logged in as ${status.user.email}`;
             } else {
