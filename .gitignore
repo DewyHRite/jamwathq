@@ -172,6 +172,13 @@ local.config.js
 # OAuth Credentials Backup
 oauth_backup/
 
+# Local Development Folders
+Main/
+Avatars/
+bfg.jar
+mongodb-win32-x86_64-windows-8.2.1/
+mongodb-windows-x86_64-8.2.1-signed.msi
+
 # DO NOT IGNORE - Keep These
 !.env.example
 !.gitignore
