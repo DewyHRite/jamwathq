@@ -1,12 +1,16 @@
 # ============================================
 # JamWatHQ - Git Ignore Configuration
-# Optimized: 2025-10-25
+# Optimized: 2025-10-25 (v2 - Code Review Updates)
 # ============================================
 
 # ============================================
 # Environment Variables (SECURITY - Never commit actual secrets)
 # ============================================
-# Block all .env files across the repository
+# Block all .env files across the repository (recursive)
+# Glob pattern **/ matches all subdirectories at any depth
+# Examples covered:
+#   - .env, backend/.env, frontend/.env
+#   - backend/config/.env, backend/services/auth/.env
 **/.env
 **/.env.local
 **/.env.production
@@ -167,9 +171,26 @@ oauth_backup/
 # Local Development Folders & Artifacts
 Main/
 Avatars/
-bfg.jar
-mongodb-win32-x86_64-windows-8.2.1/
-mongodb-windows-x86_64-8.2.1-signed.msi
+
+# Git History Cleanup Tools
+bfg*.jar
+git-filter-repo*
+
+# MongoDB Installers & Distributions
+# Covers all versions, platforms, and architectures
+mongodb*/
+mongodb*.msi
+*.mongodb
+
+# ============================================
+# Pattern Testing Examples
+# ============================================
+# To test if a file would be ignored, use:
+#   git check-ignore -v <filepath>
+# Examples:
+#   git check-ignore -v backend/.env
+#   git check-ignore -v backend/.env.example
+#   git check-ignore -v mongodb-win32-x86_64-windows-9.0.0/
 
 # ============================================
 # DO NOT IGNORE - Explicit Exceptions
