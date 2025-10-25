@@ -1,25 +1,26 @@
 # ============================================
 # JamWatHQ - Git Ignore Configuration
+# Optimized: 2025-10-25
 # ============================================
 
-# Environment Variables (CRITICAL - Contains Secrets)
-.env
-.env.local
-.env.production
-.env.development
-.env.test
+# ============================================
+# Environment Variables (SECURITY - Never commit actual secrets)
+# ============================================
+# Block all .env files across the repository
+**/.env
+**/.env.local
+**/.env.production
+**/.env.development
+**/.env.test
+**/.env.*.local
 
-# Node Modules
+# Node Modules & Dependencies
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 package-lock.json
 yarn.lock
-
-# Dependencies
-/backend/node_modules/
-/frontend/node_modules/
 
 # Build Output
 dist/
@@ -36,7 +37,6 @@ build/
 # Logs
 logs/
 *.log
-npm-debug.log*
 pids/
 *.pid
 *.seed
@@ -47,21 +47,28 @@ sessions/
 .session/
 
 # OS Files
+# MacOS
 .DS_Store
 .DS_Store?
 ._*
+.AppleDouble
+.LSOverride
 .Spotlight-V100
 .Trashes
-ehthumbs.db
+# Windows
 Thumbs.db
+ehthumbs.db
+Desktop.ini
 desktop.ini
+$RECYCLE.BIN/
+# Linux
+*~
 
 # IDE Files
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
 .project
 .settings/
 .classpath
@@ -106,20 +113,6 @@ certs/
 .deployments/
 .serverless/
 
-# MacOS
-*.DS_Store
-.AppleDouble
-.LSOverride
-
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-
-# Linux
-*~
-
 # Email Templates Cache
 .email-cache/
 
@@ -139,7 +132,6 @@ dump.rdb
 .nuxt/
 
 # Gatsby
-.cache/
 public/
 
 # Documentation Builds
@@ -172,25 +164,18 @@ local.config.js
 # OAuth Credentials Backup
 oauth_backup/
 
-# Local Development Folders
+# Local Development Folders & Artifacts
 Main/
 Avatars/
 bfg.jar
 mongodb-win32-x86_64-windows-8.2.1/
 mongodb-windows-x86_64-8.2.1-signed.msi
 
-# Environment Files (SECURITY - Never commit actual secrets)
-backend/.env
-backend/.env.production
-backend/.env.development
-backend/.env.local
-backend/.env.*.local
-**/.env
-**/.env.local
-**/.env.*.local
-
-# DO NOT IGNORE - Keep These
-!.env.example
-!.env.*.example
+# ============================================
+# DO NOT IGNORE - Explicit Exceptions
+# ============================================
+# These patterns override earlier ignore rules
 !.gitignore
 !README.md
+!**/.env.example
+!**/.env.*.example
