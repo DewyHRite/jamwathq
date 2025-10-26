@@ -1,0 +1,61 @@
+/* Header layout fixes to ensure logo is always below navigation */
+
+/* Restructure the header layout */
+#header {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+}
+
+/* Navigation always at the top */
+#nav {
+    order: 1 !important;
+    width: 100% !important;
+    position: relative !important;
+    top: 0 !important;
+    margin-bottom: 2em !important;
+}
+
+/* Logo always below navigation */
+#logo {
+    order: 2 !important;
+    width: 100% !important;
+    margin-top: 1em !important;
+    padding-top: 1em !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; /* center horizontally */
+    justify-content: center !important; /* center content vertically within logo container */
+    padding-left: 0 !important; /* override any left padding from other styles */
+    text-align: center !important; /* ensure text itself is centered */
+    transform: translateY(-50%) !important; /* move logo up by 10% */
+}
+
+/* Ensure proper spacing in the wrapper */
+.wrapper {
+    padding-top: 0 !important;
+}
+
+/* Additional fixes for mobile view */
+@media screen and (max-width: 980px) {
+    #header {
+        padding-top: 3em !important; /* Space for mobile menu button */
+    }
+    
+    #navPanel {
+        z-index: 1002 !important; /* Ensure mobile panel is above everything */
+    }
+}
+
+/* Ensure the logo text is properly centered and styled */
+#logo h1, #logo p {
+    text-align: center !important;
+    width: 100% !important;
+}
+
+/* Fix for any potential overlap issues */
+#main {
+    clear: both !important;
+    position: relative !important;
+    z-index: 99 !important;
+}

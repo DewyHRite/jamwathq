@@ -1,0 +1,202 @@
+# ============================================
+# JamWatHQ - Git Ignore Configuration
+# Optimized: 2025-10-25 (v2 - Code Review Updates)
+# ============================================
+
+# ============================================
+# Environment Variables (SECURITY - Never commit actual secrets)
+# ============================================
+# Block all .env files across the repository (recursive)
+# Glob pattern **/ matches all subdirectories at any depth
+# Examples covered:
+#   - .env, backend/.env, frontend/.env
+#   - backend/config/.env, backend/services/auth/.env
+**/.env
+**/.env.local
+**/.env.production
+**/.env.development
+**/.env.test
+**/.env.*.local
+
+# Node Modules & Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Build Output
+dist/
+build/
+.cache/
+
+# Database Files
+*.db
+*.sqlite
+*.sqlite3
+/data/
+/mongodb/
+
+# Logs
+logs/
+*.log
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Session Storage
+sessions/
+.session/
+
+# OS Files
+# MacOS
+.DS_Store
+.DS_Store?
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+desktop.ini
+$RECYCLE.BIN/
+# Linux
+*~
+
+# IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+.project
+.settings/
+.classpath
+
+# Backup Files
+backups/
+*.backup
+*.bak
+*.old
+*.orig
+*.tmp
+
+# Temporary Files
+tmp/
+temp/
+*.temp
+.tmp/
+
+# Coverage Reports
+coverage/
+*.lcov
+.nyc_output/
+
+# Testing
+.env.test.local
+
+# Uploads (User Generated Content)
+uploads/
+/frontend/uploads/
+/backend/uploads/
+
+# SSL Certificates (if stored locally)
+*.pem
+*.key
+*.cert
+*.crt
+*.csr
+ssl/
+certs/
+
+# Deployment
+.deployments/
+.serverless/
+
+# Email Templates Cache
+.email-cache/
+
+# Redis Dump
+dump.rdb
+
+# Webpack
+.webpack/
+
+# Parcel
+.parcel-cache/
+
+# Next.js
+.next/
+
+# Nuxt.js
+.nuxt/
+
+# Gatsby
+public/
+
+# Documentation Builds
+/docs/build/
+
+# AWS
+.aws/
+
+# Firebase
+.firebase/
+firebase-debug.log
+
+# Sentry
+.sentryclirc
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
+# Sensitive Documentation
+SECURITY_NOTES.md
+CREDENTIALS.md
+PASSWORDS.txt
+
+# Local Development
+.local/
+local.config.js
+
+# OAuth Credentials Backup
+oauth_backup/
+
+# Local Development Folders & Artifacts
+Main/
+Avatars/
+
+# Git History Cleanup Tools
+bfg*.jar
+git-filter-repo*
+
+# MongoDB Installers & Distributions
+# Covers all versions, platforms, and architectures
+mongodb*/
+mongodb*.msi
+*.mongodb
+
+# ============================================
+# Pattern Testing Examples
+# ============================================
+# To test if a file would be ignored, use:
+#   git check-ignore -v <filepath>
+# Examples:
+#   git check-ignore -v backend/.env
+#   git check-ignore -v backend/.env.example
+#   git check-ignore -v mongodb-win32-x86_64-windows-9.0.0/
+
+# ============================================
+# DO NOT IGNORE - Explicit Exceptions
+# ============================================
+# These patterns override earlier ignore rules
+!.gitignore
+!README.md
+!**/.env.example
+!**/.env.*.example
