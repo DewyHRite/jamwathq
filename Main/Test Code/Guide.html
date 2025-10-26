@@ -1,0 +1,1061 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Work and Travel Guide - JamWatHQ</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	</head>
+	<body class="right-sidebar is-preload">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.guide-info {
+				margin-top: 2em;
+				padding: 1.5em;
+				background: #f9f9f9;
+				border: 1px solid #ddd;
+				border-radius: 8px;
+			}
+			.guide-info h3 {
+				margin-top: 1em;
+				color: #333;
+			}
+			.guide-info p {
+				margin: 0.5em 0;
+				font-size: 0.9em;
+			}
+			.guide-info.compact {
+				width: 100%;
+				max-width: 1120px;
+				margin: 1em auto;
+				padding: 1em;
+				background: #f9f9f9;
+				border: 1px solid #ddd;
+				border-radius: 15px;
+				box-sizing: border-box;
+				margin-bottom: 1em; /* Adjust spacing between containers */
+				object-fit: cover;
+				transition: transform 0.5s, box-shadow 0.5s;
+			}
+			.guide-info.compact:hover {
+				transform: scale(1.05); /* Slight zoom-in effect */
+				box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow for emphasis */
+			}
+			.guide-info.compact h3 {
+				font-size: 1.1em;
+				color: #333;
+			}
+			.guide-info.compact section {
+				margin: 0.2em 0;
+				}
+			#content {
+				width: 100%;
+				max-width: 1120px;
+				margin: 0 auto;
+				padding: 1em;
+				}
+			.fa {
+				padding: 10px; /* Reduced padding */
+				font-size: 15px; /* Reduced font size */
+				width: 25px; /* Reduced width */
+				text-align: center;
+				text-decoration: none;
+				margin: 5px 2px;
+			}
+			.fa:hover {
+				opacity: 0.7;
+			}
+		</style>
+	</head>
+	<body class="right-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1><a href="index.html">Jamaica Work and Travel HQ</a></h1>
+							<p>Straightforward. Reliable. Your #1 Jamaican J1 Info Hub.</p>
+						</div>
+
+                        <!-- Nav -->
+                            <nav id="nav">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li>
+                                        <a href="listofAgency.html" target="_blank">Agency</a>
+                                        <ul>
+                                            <li><a href="listofAgency.html" target="_blank">List of Approved Agency/Sponsor</a></li>
+                                            <li><a href="#" target="_blank">Agency Ranking (Coming soon)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="News.html">J-1 News</a></li>
+                                    <li>
+                                        <a href="#" target="_blank">Embassy Websites</a>
+                                        <ul>
+                                            <li><a href="https://ceac.state.gov/GenNIV/Default.aspx" target="_blank">DS-160 Website</a></li>
+                                            <li><a href="https://ais.usvisa-info.com/en-jm/niv" target="_blank">Visa Appointment Website</a></li>
+                                            <li><a href="https://i94.cbp.dhs.gov/home" target="_blank">I-94 Website</a></li>
+                                            <li><a href="https://www.fmjfee.com/i901fee/index.html?content=status/checkStatus" target="_blank">I-901 website</a></li>
+                                            <li><a href="https://ceac.state.gov/CEACStatTracker/Status.aspx" target="_blank">Visa Status Check</a></li>
+                                            <li><a href="https://j1visa.state.gov/contacts/" target="_blank">J-1 Visa Emergency Hotline!!!</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#" target="_blank">Work and Travel Guides</a></li>
+                                    <li><a href="#" >J-1 Tips</a></li>
+                                    <li><a href="#" >FAQs</a></li>
+                                    <li><a href="#">J-1 Testimonials</a></li>
+                                    <li><a href="#">Jobs and States to Avoid</a></li>
+                                </ul>
+                            </nav>
+                </section>
+
+			<!-- Main -->
+				<section id="main" class="wrapper style2">
+					<div class="title">Work and Travel Guide</div>
+					<div class="container"></div>
+
+					<!-- Content -->
+						<div id="content">
+							<article class="box post">
+
+								<header class="style1"><h2 align="center" >Step by Step Guides</h2></header>
+
+								<!-- Search and Filter Section -->
+								<div class="gradient-x-three-sm-primary">
+									<div class="container content-space-2">
+										<form>
+
+												<!-- Filter by Category -->
+												<div class="input-card-form">
+													<label for="categoryForm" class="form-label visually-hidden">Category</label>
+													<div class="input-group input-group-merge">
+														<span class="input-group-prepend input-group-text">
+															<i class="bi-tag"></i>
+														</span>
+														<select class="form-control" id="categoryForm" onchange="filterByCategory()">
+															<option value="">Filter by Category</option>
+															<option value="Passport Guide">Passport Guide</option>
+															<option value="Work and Travel">Work and Travel</option>
+															<option value="U.S. Visa Application">U.S. Visa Application</option>
+															<option value="U.S. Visa Appointment">U.S. Visa Appointment</option>
+															<option value="J-1 Visa Interview Questions">J-1 Visa Interview Questions</option>
+															<option value="J‑1 Visa Interview">J‑1 Visa Interview</option>
+														</select>
+													</div>
+												</div>
+
+											</div>
+											<!-- End Input Card -->
+										</form>
+									</div>
+								</div>
+								<!-- End Search and Filter Section -->
+
+								<!-- List of News Articles/Sponsor-->
+                                <div class="guide-info compact">
+                                    <header>
+                                      <h3 align="center">First-Time Adult Passport Application</h3>
+                                    </header>
+                                    <div class="info-container">
+                                      <section><strong>Subtitle:</strong> Step-by-Step Process for First-Time Passport Applicants</section>
+                                      <section><strong>Author:</strong> Passport, Immigration and Citizenship Agency (PICA)</section>
+                                      <section><strong>Year:</strong> 2021</section>
+                                      <section><strong>Publication Date:</strong> May 2021</section>
+                                      <section><strong>Category:</strong> Passport Guide</section>
+                                      <section><strong>Tags:</strong> Jamaican Passport, First-Time Application, PICA</section>
+                                      <section>
+                                        <strong>Sources:</strong>
+                                        <a href="https://www.pica.gov.jm">PICA Official Website</a>
+                                      </section>
+                                      <section>
+                                        <strong>Article Summary:</strong> Detailed instructions on obtaining and completing your first Jamaican passport application along with required documentation and payment details.
+                                      </section>
+                                    </div>
+                                    <div class="steps-container">
+                                      <ol>
+                                        <li>
+                                          <strong>Obtain the Application Form:</strong> Visit a PICA office or a designated service center to pick up the official passport application form.
+                                        </li>
+                                        <li>
+                                          <strong>Complete the Application Form:</strong> Fill out the form accurately, ensuring all personal details match your supporting documents.
+                                        </li>
+                                        <li>
+                                          <strong>Gather Required Documents:</strong>
+                                          <ul>
+                                            <li>Proof of Citizenship: Birth Certificate, Adoption Certificate, or Jamaican Citizenship Certificate</li>
+                                            <li>Two identical passport-sized photographs (only one must be certified by the same certifying official as your application)</li>
+                                            <li>Valid government-issued photo ID (e.g., driver’s license or voter ID)</li>
+                                            <li>Proof of Name Change (if applicable: Marriage Certificate, Deed poll, Divorce Decree, or Court Order)</li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Processing Fees:</strong> Confirm the fee details with PICA, make the payment, and retain your receipt as proof.
+                                        </li>
+                                        <li>
+                                          <strong>Submit Your Application:</strong> Submit your completed application and documents in person at the appropriate PICA office.
+                                        </li>
+                                        <li>
+                                          <strong>Follow-Up:</strong> Track your application status using the official PICA channels and keep all receipts for future reference.
+                                        </li>
+                                        <li><strong>Note: </strong>All fees are subject to change.</li>
+                                      </ol>
+                                    </div>
+                                  </div>
+
+                                  <div class="guide-info compact">
+                                    <header>
+                                      <h3 align="center">Renewing an Adult Passport</h3>
+                                    </header>
+                                    <div class="info-container">
+                                      <section><strong>Subtitle:</strong> Detailed Process for Renewing Your Jamaican Passport</section>
+                                      <section><strong>Author:</strong> Passport, Immigration and Citizenship Agency (PICA)</section>
+                                      <section><strong>Year:</strong> 2021</section>
+                                      <section><strong>Publication Date:</strong> May 2021</section>
+                                      <section><strong>Category:</strong> Passport Guide</section>
+                                      <section><strong>Tags:</strong> Jamaican Passport, Renewal, PICA</section>
+                                      <section>
+                                        <strong>Sources:</strong>
+                                        <a href="https://www.pica.gov.jm">PICA Official Website</a>
+                                      </section>
+                                      <section>
+                                        <strong>Article Summary:</strong> A guide outlining the renewal process for adult Jamaican passports with steps varying based on a change in name.
+                                      </section>
+                                    </div>
+                                    <div class="steps-container">
+                                      <ol>
+                                        <li>
+                                          <strong>Determine the Renewal Type:</strong>
+                                          <ul>
+                                            <li>If your name remains unchanged, use the Simplified Adult Renewal Passport Application form.</li>
+                                            <li>If your name has changed, complete the regular application form with the necessary certification.</li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Prepare Required Documents:</strong>
+                                          <ul>
+                                            <li>Current Passport</li>
+                                            <li>Two identical passport-sized photographs (if there is a name change, one must be certified)</li>
+                                            <li>Proof of Name Change (if applicable: Marriage Certificate, Deed poll, Divorce Decree, or Court Order)</li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Processing Fee:</strong> Approximately $6,500. Online applications require a Visa, Master debit, or credit card.
+                                        </li>
+                                        <li>
+                                          <strong>Submit Your Renewal Application:</strong> Apply online (if eligible) or in person, ensuring that all requirements and certifications are met.
+                                        </li>
+                                        <li><strong>Note: </strong>All fees are subject to change.</li>
+                                      </ol>
+                                    </div>
+                                  </div>
+
+                                  <div class="guide-info compact">
+                                    <header>
+                                      <h3 align="center">Additional Passport Information</h3>
+                                    </header>
+                                    <div class="info-container">
+                                      <section>
+                                        <strong>Subtitle:</strong> Quick Turnaround Options for Jamaican Passport Applications
+                                      </section>
+                                      <section><strong>Author:</strong> Passport, Immigration and Citizenship Agency (PICA)</section>
+                                      <section><strong>Year:</strong> 2021</section>
+                                      <section><strong>Publication Date:</strong> May 2021</section>
+                                      <section><strong>Category:</strong> Passport Guide</section>
+                                      <section><strong>Tags:</strong> Jamaican Passport, Expedited Service, PICA</section>
+                                      <section>
+                                        <strong>Sources:</strong>
+                                        <a href="https://www.pica.gov.jm">PICA Official Website</a>
+                                      </section>
+                                      <section>
+                                        <strong>Article Summary:</strong> Outlines the expedited passport services available locally with various turnaround times and corresponding fees for both adults and minors.
+                                      </section>
+                                    </div>
+                                    <div class="steps-container">
+                                      <ol>
+                                        <li>
+                                          <strong>Standard Processing Times:</strong>
+                                          <ul>
+                                            <li>Kingston (Head Office): 7 working days</li>
+                                            <li>Portmore Office: 11 working days</li>
+                                            <li>Regional Offices: 14 working days</li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Expedited Services at PICA Headquarters (Kingston):</strong>
+                                          <ul>
+                                            <li><strong>Same Day Service (before 10 am):</strong> Adult: $16,500; Minor: $9,000</li>
+                                            <li><strong>Next Working Day Service:</strong> Adult: $11,500; Minor: $7,000</li>
+                                            <li><strong>Three Working Days Service:</strong> Adult: $9,500; Minor: $6,000</li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Expedited Services at Regional Offices/Outposts:</strong>
+                                          <ul>
+                                            <li><strong>Five-Day Service:</strong> Adult: $11,500; Minor: $7,000</li>
+                                            <li><strong>Seven-Day Service:</strong> Adult: $9,500; Minor: $6,000</li>
+                                          </ul>
+                                        </li>
+                                        <li><strong>Note: </strong>All fees are subject to change and overseas applicants are not eligible for expedited services.</li>
+                                      </ol>
+                                    </div>
+                                  </div>
+                                
+                                  <div class="guide-info compact">
+                                    <header>
+                                        <h3 align="center">Work and Travel Program Guide</h3>
+                                    </header>
+                                    <div class="info-container">
+                                        <section><strong>Category:</strong> Work and Travel</section>
+                                        <section><strong>Tags:</strong> Work Visa, SEVIS, DS-2019, Insurance</section>
+                                        <section><strong>Sources:</strong> Agency guidelines, SEVIS official site</section>
+                                        <section><strong>Article Summary:</strong> A step-by-step guide to successfully navigating the work and travel application process—covering funding requirements, document collection, agency selection, payments, interviews, and additional services.</section>
+                                        
+                                        <ol>
+                                            <li>
+                                                <strong>Step 1: Understand the Required Funds</strong>
+                                                <ul>
+                                                    <li><strong>Identify Needed Funds:</strong> Ensure you have funds available to cover the following fees, which vary by agency:
+                                                        <ul>
+                                                            <li>Visa application fee</li>
+                                                            <li>Agency registration fee</li>
+                                                            <li>Program fee</li>
+                                                            <li>Housing deposit</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Step 2: Gather Required Documents</strong>
+                                                <ul>
+                                                    <li>Before beginning your application, collect the following official documents:
+                                                        <ul>
+                                                            <li>Official status letter</li>
+                                                            <li>Official transcript</li>
+                                                            <li>Official birth certificate</li>
+                                                            <li>Government-issued ID</li>
+                                                            <li>Tax Registration Number (TRN)</li>
+                                                            <li>Background check (Note: This may be required by some agencies only)</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Step 3: Select an Agency</strong>
+                                                <ul>
+                                                    <li><strong>Find an Agency:</strong> Visit the provided list of agencies by clicking <a href="listofAgency.html">here.</a></li>
+                                                    <li><strong>Compare Options:</strong> Each agency sets its own fee rates and service policies. Take the time to carefully review and choose the agency that best fits your needs.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Step 4: Complete the Payment Process</strong>
+                                                <ul>
+                                                    <li><strong>Pay the Registration Fee:</strong> Once you’ve selected an agency, begin by paying their registration fee.</li>
+                                                    <li><strong>Pay the Program Fee:</strong> Next, remit the program fee as specified by the agency.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Step 5: Complete the Registration Form</strong>
+                                                <ul>
+                                                    <li><strong>Fill Out the Form:</strong> Complete the required registration form provided by your chosen agency.</li>
+                                                    <li><strong>Job Application Submission:</strong> After your registration is complete, the agency will submit your job application on your behalf.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Step 6: Schedule Interviews</strong>
+                                                <ul>
+                                                    <li><strong>Interview with Your Sponsor:</strong> Arrange your interview with your sponsor as directed.</li>
+                                                    <li><strong>For Direct Placement:</strong>
+                                                        <ul>
+                                                            <li><strong>Wait for Application Decision:</strong> If you are applying through direct placement, await the agency’s notification regarding your job application outcome.</li>
+                                                            <li><strong>Additional Employer Interview:</strong> If your application is accepted, note that some jobs may require an extra interview with the employer while others may not.</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Step 7: Documentation Preparation</strong>
+                                                <ul>
+                                                    <li><strong>Upon Job Acceptance:</strong> If your job application is successful, your agency will begin preparing your essential documents, including:
+                                                        <ul>
+                                                            <li>SEVIS</li>
+                                                            <li>DS-2019</li>
+                                                            <li>DHS I-901</li>
+                                                            <li>Insurace Coverage</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Step 8: Handling Job Application Rejection</strong>
+                                                <ul>
+                                                    <li><strong>Alternative Options:</strong> If your application is not accepted, the agency should offer you the option to:
+                                                        <ul>
+                                                            <li>Apply for another job</li>
+                                                            <li>Request a refund (Note: Refund policies differ between agencies, so be sure to review the specific terms)</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Step 9: Utilize Additional Agency Services</strong>
+                                                <ul>
+                                                    <li><strong>Extra Assistance:</strong> Some agencies provide additional services such as:
+                                                        <ul>
+                                                            <li>Assistance with submitting your visa application</li>
+                                                            <li>Help with scheduling your visa interview</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="guide-info compact">
+                                    <header>
+                                        <h3 align="center">DS-160 Visa Application Guide for Kingston, Jamaica</h3>
+                                    </header>
+                                    <div class="info-container">
+                                        <section><strong>Category:</strong> U.S. Visa Application</section>
+                                        <section><strong>Tags:</strong> DS-160, U.S. Visa, Kingston, Jamaica, Nonimmigrant Visa</section>
+                                        <section><strong>Sources:</strong> <a href="https://ceac.state.gov/genniv/">DS-160 Official Portal</a></section>
+                                        <section><strong>Article Summary:</strong> This guide provides detailed step-by-step instructions for completing the DS-160 nonimmigrant visa application for the U.S., with specific considerations for applicants in Kingston, Jamaica.</section>
+                                        <section>
+                                            <strong>Before You Begin:</strong> Gather your documents—ensure you have a valid passport (with at least six months of validity beyond your intended stay), a digital passport-style photograph that meets U.S. visa specifications, your travel itinerary (if available), and any supporting documents (evidence of financial ties or employment details). Also, set up a reliable internet connection and use a supported browser (like Chrome, Edge, or Firefox) as the DS-160 website works best on modern browsers. In Kingston, Jamaica, be prepared with a backup connection to avoid interruptions.
+                                        </section>
+                                        <ol>
+                                            <li>
+                                                <strong>Step 1: Access the DS-160 Website</strong>
+                                                <ul>
+                                                    <li>Visit the DS-160 Portal at <a href="https://ceac.state.gov/genniv/">https://ceac.state.gov/genniv/</a>.</li>
+                                                    <li>Note that the application takes about 90 minutes to complete.</li>
+                                                    <li>The form is primarily available in English; hover for translations if needed, though key instructions remain in English.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Step 2: Choose the U.S. Embassy/Consulate Location</strong>
+                                                <ul>
+                                                    <li>Select your location by choosing Kingston, Jamaica when prompted.</li>
+                                                    <li>Check the U.S. Embassy in Jamaica’s website for any local instructions, specific appointment procedures, or additional documentation requirements.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Step 3: Start Your Application</strong>
+                                                <ul>
+                                                    <li>Click on the “START AN APPLICATION” button to initiate a new application.</li>
+                                                    <li>Record your Application ID displayed at the upper right-hand corner; also set up a security question to retrieve your application later if needed.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Step 4: Complete Your Personal and Passport Information</strong>
+                                                <ul>
+                                                    <li>Enter your full name, date of birth, and current address (ensure you use your correct Kingston address details).</li>
+                                                    <li>Input your passport information exactly as it appears on your valid passport (passport number, expiration date, country of issuance).</li>
+                                                    <li>Provide an accurate email address and phone number for follow-up communication.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Step 5: Enter Travel Information</strong>
+                                                <ul>
+                                                    <li>Specify the purpose of your travel (such as tourism, business, or conference) and your intended duration of stay in the U.S.</li>
+                                                    <li>Input your anticipated arrival and departure dates, and include the address where you will stay (e.g., hotel or friend’s residence).</li>
+                                                    <li>If applicable, provide details about travel companions.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Step 6: Provide Contact, Family, and Work Details</strong>
+                                                <ul>
+                                                    <li>Enter the U.S. contact information if you have someone or an organization to visit (name, relationship, contact details).</li>
+                                                    <li>List your immediate family members as required.</li>
+                                                    <li>Fill in your employment, education, or training history with accurate details.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Step 7: Answer Security & Background Questions</strong>
+                                                <ul>
+                                                    <li>Respond to a series of questions regarding criminal history, previous U.S. visas, and other background details.</li>
+                                                    <li>Provide honest and complete answers, as any discrepancies can affect your visa application outcome.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Step 8: Upload Your Photograph</strong>
+                                                <ul>
+                                                    <li>Upload a recent digital passport-style photograph that complies with U.S. visa photo specifications.</li>
+                                                    <li>Use the DS-160 site's built-in photo tool to verify that your photo meets the criteria; adjust and re-upload if necessary.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Step 9: Review Your Application</strong>
+                                                <ul>
+                                                    <li>Double-check all sections to ensure that all information is complete and correct.</li>
+                                                    <li>Use the “back” button to amend any errors and save your progress frequently since the session times out after 20 minutes of inactivity.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Step 10: Electronically Sign and Submit Your Application</strong>
+                                                <ul>
+                                                    <li>After verifying your details, electronically sign your DS-160 form.</li>
+                                                    <li>Submit your form—upon submission, a confirmation page with a barcode will be generated.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Step 11: Print the DS-160 Confirmation Page</strong>
+                                                <ul>
+                                                    <li>Print the confirmation page immediately, as you must bring it to your visa interview.</li>
+                                                    <li>Keep a digital copy as a backup.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Step 12: Pay the Visa Fee and Schedule an Interview</strong>
+                                                <ul>
+                                                    <li>Follow the instructions provided on the U.S. Embassy in Kingston’s website or the designated visa appointment system to pay your visa fee.</li>
+                                                    <li>Schedule your visa interview appointment using the DS-160 confirmation information.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Step 13: Prepare for and Attend Your Visa Interview</strong>
+                                                <ul>
+                                                    <li>Gather all required documents for the interview:
+                                                        <ul>
+                                                            <li>DS-160 confirmation page with barcode</li>
+                                                            <li>Your valid passport</li>
+                                                            <li>Receipt of visa fee payment</li>
+                                                            <li>Supporting documents (evidence of ties to Jamaica, employment letters, bank statements, travel itinerary, invitation letters, etc.)</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Note: Arrive early and dress professionally, and be ready to answer questions about your travel intent and background.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Step 14: Post-Interview Processing</strong>
+                                                <ul>
+                                                    <li>After your interview, your DS-160 and accompanying documents will be reviewed.</li>
+                                                    <li>You can track the status of your visa application online; processing times may vary.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>Additional Tips Specific to Kingston, Jamaica</strong>
+                                                <ul>
+                                                    <li>Review any additional instructions or documentation requirements on the U.S. Embassy in Jamaica’s website.</li>
+                                                    <li>Know the embassy’s exact location and contact details to help plan your trip for the interview.</li>
+                                                    <li>Plan for potential delays, and have backup options for internet connectivity during the application process.</li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="guide-info compact">
+                                    <header>
+                                      <h3 align="center">Visa Appointment Scheduling Guide for Jamaica</h3>
+                                    </header>
+                                    <div class="info-container">
+                                      <section><strong>Category:</strong> U.S. Visa Appointment</section>
+                                      <section><strong>Tags:</strong> DS-160, Visa Scheduling, Interview, U.S. Embassy, Jamaica</section>
+                                      <section>
+                                        <strong>Article Summary:</strong> This guide details the process to sign in, create a new group, answer initial questions, complete the applicant information form, proceed with paying your visa fee, and follow next steps for either a document drop-off or scheduling your visa interview—with final reminders to ensure accuracy.
+                                      </section>
+                                      <ol>
+                                        <li>
+                                          <strong>Step 1: Sign In and Create a New Group</strong>
+                                          <ul>
+                                            <li>
+                                              <strong>Sign In:</strong> Open your web browser and navigate to 
+                                              <a href="https://ais.usvisa-info.com/en-jm/niv/groups/33859878" target="_blank">https://ais.usvisa-info.com/en-jm/niv/groups/33859878</a>. In the upper right-hand corner, locate the “Sign In” button and enter your credentials.
+                                            </li>
+                                            <li>
+                                              <strong>Create a New Group:</strong> Next to the “Groups” label in the upper right-hand area, click on “New Group.” This starts a new application process for your visa interview appointment.
+                                            </li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Step 2: Answer the Initial Questions</strong>
+                                          <ul>
+                                            <li>
+                                              <strong>Select Your Condition:</strong> You will see a prompt asking, “Please select the condition that best applies to you.” Review the options and select the one that best describes your situation.
+                                            </li>
+                                            <li>
+                                              <strong>Click Continue:</strong> After making your selection, click “Continue.”
+                                            </li>
+                                            <li>
+                                              <strong>Agree to the Statements:</strong> A statement will appear: “I agree to the statement above, I have completed the DS-160 form, and I am ready to schedule as a Non-Resident applicant.” Check the box to agree to the statement and then click “Continue.”
+                                            </li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Step 3: Complete the Applicant Information Form</strong>
+                                          <ul>
+                                            <li>
+                                              <strong>Read the Warning:</strong> At the top of the form, note the warning: “The information entered below must match the applicant’s passport and DS-160 Number application. Any discrepancy will result in delays in the return of the applicant’s documents. If you are completing the information below on behalf of a child, please make sure that you enter the child’s information, not the parent’s.” Remember that all fees paid via the site are non-refundable and non-transferable.
+                                            </li>
+                                            <li>
+                                              <strong>Fill in Personal and Passport Details:</strong>
+                                              <ul>
+                                                <li>Given Name*: “John.”</li>
+                                                <li>Surname*:  “Doe.” </li>
+                                                <li>Country / Authority that Issued Passport*: Select the appropriate country (e.g., “United States” if applicable, or your actual authority if demonstrating).</li>
+                                                <li>Country of Birth*: Select your country of birth.</li>
+                                                <li>Country of Permanent Residence*: Choose your country of permanent residence.</li>
+                                                <li>Passport Number*: Enter your passport number exactly as it appears.</li>
+                                                <li>DS-160 Number*: Carefully input your DS-160 confirmation number as it appears on your confirmation page.</li>
+                                                <li>Visa Class*: Choose the appropriate visa class for which you are applying.</li>
+                                              </ul>
+                                            </li>
+                                            <li>
+                                              <strong>Fill in Date of Birth and Contact Details:</strong>
+                                              <ul>
+                                                <li>Date of Birth*: Provide your day, month, and year of birth in the respective fields.</li>
+                                                <li>Primary Phone*: Enter your phone number.</li>
+                                                <li>Text Alerts: Check the box if you’d like to receive text message alerts about your visa processing events (agree to the SMS terms).</li>
+                                                <li>Email Address: For demonstration purposes, you might use an example like <em>johnadoe@example.com</em>.</li>
+                                              </ul>
+                                            </li>
+                                            <li>
+                                              <strong>Answer the Additional Questions:</strong>
+                                              <ul>
+                                                <li>Were you previously issued a visa to enter the United States?*: Choose “Yes” or “No” according to your situation.</li>
+                                                <li>Is the applicant traveling from another country other than the Cayman Islands and Guantanamo Bay to apply for a visa in Jamaica?*: Choose “Yes” or “No.”</li>
+                                              </ul>
+                                            </li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Step 4: Create the Applicant and Proceed</strong>
+                                          <ul>
+                                            <li>
+                                              <strong>Create Applicant:</strong> After verifying that every detail matches your passport and DS-160 application, click “Create Applicant.”
+                                            </li>
+                                            <li>
+                                              <strong>Visa Fee Payment:</strong> Follow the on-screen instructions to pay the visa fee (fees are subject to change).
+                                            </li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Step 5: Next Steps – Interview or Document Drop-off</strong>
+                                          <ul>
+                                            <li>
+                                              <strong>If You Qualify for an Interview:</strong> You will be emailed instructions to drop off your documents at the document processing center. Once the documents have been received, processing takes 5 business days, and you will be sent an email confirmation when your documents are ready.
+                                            </li>
+                                            <li>
+                                              <strong>If You Do Not Qualify for an Interview:</strong> You will be asked to select a date for your visa interview.
+                                            </li>
+                                            <li>
+                                              <strong>Check Visa Status:</strong> You can check your visa status <a href="https://ceac.state.gov/CEACStatTracker/Status.aspx" target="_blank">here</a>.
+                                            </li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Final Reminders</strong>
+                                          <ul>
+                                            <li><strong>Double-Check Information:</strong> Ensure that every detail (passport number, DS-160 number, personal names, and dates) is entered exactly as it appears on your official documents.</li>
+                                            <li><strong>Have Your Documentation Ready:</strong> Keep your DS-160 confirmation page, valid passport, and any additional supporting documents on hand when scheduling your appointment or preparing for your interview.</li>
+                                            <li><strong>Monitor Communications:</strong> Regularly check your email for any follow-up instructions or notifications regarding document drop-off or your visa interview.</li>
+                                          </ul>
+                                        </li>
+                                      </ol>
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="guide-info compact">
+                                    <header>
+                                      <h3 align="center">Visa Interview Questions Guide</h3>
+                                    </header>
+                                    <div class="info-container">
+                                      <section><strong>Category:</strong>J-1 Visa Interview Questions</section>
+                                      <section><strong>Tags:</strong> Interview Questions, DS-160, U.S. Visa, Interview Preparation</section>
+                                      <section><strong>Sources:</strong> <a href="https://www.boundless.com/immigration-resources/preparing-for-j-1-exchange-visa-interview/">Boundless.com</a></section>
+                                      <section>
+                                        <strong>Article Summary:</strong> This guide outlines potential questions that may be asked during a U.S. visa interview. It covers topics from your purpose of visit and funding details to your academic background, program specifics, financial situation, social ties to your home country, and immigration history to help you prepare effectively.
+                                      </section><br>
+                                      <ol>
+                                        <li>
+                                          <strong>General Purpose and Intent</strong>
+                                          <ul>
+                                            <li>What is the purpose of your visit? (e.g., What do you plan to do upon arriving in the United States?)</li>
+                                            <li>What are your plans after completing your studies? (This could include future career or further educational intentions.)</li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Funding and Sponsorship</strong>
+                                          <ul>
+                                            <li>Who is funding your travel and education?</li>
+                                            <li>Who is your sponsor?</li>
+                                            <li>Do you have any family in the United States?</li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Academic Background and Experience</strong>
+                                          <ul>
+                                            <li>Where do you study? (Which school or university do you attend?)</li>
+                                            <li>What are you studying (your major or field of study)?</li>
+                                            <li>Why did you choose your field of study?</li>
+                                            <li>Can you describe some of the courses you have taken? (Include key courses related to your major if possible.)</li>
+                                            <li>Who is your favorite lecturer, and why?</li>
+                                            <li>What is your current GPA?</li>
+                                            <li>How many courses are you currently enrolled in?</li>
+                                            <li>Which year of study are you in?</li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Documentation and Status</strong>
+                                          <ul>
+                                            <li>Can you provide your official status letter? (This is commonly requested to verify your documentation.)</li>
+                                            <li>Where in the US will you be studying or residing?</li>
+                                            <li>Have you brought any additional supporting documents, such as transcripts or letters of recommendation?</li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Questions About Your Program</strong>
+                                          <ul>
+                                            <li>What is the purpose of your program?</li>
+                                            <li>What do you want to do while in the United States? What places will you visit?</li>
+                                            <li>What cultural activities will you participate in?</li>
+                                            <li>Where is your exchange program located?</li>
+                                            <li>What will your housing situation be during the program?</li>
+                                            <li>Why did you choose a program in this specific state?</li>
+                                            <li>How many hours per week will you be working during your program?</li>
+                                            <li>What will your compensation be?</li>
+                                            <li>What is your employer’s worker’s compensation policy, if applicable?</li>
+                                            <li>What activities and responsibilities will you have during your internship or training?</li>
+                                            <li>What was your score on your English language test (TOEFL, IELTS, etc.)?</li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Financial Questions</strong>
+                                          <ul>
+                                            <li>Where did you last work? Where do you currently work? Why did you leave your last job?</li>
+                                            <li>Do you have any financial sponsors for your program?</li>
+                                            <li>Is your program funded by a government entity, an organization from your home country, or one based in the U.S.?</li>
+                                            <li>Will you be paid during your program?</li>
+                                            <li>What was the placement fee for your program?</li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Determining Social Ties to Your Home Country</strong>
+                                          <ul>
+                                            <li>Tell me more about your family. What do your siblings and other immediate family members do for a living?</li>
+                                            <li>How many family members have graduated from college and are working professional jobs?</li>
+                                            <li>Do you have any assets or investments in your home country?</li>
+                                            <li>Do you own property?</li>
+                                            <li>Are you currently enrolled in school?</li>
+                                            <li>What are your long-term educational goals?</li>
+                                            <li>What are your long-term career goals?</li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Immigration History and Visa Eligibility</strong>
+                                          <ul>
+                                            <li>Do you have any relatives or friends who currently reside in the United States?</li>
+                                            <li>Have you ever traveled to the United States before?</li>
+                                            <li>Do you currently hold any other types of U.S. visas?</li>
+                                            <li>What are your plans after your program ends? Will you return home or do you intend to seek employment in the U.S.?</li>
+                                          </ul>
+                                        </li>
+                                      </ol>
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="guide-info compact">
+                                    <header>
+                                      <h3 align="center">J‑1 Visa Interview Preparation Guide</h3>
+                                    </header>
+                                    <div class="info-container">
+                                      <section><strong>Category:</strong> J‑1 Visa Interview</section>
+                                      <section><strong>Tags:</strong> J‑1 Visa, Exchange Program, Interview Preparation, Cultural Exchange</section>
+                                      <section><strong>Sources:</strong> <a href="https://www.boundless.com/immigration-resources/preparing-for-j-1-exchange-visa-interview/" target="_blank">Boundless.com</a></section>
+                                      <section>
+                                        <strong>Article Summary:</strong> This guide provides a step-by-step process to prepare for your J‑1 visa interview. It covers understanding your exchange program, organizing all essential documents, reviewing common interview questions, crafting your personal narrative, planning your appearance and travel logistics, and following up after the interview.
+                                      </section>
+                                      <ol>
+                                        <li>
+                                          <strong>Step 1: Understand Your Exchange Program and J‑1 Visa Requirements</strong>
+                                          <ul>
+                                            <li>
+                                              <strong>Research Your Program:</strong> Familiarize yourself with your exchange program’s details—its purpose, duration, location, and how it fits with your academic or career goals. This clarity helps you articulate why it’s the best opportunity for you.
+                                            </li>
+                                            <li>
+                                              <strong>Review Visa Guidelines:</strong> Read the official J‑1 visa instructions from the U.S. Department of State. Understand that the primary goal of the interview is to verify your eligibility for a cultural exchange and confirm that you intend to return home after your program.
+                                            </li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Step 2: Gather and Organize All Essential Documents</strong>
+                                          <ul>
+                                            <li>
+                                              <strong>Primary Documents:</strong>
+                                              <ul>
+                                                <li>DS‑2019 Form – Confirms your participation in the exchange program.</li>
+                                                <li>Valid Passport – Ensure it remains valid well beyond your intended stay in the U.S.</li>
+                                                <li>DS‑160 Confirmation Page – Have an up-to-date printed copy, if required.</li>
+                                                <li>Photographs – A passport‐formatted digital photo that meets U.S. visa standards.</li>
+                                              </ul>
+                                            </li>
+                                            <li>
+                                              <strong>Supporting Documents:</strong>
+                                              <ul>
+                                                <li>Financial Evidence – Bank statements, scholarship/sponsorship letters, or employment letters proving you can support yourself.</li>
+                                                <li>Program Acceptance Letter – Proof of enrollment or acceptance into your exchange program.</li>
+                                                <li>Ties to Your Home Country – Documents such as property deeds, job letters, or enrollment confirmations that show you intend to return home.</li>
+                                              </ul>
+                                            </li>
+                                            <li>
+                                              <strong>Organize Copies:</strong> Make both digital and hard copies of all documents and arrange them in a logical order (e.g., in a folder or binder) for easy retrieval during your interview.
+                                            </li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Step 3: Review and Practice Common Interview Questions</strong>
+                                          <ul>
+                                            <li>
+                                              <strong>Familiarize Yourself with Common Topics:</strong> Visa officers typically ask about your program’s purpose, your career and academic goals, your financial preparedness, and your ties to your home country.
+                                            </li>
+                                            <li>
+                                              <strong>Develop Clear, Concise Responses:</strong> Prepare honest answers that align with your DS‑2019 and DS‑160 information, explaining how the skills you gain will benefit your career back home.
+                                            </li>
+                                            <li>
+                                              <strong>Practice Out Loud:</strong> Rehearse with a friend or mentor, or record yourself to build confidence and refine your delivery.
+                                            </li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Step 4: Prepare Your Personal Narrative</strong>
+                                          <ul>
+                                            <li>
+                                              <strong>Craft Your Story:</strong> Develop a concise narrative that describes who you are, why you chose this exchange program, and how it fits into your future plans.
+                                            </li>
+                                            <li>
+                                              <strong>Include Key Elements:</strong> Cover your background, motivation for pursuing the cultural exchange, and plans after you return home. Emphasize your nonimmigrant intent by highlighting personal commitments like family, education, or a job waiting for you.
+                                            </li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Step 5: Prepare Your Appearance and Logistics</strong>
+                                          <ul>
+                                            <li>
+                                              <strong>Dress Professionally:</strong> Choose business-appropriate attire to create a positive first impression.
+                                            </li>
+                                            <li>
+                                              <strong>Plan Your Journey:</strong> Confirm your interview details and the location of the U.S. Embassy or Consulate. Plan your route and aim to arrive 15–20 minutes early.
+                                            </li>
+                                            <li>
+                                              <strong>Prepare a Document Checklist:</strong> Create a checklist of all items you need to bring so that nothing is forgotten.
+                                            </li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Step 6: The Day of the Interview</strong>
+                                          <ul>
+                                            <li>
+                                              <strong>Stay Calm and Confident:</strong> Practice relaxation techniques such as deep breathing or visualization to ease pre-interview anxiety.
+                                            </li>
+                                            <li>
+                                              <strong>Maintain a Polite Demeanor:</strong> Greet the visa officer with a smile, maintain eye contact, and answer each question politely and succinctly.
+                                            </li>
+                                            <li>
+                                              <strong>Answer Clearly:</strong> Listen carefully to each question, and take a brief pause if needed to formulate clear, concise responses.
+                                            </li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Step 7: Follow-Up After the Interview</strong>
+                                          <ul>
+                                            <li>
+                                              <strong>Review Any Additional Instructions:</strong> The officer may provide extra instructions or request further documents; ensure you understand these before leaving.
+                                            </li>
+                                            <li>
+                                              <strong>Track Your Application:</strong> Monitor your visa status at <a href="https://ceac.state.gov/CEACStatTracker/Status.aspx" target="_blank">https://ceac.state.gov/CEACStatTracker/Status.aspx</a>.
+                                            </li>
+                                            <li>
+                                              <strong>Stay Patient:</strong> Processing times vary, and additional administrative steps may be necessary.
+                                            </li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <strong>Step 8: Additional Tips</strong>
+                                          <ul>
+                                            <li><strong>Mock Interviews:</strong> Schedule a practice interview with a former consular officer or experienced advisor for personalized feedback.</li>
+                                            <li><strong>Improve Your English Proficiency:</strong> Practice common questions or consider a short conversational English course if needed.</li>
+                                            <li><strong>Relaxation Techniques:</strong> Get adequate sleep, eat healthily, and minimize caffeine on the interview day to keep stress levels low.</li>
+                                            <li><strong>Record Your Answers:</strong> Practice answering questions out loud by recording yourself; this can help highlight areas for improvement.
+                                            </li>
+                                          </ul>
+                                        </li>
+                                      </ol>
+                                    </div>
+                                  </div>
+                                  
+							</article>
+						</div>
+					</section>
+				</div>
+
+				<section id="footer" class="wrapper">
+					<div class="title">Contact</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-6 col-12-medium">
+
+								<!-- Contact Form -->
+									<section>
+										<form method="post" action="#">
+											<div class="row gtr-50">
+												<div class="col-6 col-12-small">
+													<input type="text" name="name" id="contact-name" placeholder="Name">
+												</div>
+												<div class="col-6 col-12-small">
+													<input type="text" name="email" id="contact-email" placeholder="Email">
+												</div>
+												<div class="col-12">
+													<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
+												</div>
+												<div class="col-12">
+													<ul class="actions">
+														<li><input type="submit" class="style1" value="Send"></li>
+														<li><input type="reset" class="style2" value="Reset"></li>
+													</ul>
+												</div>
+											</div>
+										</form>
+									</section>
+
+							</div>
+							<div class="col-6 col-12-medium">
+
+								<!-- Contact -->
+									<section class="feature-list small">
+										<div class="row">
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-home">Mailing Address</h3>
+													<p>
+														Jamaica<br>
+														1234 Somewhere Rd<br>
+													</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-comment">Social</h3>
+													<p>
+														<a href="https://www.instagram.com/jamwathq?utm_source=qr&amp;igsh=MWgxdTlpY3NpcWx3bw==" target="_blank">instagram/JamWatHQ</a><br>
+														<a href="https://www.facebook.com/profile.php?id=61575307395932" target="_blank">facebook.com/JamWat</a>
+													</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-envelope">Email</h3>
+													<p>
+														<a href="#">jamwathq@outlook.com</a>
+													</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-phone">Phone</h3>
+													<p>
+														(876) 555-0000
+													</p>
+												</section>
+											</div>
+										</div>
+									</section>
+
+							</div>
+						</div>
+						<div id="copyright">
+							<ul>
+								<li>© JamWatHQ.</li>
+							</ul>
+						</div>
+					</section>
+			</div>
+			<style>
+				#footer {
+					margin-bottom: 0;
+				}
+			</style>
+					<!-- Scripts -->
+						<script src="assets/js/jquery.min.js"></script>
+						<script src="assets/js/jquery.dropotron.min.js"></script>
+						<script src="assets/js/browser.min.js"></script>
+						<script src="assets/js/breakpoints.min.js"></script>
+						<script src="assets/js/util.js"></script>
+						<script src="assets/js/main.js"></script>
+	</body>
+</html>
+	<script>
+		function filterAgencies() {
+		const searchInput = document.getElementById('searchAgencyForm').value.toLowerCase();
+		const locationFilter = document.getElementById('locationForm').value.toLowerCase();
+		const servicesFilter = document.getElementById('servicesForm').value.toLowerCase();
+		const agencies = document.querySelectorAll('.guide-info');
+
+		agencies.forEach(agency => {
+			const agencyName = agency.querySelector('header h3')?.textContent.toLowerCase() || '';
+			const location = agency.querySelector('.location-tag')?.textContent.toLowerCase() || '';
+			const services = Array.from(agency.querySelectorAll('section')).find(section =>
+				section.textContent.toLowerCase().includes('services:')
+			)?.textContent.toLowerCase() || '';
+
+			if (
+				(agencyName.includes(searchInput) || !searchInput) &&
+				(location.includes(locationFilter) || !locationFilter) &&
+				(services.includes(servicesFilter) || !servicesFilter)
+			) {
+				agency.style.display = '';
+			} else {
+				agency.style.display = 'none';
+			}
+		});
+	}
+
+	function filterNews() {
+		const titleInput = document.getElementById('searchTitleForm').value.toLowerCase();
+		const categoryFilter = document.getElementById('categoryForm').value.toLowerCase();
+		const yearFilter = document.getElementById('yearForm').value.toLowerCase();
+		const newsItems = document.querySelectorAll('.guide-info');
+
+		newsItems.forEach(news => {
+			const newsTitle = news.querySelector('header h3')?.textContent.toLowerCase() || '';
+			const category = Array.from(news.querySelectorAll('section')).find(section =>
+				section.textContent.toLowerCase().includes('category:')
+			)?.textContent.toLowerCase() || '';
+			const year = Array.from(news.querySelectorAll('section')).find(section =>
+				section.textContent.toLowerCase().includes('year:')
+			)?.textContent.toLowerCase() || '';
+
+			if (
+				(newsTitle.includes(titleInput) || !titleInput) &&
+				(category.includes(categoryFilter) || !categoryFilter) &&
+				(year.includes(yearFilter) || !yearFilter)
+			) {
+				news.style.display = '';
+			} else {
+				news.style.display = 'none';
+			}
+		});
+	}
+
+	function filterByCategory() {
+		const categoryFilter = document.getElementById('categoryForm').value.toLowerCase();
+		const guides = document.querySelectorAll('.guide-info');
+
+		guides.forEach(guide => {
+			const category = Array.from(guide.querySelectorAll('section')).find(section =>
+				section.textContent.toLowerCase().includes('category:')
+			)?.textContent.toLowerCase() || '';
+
+			if (category.includes(categoryFilter) || !categoryFilter) {
+				guide.style.display = '';
+			} else {
+				guide.style.display = 'none';
+			}
+		});
+	}
+	</script>

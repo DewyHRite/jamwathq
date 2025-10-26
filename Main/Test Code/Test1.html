@@ -1,0 +1,634 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>List of Approved Agencies - JamWatHQ</title>
+	</head>
+	<body class="right-sidebar is-preload">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.agency-info {
+				margin-top: 2em;
+				padding: 1.5em;
+				background: #f9f9f9;
+				border: 1px solid #ddd;
+				border-radius: 8px;
+			}
+			.agency-info h3 {
+				margin-top: 1em;
+				color: #333;
+			}
+			.agency-info p {
+				margin: 0.5em 0;
+				font-size: 0.9em;
+			}
+			.agency-info.compact {
+				width: 100%;
+				max-width: 1120px;
+				margin: 1em auto;
+				padding: 1em;
+				background: #f9f9f9;
+				border: 1px solid #ddd;
+				border-radius: 15px;
+				box-sizing: border-box;
+				margin-bottom: 1em; /* Adjust spacing between containers */
+				object-fit: cover;
+				transition: transform 0.5s, box-shadow 0.5s;
+			}
+			.agency-info.compact:hover {
+				transform: scale(1.05); /* Slight zoom-in effect */
+				box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow for emphasis */
+			}
+			.agency-info.compact h3 {
+				font-size: 1.1em;
+				color: #333;
+			}
+			.agency-info.compact section {
+				margin: 0.2em 0;
+				}
+			#content {
+				width: 100%;
+				max-width: 1120px;
+				margin: 0 auto;
+				padding: 1em;
+			}
+
+			* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0 auto; /* Center website */
+  max-width: 800px; /* Max width */
+  padding: 20px;
+}
+
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top: 10px;
+}
+
+.middle {
+  float: left;
+  width: 70%;
+  margin-top: 10px;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  /* Hide the right column on small screens */
+  .right {
+    display: none;
+  }
+}
+
+.star-rating {
+    direction: rtl; /* Right-to-left for proper star selection */
+    display: inline-flex;
+}
+
+.star-rating input[type="radio"] {
+    display: none; /* Hide radio buttons */
+}
+
+.star-rating label {
+    font-size: 25px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.star-rating input[type="radio"]:checked ~ label {
+    color: orange; /* Highlight selected stars */
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: orange; /* Highlight stars on hover */
+}
+
+.review-button {
+        font-size: 0.6em; /* Reduce font size */
+        padding: 5px 10px; /* Adjust padding */
+        border-radius: 5px; /* Optional: Add rounded corners */
+    }
+
+.star-rating-summary {
+    font-size: 1em; /* Align with the main font size */
+    color: #333; /* Match the main text color */
+    display: flex;
+    align-items: center; /* Align stars with text */
+}
+
+#averageRating .fa {
+    font-size: 1em; /* Match the font size of the text */
+    color: #ccc; /* Default star color */
+}
+
+#averageRating .fa.checked {
+    color: orange; /* Highlight selected stars */
+}
+
+#ratingText {
+    font-size: 1em; /* Align with the main font size */
+    color: #333; /* Match the main text color */
+}
+
+.checked {
+    color: orange; /* Highlight selected stars */
+}
+		</style>
+	</head>
+	<body class="right-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1>
+								<a href="index.html" class="logo-link">
+									<span id="word1">Jamaican's</span>
+									<span id="word2">Work</span>
+									<span id="word3">and</span>
+									<span id="word4">Travel</span>
+									<span id="word5">HQ</span>
+								</a>
+							</h1>
+							<p class="logo-tagline">
+								<span id="tagline1">Straightforward.</span>
+								<span id="tagline2">Reliable.</span>
+								<span id="tagline3">Your</span>
+								<span id="tagline4">#1</span>
+								<span id="tagline5">Jamaican</span>
+								<span id="tagline6">J1</span>
+								<span id="tagline7">Info</span>
+								<span id="tagline8">Hub.</span>
+							</p>
+						</div>
+
+						<!-- Nav -->
+							
+						
+							<nav id="nav">
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li>
+										<a href="listofAgency.html" target="_blank">Agency</a>
+										<ul>
+											<li><a href="listofAgency.html" target="_blank">List of Approved Agency/Sponsor</a></li>
+											<li><a href="#" target="_blank">Agency Ranking (Coming soon)</a></li>
+										</ul>
+									</li>
+									<li><a href="News.html">J-1 News</a></li>
+									<li>
+										<a href="#" target="_blank">Embassy Websites</a>
+										<ul>
+											<li><a href="https://ceac.state.gov/GenNIV/Default.aspx" target="_blank">DS-160 Website</a></li>
+											<li><a href="https://ais.usvisa-info.com/en-jm/niv" target="_blank">Visa Appointment Website</a></li>
+											<li><a href="https://i94.cbp.dhs.gov/home" target="_blank">I-94 Website</a></li>
+											<li><a href="https://www.fmjfee.com/i901fee/index.html?content=status/checkStatus" target="_blank">I-901 website</a></li>
+											<li><a href="https://ceac.state.gov/CEACStatTracker/Status.aspx" target="_blank">Visa Status Check</a></li>
+											<li><a href="https://j1visa.state.gov/contacts/" target="_blank">J-1 Visa Emergency Hotline!!!</a></li>
+										</ul>
+									</li>
+									<li>
+									<li><a href="#" target="_blank">Work and Travel Guides</a></li>
+									<li><a href="#" >J-1 Tips</a></li>
+									<li><a href="#" >FAQs</a></li>
+									<li><a href="#">J-1 Testimonials</a></li>
+									<li><a href="#">Jobs and States to </a></li>
+								</ul>
+							</nav>
+					</section>
+
+			<!-- Main -->
+				<section id="main" class="wrapper style2">
+					<div class="title">Agency</div>
+					<div class="container"></div>
+
+					<!-- Content -->
+						<div id="content">
+							<article class="box post">
+
+								<header class="style1"><h2 align="center" >List of Approved Agency/Sponsor</h2></header>
+  
+								<p style="color: red;">Please note that the list of agencies is subject to change as new agencies are added and existing ones may update their offerings. For the most current information, visit the official website of the Ministry of Labour and Social Security: 
+									<a href="https://www.mlss.gov.jm/departments/mployment-agency-unit/" target="_blank">Employment Agency Unit</a>.
+								</p>
+
+								<!-- Search and Filter Section -->
+								<div class="gradient-x-three-sm-primary">
+									<div class="container content-space-2">
+									<form>
+										<!-- Input Card -->
+										<div class="input-card input-card-sm mb-3">
+										<div class="input-card-form">
+											<label for="searchAgencyForm" class="form-label visually-hidden">Agency name</label>
+											<div class="input-group input-group-merge">
+											<span class="input-group-prepend input-group-text">
+												<i class="bi-search"></i>
+											</span>
+											<input type="text" class="form-control" id="searchAgencyForm" placeholder="Search for agency name..." onkeyup="filterAgencies()">
+											</div>
+										</div>
+								
+										<div class="input-card-form">
+											<label for="locationForm" class="form-label visually-hidden">Location</label>
+											<div class="input-group input-group-merge">
+											<span class="input-group-prepend input-group-text">
+												<i class="bi-geo-alt"></i>
+											</span>
+											<select class="form-control" id="locationForm" onchange="filterAgencies()">
+												<option value="">Filter by Location</option>
+												<option value="Kingston, Jamaica">Kingston, Jamaica</option>
+												<option value="Montego Bay, Jamaica">Montego Bay, Jamaica</option>
+												<option value="Mandeville, Jamaica">Mandeville, Jamaica</option>
+												<option value="Clarendon, Jamaica">Clarendon, Jamaica</option>
+												<option value="St. Ann, Jamaica">St. Ann, Jamaica</option>
+											</select>
+											</div>
+										</div>
+								
+										<div class="input-card-form">
+											<label for="servicesForm" class="form-label visually-hidden">Services</label>
+											<div class="input-group input-group-merge">
+											<span class="input-group-prepend input-group-text">
+												<i class="bi-briefcase"></i>
+											</span>
+											<select class="form-control" id="servicesForm" onchange="filterAgencies()">
+												<option value="">Filter by Services</option>
+												<option value="J-1">J-1</option>
+												<option value="H-1B">H-1B</option>
+												<option value="H-2B">H-2B</option>
+												<option value="H-3B">H-3B</option>
+												<option value="Q-1">Q-1</option>
+												<option value="Au Pair">Au Pair</option>
+												<option value="Internship Program">Internship Program</option>
+											</select>
+											</div>
+										</div>
+										<button type="button" class="btn btn-primary" onclick="filterAgencies()">Search</button>
+										<button type="button" class="btn btn-secondary" onclick="clearFilters()">Clear</button>
+										</div>
+										<!-- End Input Card -->
+									</form>
+									</div>
+								</div>
+								<!-- End Search and Filter Section -->
+
+								<!-- List of Angency/Sponsor-->
+								<div class="agency-info compact">
+									<header>
+										<h3 align="center">10881 Entertainment Agency</h3>
+									</header>
+									<div class="info-container">
+										<section><strong>Contact:</strong> 876-314-2564, 876-671-7705</section>
+										<section><strong>Email:</strong> <a href="mailto:10881agency@gmail.com">10881agency@gmail.com</a></section>
+										<section><strong>Website:</strong> Not found</section>
+										<section><strong>Social Media:</strong> Not found</section>
+										<section><strong>Address:</strong> Door #6, 63 Dumbarton Avenue, Kingston 10, St. Andrew, Jamaica</section>
+										<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+										<section><strong>Services:</strong>  J-1,  H-2B</section>
+										<section><strong>Hours:</strong> Not found</section>
+										<section><strong>Personnel:</strong> Mr. Elvey Johnson - Contact for queries</section>
+										<section><strong>Eligibility:</strong> Not found</section>
+										<section><strong>Fees (subject to change):</strong> Not found</section>
+									</div>
+									<!-- Always Visible Section -->
+<div class="review-summary">
+    <section id="testimonials">
+        <div class="star-rating-summary" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <h3>Agency Rating</h3>
+            <span id="averageRating" style="display: inline-block; margin-left: 8px;">
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+            </span>
+            <span id="ratingText">0.0 average based on 0 reviews.</span>
+        </div>
+    </section>
+</div>
+
+<!-- Hidden Review Section -->
+<div class="review-section" style="display: none;">
+    <section id="review-form">
+        <h2>Submit Your Review for 10881 Entertainment Agency</h2>
+        <form id="reviewForm">
+            <!-- Review Categories -->
+            <fieldset>
+                <legend>Application Process: Was the application process smooth and transparent?</legend>
+                <div class="star-rating">
+                    <input type="radio" id="application5" name="applicationProcess" value="5"><label for="application5" class="fa fa-star"></label>
+                    <input type="radio" id="application4" name="applicationProcess" value="4"><label for="application4" class="fa fa-star"></label>
+                    <input type="radio" id="application3" name="applicationProcess" value="3"><label for="application3" class="fa fa-star"></label>
+                    <input type="radio" id="application2" name="applicationProcess" value="2"><label for="application2" class="fa fa-star"></label>
+                    <input type="radio" id="application1" name="applicationProcess" value="1"><label for="application1" class="fa fa-star"></label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Customer Service: Were inquiries handled efficiently and professionally?</legend>
+                <div class="star-rating">
+                    <input type="radio" id="customer5" name="customerService" value="5"><label for="customer5" class="fa fa-star"></label>
+                    <input type="radio" id="customer4" name="customerService" value="4"><label for="customer4" class="fa fa-star"></label>
+                </div>
+            </fieldset>
+
+            <!-- Overall Experience -->
+            <fieldset>
+                <legend>Overall Experience: Would users recommend this agency?</legend>
+                <div class="star-rating">
+                    <input type="radio" id="overall5" name="overallExperience" value="5"><label for="overall5" class="fa fa-star"></label>
+                    <input type="radio" id="overall4" name="overallExperience" value="4"><label for="overall4" class="fa fa-star"></label>
+                </div>
+            </fieldset>
+
+            <!-- Comments -->
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Write your review here..."></textarea>
+
+            <button type="button" onclick="submitReview()">Submit Review</button>
+        </form>
+    </section>
+</div>
+
+<!-- Review Button -->
+<button type="button" class="btn btn-primary" onclick="toggleReviewSection(this)">Leave a Review</button>
+
+								</div>
+					</section>
+				</div>
+
+				<section id="footer" class="wrapper">
+					<div class="title">No contact Info</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-6 col-12-medium">
+
+								<!-- Contact Form -->
+									<section>
+										<form method="post" action="#">
+											<div class="row gtr-50">
+												<div class="col-6 col-12-small">
+													<input type="text" name="name" id="contact-name" placeholder="Name">
+												</div>
+												<div class="col-6 col-12-small">
+													<input type="text" name="email" id="contact-email" placeholder="Email">
+												</div>
+												<div class="col-12">
+													<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
+												</div>
+												<div class="col-12">
+													<ul class="actions">
+														<li><input type="submit" class="style1" value="Send"></li>
+														<li><input type="reset" class="style2" value="Reset"></li>
+													</ul>
+												</div>
+											</div>
+										</form>
+									</section>
+
+							</div>
+							<div class="col-6 col-12-medium">
+
+								<!-- Contact -->
+									<section class="feature-list small">
+										<div class="row">
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-home">Mailing Address</h3>
+													<p>
+														Jamaica<br>
+														1234 Somewhere Rd<br>
+													</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-comment">Social</h3>
+													<p>
+														<a href="https://www.instagram.com/jamwathq?utm_source=qr&amp;igsh=MWgxdTlpY3NpcWx3bw==" target="_blank">instagram/JamWatHQ</a><br>
+														<a href="https://www.facebook.com/profile.php?id=61575307395932" target="_blank">facebook.com/JamWat</a>
+													</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-envelope">Email</h3>
+													<p>
+														<a href="#">jamwathq@outlook.com</a>
+													</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-phone">Phone</h3>
+													<p>
+														(876) 555-0000
+													</p>
+												</section>
+											</div>
+										</div>
+									</section>
+
+							</div>
+						</div>
+						<div id="copyright">
+							<ul>
+								<li>© JamWatHQ.</li>
+							</ul>
+						</div>
+					</section>
+			</div>
+			<style>
+				#footer {
+					margin-bottom: 0;
+				}
+			</style>
+					<!-- Scripts -->
+						<script src="assets/js/jquery.min.js"></script>
+						<script src="assets/js/jquery.dropotron.min.js"></script>
+						<script src="assets/js/browser.min.js"></script>
+						<script src="assets/js/breakpoints.min.js"></script>
+						<script src="assets/js/util.js"></script>
+						<script src="assets/js/main.js"></script>
+	</body>
+</html>
+	<script>
+let totalReviews = 0;
+let totalRating = 0;
+
+function filterAgencies() {
+    const searchInput = document.getElementById('searchAgencyForm').value.toLowerCase();
+    const locationFilter = document.getElementById('locationForm').value.toLowerCase();
+    const servicesFilter = document.getElementById('servicesForm').value.toLowerCase();
+    const agencies = document.querySelectorAll('.agency-info');
+
+    agencies.forEach(agency => {
+        const agencyName = agency.querySelector('header h3')?.textContent.toLowerCase() || '';
+        const location = agency.querySelector('.location-tag')?.textContent.toLowerCase() || '';
+        const services = Array.from(agency.querySelectorAll('section')).find(section =>
+            section.textContent.toLowerCase().includes('services:')
+        )?.textContent.toLowerCase() || '';
+
+        if (
+            (agencyName.includes(searchInput) || !searchInput) &&
+            (location.includes(locationFilter) || !locationFilter) &&
+            (services.includes(servicesFilter) || !servicesFilter)
+        ) {
+            agency.style.display = '';
+        } else {
+            agency.style.display = 'none';
+        }
+    });
+}
+
+function clearFilters() {
+    // Reset all input fields
+    document.getElementById('searchAgencyForm').value = '';
+    document.getElementById('locationForm').value = '';
+    document.getElementById('servicesForm').value = '';
+
+    // Display all agencies
+    const agencies = document.querySelectorAll('.agency-info');
+    agencies.forEach(agency => {
+        agency.style.display = '';
+    });
+}
+
+function toggleReviewSection(buttonElement) {
+    const agencyElement = buttonElement.closest('.agency-info');
+    const reviewSection = agencyElement.querySelector('.review-section');
+
+    if (reviewSection.style.display === 'none' || reviewSection.style.display === '') {
+        // Show the review section
+        reviewSection.style.display = 'block';
+        // Change button text to "Cancel"
+        buttonElement.textContent = 'Cancel';
+        buttonElement.classList.remove('btn-primary');
+        buttonElement.classList.add('btn-secondary');
+    } else {
+        // Hide the review section
+        reviewSection.style.display = 'none';
+        // Change button text back to "Leave a Review"
+        buttonElement.textContent = 'Leave a Review';
+        buttonElement.classList.remove('btn-secondary');
+        buttonElement.classList.add('btn-primary');
+    }
+}
+
+// Place before </body>
+const agencyReviews = {};
+
+function submitReviewGeneric(agencyKey) {
+    // Get values for this agency
+    const applicationProcess = parseInt(document.querySelector(`input[name="applicationProcess-${agencyKey}"]:checked`)?.value || 0);
+    const customerService = parseInt(document.querySelector(`input[name="customerService-${agencyKey}"]:checked`)?.value || 0);
+    const communication = parseInt(document.querySelector(`input[name="communication-${agencyKey}"]:checked`)?.value || 0);
+    const supportServices = parseInt(document.querySelector(`input[name="supportServices-${agencyKey}"]:checked`)?.value || 0);
+    const overallExperience = parseInt(document.querySelector(`input[name="overallExperience-${agencyKey}"]:checked`)?.value || 0);
+    const comments = document.getElementById(`comments-${agencyKey}`)?.value.trim();
+
+    // Validate
+    if (!applicationProcess || !customerService || !communication || !supportServices || !overallExperience) {
+        alert('Please rate all categories before submitting your review.');
+        return;
+    }
+    if (!comments) {
+        alert('Please provide your comments before submitting your review.');
+        return;
+    }
+
+    // Calculate rating
+    const overallRating = (applicationProcess + customerService + communication + supportServices + overallExperience) / 5;
+
+    // Store and update
+    if (!agencyReviews[agencyKey]) agencyReviews[agencyKey] = [];
+    agencyReviews[agencyKey].push(overallRating);
+
+    const totalReviews = agencyReviews[agencyKey].length;
+    const totalRating = agencyReviews[agencyKey].reduce((a, b) => a + b, 0);
+    const averageRating = (totalRating / totalReviews).toFixed(1);
+
+    // Update UI
+    const ratingText = document.getElementById(`ratingText-${agencyKey}`);
+    if (ratingText) ratingText.textContent = `${averageRating} average based on ${totalReviews} reviews.`;
+
+    const stars = document.getElementById(`averageRating-${agencyKey}`)?.children;
+    if (stars) {
+        for (let i = 0; i < stars.length; i++) {
+            stars[i].className = i < Math.round(averageRating) ? 'fa fa-star checked' : 'fa fa-star';
+        }
+    }
+
+    // Reset form
+    document.getElementById(`reviewForm-${agencyKey}`).reset();
+    alert('Thank you for your review!');
+}
+
+// Attach to each agency's submit button
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('form[id^="reviewForm-"]').forEach(form => {
+        const agencyKey = form.id.replace('reviewForm-', '');
+        const submitBtn = form.querySelector('button[type="button"]');
+        if (submitBtn) {
+            submitBtn.onclick = function() {
+                submitReviewGeneric(agencyKey);
+            };
+        }
+    });
+});
+</script>

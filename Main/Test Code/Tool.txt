@@ -1,0 +1,2072 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>List of Approved Agencies - JamWatHQ</title>
+	</head>
+	<body class="right-sidebar is-preload">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.agency-info {
+				margin-top: 2em;
+				padding: 1.5em;
+				background: #f9f9f9;
+				border: 1px solid #ddd;
+				border-radius: 8px;
+			}
+			.agency-info h3 {
+				margin-top: 1em;
+				color: #333;
+			}
+			.agency-info p {
+				margin: 0.5em 0;
+				font-size: 0.9em;
+			}
+			.agency-info.compact {
+				width: 100%;
+				max-width: 1120px;
+				margin: 1em auto;
+				padding: 1em;
+				background: #f9f9f9;
+				border: 1px solid #ddd;
+				border-radius: 15px;
+				box-sizing: border-box;
+				margin-bottom: 1em; /* Adjust spacing between containers */
+				object-fit: cover;
+				transition: transform 0.5s, box-shadow 0.5s;
+			}
+			.agency-info.compact:hover {
+				transform: scale(1.05); /* Slight zoom-in effect */
+				box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow for emphasis */
+			}
+			.agency-info.compact h3 {
+				font-size: 1.1em;
+				color: #333;
+			}
+			.agency-info.compact section {
+				margin: 0.2em 0;
+				}
+			#content {
+				width: 100%;
+				max-width: 1120px;
+				margin: 0 auto;
+				padding: 1em;
+			}
+		</style>
+	</head>
+	<body class="right-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1>
+								<a href="index.html" class="logo-link">
+									<span id="word1">Jamaican's</span>
+									<span id="word2">Work</span>
+									<span id="word3">and</span>
+									<span id="word4">Travel</span>
+									<span id="word5">HQ</span>
+								</a>
+							</h1>
+							<p class="logo-tagline">
+								<span id="tagline1">Straightforward.</span>
+								<span id="tagline2">Reliable.</span>
+								<span id="tagline3">Your</span>
+								<span id="tagline4">#1</span>
+								<span id="tagline5">Jamaican</span>
+								<span id="tagline6">J1</span>
+								<span id="tagline7">Info</span>
+								<span id="tagline8">Hub.</span>
+							</p>
+						</div>
+
+						<!-- Nav -->
+							
+						
+							<nav id="nav">
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li>
+										<a href="listofAgency.html" target="_blank">Agency</a>
+										<ul>
+											<li><a href="listofAgency.html" target="_blank">List of Approved Agency/Sponsor</a></li>
+											<li><a href="#" target="_blank">Agency Ranking (Coming soon)</a></li>
+										</ul>
+									</li>
+									<li><a href="News.html">J-1 News</a></li>
+									<li>
+										<a href="#" target="_blank">Embassy Websites</a>
+										<ul>
+											<li><a href="https://ceac.state.gov/GenNIV/Default.aspx" target="_blank">DS-160 Website</a></li>
+											<li><a href="https://ais.usvisa-info.com/en-jm/niv" target="_blank">Visa Appointment Website</a></li>
+											<li><a href="https://i94.cbp.dhs.gov/home" target="_blank">I-94 Website</a></li>
+											<li><a href="https://www.fmjfee.com/i901fee/index.html?content=status/checkStatus" target="_blank">I-901 website</a></li>
+											<li><a href="https://ceac.state.gov/CEACStatTracker/Status.aspx" target="_blank">Visa Status Check</a></li>
+											<li><a href="https://j1visa.state.gov/contacts/" target="_blank">J-1 Visa Emergency Hotline!!!</a></li>
+										</ul>
+									</li>
+									<li>
+									<li><a href="#" target="_blank">Work and Travel Guides</a></li>
+									<li><a href="#" >J-1 Tips</a></li>
+									<li><a href="#" >FAQs</a></li>
+									<li><a href="#">J-1 Testimonials</a></li>
+									<li><a href="#">Jobs and States to </a></li>
+								</ul>
+							</nav>
+					</section>
+
+			<!-- Main -->
+				<section id="main" class="wrapper style2">
+					<div class="title">Agency</div>
+					<div class="container"></div>
+
+					<!-- Content -->
+						<div id="content">
+							<article class="box post">
+
+								<header class="style1"><h2 align="center" >List of Approved Agency/Sponsor</h2></header>
+  
+								<p style="color: red;">Please note that the list of agencies is subject to change as new agencies are added and existing ones may update their offerings. For the most current information, visit the official website of the Ministry of Labour and Social Security: 
+									<a href="https://www.mlss.gov.jm/departments/mployment-agency-unit/" target="_blank">Employment Agency Unit</a>.
+								</p>
+
+								<!-- Search and Filter Section -->
+								<div class="gradient-x-three-sm-primary">
+									<div class="container content-space-2">
+									<form>
+										<!-- Input Card -->
+										<div class="input-card input-card-sm mb-3">
+										<div class="input-card-form">
+											<label for="searchAgencyForm" class="form-label visually-hidden">Agency name</label>
+											<div class="input-group input-group-merge">
+											<span class="input-group-prepend input-group-text">
+												<i class="bi-search"></i>
+											</span>
+											<input type="text" class="form-control" id="searchAgencyForm" placeholder="Search for agency name..." onkeyup="filterAgencies()">
+											</div>
+										</div>
+								
+										<div class="input-card-form">
+											<label for="locationForm" class="form-label visually-hidden">Location</label>
+											<div class="input-group input-group-merge">
+											<span class="input-group-prepend input-group-text">
+												<i class="bi-geo-alt"></i>
+											</span>
+											<select class="form-control" id="locationForm" onchange="filterAgencies()">
+												<option value="">Filter by Location</option>
+												<option value="Kingston, Jamaica">Kingston, Jamaica</option>
+												<option value="Montego Bay, Jamaica">Montego Bay, Jamaica</option>
+												<option value="Mandeville, Jamaica">Mandeville, Jamaica</option>
+												<option value="Clarendon, Jamaica">Clarendon, Jamaica</option>
+												<option value="St. Ann, Jamaica">St. Ann, Jamaica</option>
+											</select>
+											</div>
+										</div>
+								
+										<div class="input-card-form">
+											<label for="servicesForm" class="form-label visually-hidden">Services</label>
+											<div class="input-group input-group-merge">
+											<span class="input-group-prepend input-group-text">
+												<i class="bi-briefcase"></i>
+											</span>
+											<select class="form-control" id="servicesForm" onchange="filterAgencies()">
+												<option value="">Filter by Services</option>
+												<option value="J-1">J-1</option>
+												<option value="H-1B">H-1B</option>
+												<option value="H-2B">H-2B</option>
+												<option value="H-3B">H-3B</option>
+												<option value="Q-1">Q-1</option>
+												<option value="Au Pair">Au Pair</option>
+												<option value="Internship Program">Internship Program</option>
+											</select>
+											</div>
+										</div>
+										<button type="button" class="btn btn-primary" onclick="filterAgencies()">Search</button>
+										<button type="button" class="btn btn-secondary" onclick="clearFilters()">Clear</button>
+										</div>
+										<!-- End Input Card -->
+									</form>
+									</div>
+								</div>
+								<!-- End Search and Filter Section -->
+
+								<!-- List of Angency/Sponsor-->
+								<!-- 10881 Entertainment Agency -->
+								<div class="agency-info compact">
+									<header>
+										<h3 align="center">10881 Entertainment Agency</h3>
+									</header>
+									<div class="info-container"></div>
+										<section><strong>Email:</strong> <a href="mailto:10881agency@gmail.com">10881agency@gmail.com</a></section>
+										<section><strong>Website:</strong> Not found</section>
+										<section><strong>Social Media:</strong> Not found</section>
+										<section><strong>Address:</strong> Door #6, 63 Dumbarton Avenue, Kingston 10, St. Andrew, Jamaica</section>
+										<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+										<section><strong>Services:</strong>  J-1,  H-2B</section>
+										<section><strong>Hours:</strong> Not found</section>
+										<section><strong>Personnel:</strong> Mr. Elvey Johnson - Contact for queries</section>
+										<section><strong>Eligibility:</strong> Not found</section>
+										<section><strong>Fees (subject to change):</strong> Not found</section>
+									</div>
+								</div>
+
+								<div class="agency-info compact">
+									<header>
+										<h3 align="center">A-Rize Work &amp; Travel Services</h3>
+									</header>
+									<div class="info-container">
+										<section><strong>Contact:</strong> 876-990-6427, 876-490-9482</section>
+										<section><strong>Email:</strong> <a href="mailto:info@arizeworkandtravel.com">info@arizeworkandtravel.com</a>, <a href="mailto:support@arizeworkandtravel.com">support@arizeworkandtravel.com</a></section>
+										<section><strong>Website:</strong> <a href="http://www.arizeworkandtravel.com" target="_blank">http://www.arizeworkandtravel.com</a></section>
+										<section><strong>Social Media:</strong>
+											<a href="https://www.instagram.com/arizeworkandtravel1/?hl=en" target="_blank">Instagram</a>, 
+											<a href="https://www.facebook.com/ARWTS1/" target="_blank">Facebook</a>
+										</section>
+										<section><strong>Address:</strong> 12 Wiltshire Complex, Spalding P.O., Clarendon, Jamaica</section>
+										<section><strong>Location:</strong> <span class="location-tag">Clarendon, Jamaica</span></section>
+										<section><strong>Services:</strong>  J-1,  H-2B, H-3B, Q-1</section>
+										<section><strong>Hours:</strong> Mon-Fri: 9:00 AM - 3:00 PM, Sat-Sun: Closed</section>
+										<section><strong>Personnel:</strong> Mr. Pierre Bennet - Contact for queries</section>
+										<section><strong>Eligibility:</strong> Applicants must be 18+, post-secondary students (part-time or full-time), specialized skills may be required.</section>
+										<section><strong>Fees (subject to change):</strong> JMD $8,500 registration/orientation fee, USD $650 program fee</section>
+									</div>
+								</div>
+
+								<div class="agency-info compact">
+									<header>
+										<h3 align="center">A1 Placement Service Limited</h3>
+									</header>
+									<div class="info-container">
+										<section><strong>Contact:</strong> 876-503-1257</section>
+										<section><strong>Address:</strong> Shop #8, 6 Hagley Park Road, Kingston 10, Jamaica</section>
+										<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+										<section><strong>Services:</strong>  H-2B and  J-1 programs</section>
+										<section><strong>Hours:</strong> Not found</section>
+										<section><strong>Personnel:</strong> Ms. Rochelle Russell - Contact for queries</section>
+										<section><strong>Eligibility:</strong> Not found</section>
+										<section><strong>Fees (subject to change):</strong> Not found</section>
+									</div>
+								</div>
+
+								<div class="agency-info compact">
+									<header>
+										<h3 align="center">Access to Success Business Solution</h3>
+									</header>
+									<div class="info-container">
+										<section><strong>Contact:</strong> 876-815-7494, 876-929-3633</section>
+										<section><strong>Website:</strong> <a href="http://atseagency.org/" target="_blank">http://atseagency.org/</a></section>
+										<section><strong>Instagram:</strong> <a href="https://www.instagram.com/_access_to_success_?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram Profile</a></section>
+										<section><strong>Address:</strong> Shop #3, Bisayne Plaza, 51 Slipe Road, Kingston 5, Jamaica</section>
+										<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+										<section><strong>Services:</strong> H2B and Canadian Employment</section>
+										<section><strong>Hours:</strong> Mon-Thu: 8:30 AM - 5:00 PM, Fri: 8:30 AM - 3:00 PM, Sat-Sun: Closed</section>
+										<section><strong>Personnel:</strong> Mrs. Michelle Bryan-Ford - Contact for queries</section>
+										<section><strong>Eligibility:</strong> Not found</section>
+										<section><strong>Fees (subject to change):</strong> Not found</section>
+									</div>
+								</div>
+									<div class="agency-info compact">
+										<header><h3 align="center">Adnil Services</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-963-5480, (876) 963-5700</section>
+											<section><strong>Email:</strong> <a href="mailto:info@adnilservices.com">info@adnilservices.com</a></section>
+											<section><strong>Website:</strong> <a href="https://www.adnilservices.com/" target="_blank">https://www.adnilservices.com/</a></section>
+											<section><strong>Address:</strong> Market Street, Whitehouse, Westmoreland, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Westmoreland, Jamaica</span></section>
+											<section><strong>Services:</strong>  H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Mr. Dennis Turner - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Agency for Cultural Exchange Program Company Limited</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-330-9151, 876-906-9311</section>
+											<section><strong>Email:</strong> <a href="mailto:info@acepja.com">info@acepja.com</a>, <a href="mailto:applicant.acepja@gmail.com">applicant.acepja@gmail.com</a></section>
+											<section><strong>Website:</strong> <a href="http://www.acepja.com" target="_blank">http://www.acepja.com</a></section>
+											<section><strong>Address:</strong> 3 Cargill Avenue, Suite #13, Kingston 10, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong> J-1</section>
+											<section><strong>Other Services:</strong>Non-immigrant visa application services for the United States and Canada. </section>
+											<section><strong>Hours:</strong> Mon-Fri: 9:00 AM - 5:00 PM, Sat-Sun: Closed</section>
+											<section><strong>Personnel:</strong> Ms. Casandra Chisholm - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> JMD 5000 US application service fee, JMD 25,120 US visa application fee (subject to change), JMD 5000 Canadian application service fee, CAD 185 Canadian visa application fee (subject to change)</section>
+											<section><strong>Documents Required:</strong> Valid Passport, One passport-sized photo (not embossed or certified), Previously issued visa(s) (if applicable), Last five travel dates (if applicable)</section>
+											<section><strong>Flight Booking:</strong> Assistance available</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Akey1 Limited</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-402-8302</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong> Not found</section>
+											<section><strong>Address:</strong> Shop #50, Little Premier Plaza, Kingston 10, St. Andrew, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Dianne Strachan - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Alphanso Agency Limited</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-667-7194</section>
+											<section><strong>Email:</strong> <a href="mailto:info@alphansoagency.com">info@alphansoagency.com</a></section>
+											<section><strong>Website:</strong> <a href="http://www.alphansoagency.com" target="_blank">http://www.alphansoagency.com</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/alphansoagencyltd/?hl=en" target="_blank">Instagram</a>, 
+												<a href="https://www.youtube.com/@AlphansoAgency/featured" target="_blank">YouTube</a>
+											</section>
+											<section><strong>Address:</strong> 30A Constant Spring Road, Kingston 10, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong> H-2B</section>
+											<section><strong>Other Services:</strong> Staffing solutions for local and overseas employment, connecting workers with sustainable job opportunities.</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Ms. Antoinette Osbourne - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+									
+									<div class="agency-info compact">
+										<header><h3 align="center">Atlantic International Travel Services</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-700-8819, 876-325-5235</section>
+											<section><strong>Email:</strong> <a href="mailto:atlanticinternationaltravel69@gmail.com">atlanticinternationaltravel69@gmail.com</a></section>
+											<section><strong>Website:</strong> <a href="https://www2.inteletravel.com/" target="_blank">https://www2.inteletravel.com/</a></section>
+											<section><strong>Social Media:</strong> Not found</section>
+											<section><strong>Address:</strong> 3A Green Vale Road, Mandeville, Manchester, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Mandeville, Manchester, Jamaica</span></section>
+											<section><strong>Services:</strong> H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Wendy Elliot - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">ATSED Employment Agency</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-310-1869, (876) 488-3020</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong> Not found</section>
+											<section><strong>Address:</strong> Rose Heights, Montego Bay, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Montego Bay, Jamaica</span></section>
+											<section><strong>Services:</strong> H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Ms. Desta Simms - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Beadles &amp; Associates</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-472-4479, 876-727-6240</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong> Not found</section>
+											<section><strong>Address:</strong> Shop #9, Four Paths Shopping Centre, Clarendon, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Clarendon, Jamaica</span></section>
+											<section><strong>Services:</strong> H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Mrs. Trevoline Reeves-Beadles - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees:</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">C &amp; Y Employment Agency</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-469-1634, 876-862-2416, (876) 408-7818</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong> Not found</section>
+											<section><strong>Address:</strong> 40 Jarett Street, Liberty Plaza, Montego Bay, St. James, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Montego Bay, St. James, Jamaica</span></section>
+											<section><strong>Services:</strong>  H-2B</section>
+											<section><strong>Hours:</strong> Opens at 9:00 AM</section>
+											<section><strong>Personnel:</strong> Ms. Yvonne James - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">C.C.S. Global Limited</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-489-7118, (876) 960-1285</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> <a href="http://www.ccsgloballtd.com" target="_blank">http://www.ccsgloballtd.com</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/ccsglobalusa/" target="_blank">Instagram</a>, 
+												<a href="https://www.linkedin.com/company/ccs-global/" target="_blank">LinkedIn</a>
+											</section>
+											<section><strong>Address:</strong> 26A Parking Plaza, Kingston 10, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong> H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Ms. Camillie Wilson - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Cape Cod Workers</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-351-0982</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> <a href="http://www.capecodja.com" target="_blank">http://www.capecodja.com</a></section>
+											<section><strong>Social Media:</strong> <a href="https://www.instagram.com/capecodja/" target="_blank">Instagram</a></section>
+											<section><strong>Address:</strong> 14 Winchester Business Centre, 15 Hope Road, Kingston 10, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong> H-2B</section>
+											<section><strong>Hours:</strong> Mon-Fri: 8:30 AM - 2:00 PM, Sat-Sun: Closed</section>
+											<section><strong>Personnel:</strong> Mrs. Violet Sheppard-Rose - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Checkin Work and Travel</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-436-4181</section>
+											<section><strong>Email:</strong>
+												<a href="mailto:checkinworkandtravel@gmail.com">checkinworkandtravel@gmail.com</a>, 
+												<a href="mailto:info@checkinworkandtravel.com">info@checkinworkandtravel.com</a>
+											</section>
+											<section><strong>Website:</strong> <a href="https://checkinworkandtravel.com/" target="_blank">https://checkinworkandtravel.com/</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/checkinworkandtravel/" target="_blank">Instagram</a>, 
+												<a href="https://wa.me/message/AHVQ5KC3AE6WH1" target="_blank">WhatsApp</a>
+											</section>
+											<section><strong>Address:</strong> 22B Old Hope Road, Kingston 5, St. Andrew, Jamaica</section>
+											<section><strong>Branch Offices:</strong> 115 Hope Road Suite 12, Liguanea Post Mall, Kingston 6, Jamaica, W.I.</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1</section>
+											<section><strong>Hours:</strong> Mon-Fri: 8:30 AM - 4:00 PM</section>
+											<section><strong>Personnel:</strong> Dwight Sommers - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">College &amp; Undergrad Student Exchanges</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-707-1245</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong> Not found</section>
+											<section><strong>Address:</strong> 10 Queens Drive, Montego Bay, St. James, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Montego Bay, St. James, Jamaica</span></section>
+											<section><strong>Services:</strong> J-1,  H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Ms. Johnelle Waite - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+									<div class="agency-info compact">
+										<header><h3 align="center">Creative Staffing Agency</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-530-2468, 876-690-5455, (240) 571-6443 USA</section>
+											<section><strong>Email:</strong>
+												<a href="mailto:info@creativestaffings.com">info@creativestaffings.com</a>, 
+												<a href="mailto:creativestaffingagency@yahoo.com">creativestaffingagency@yahoo.com</a>
+											</section>
+											<section><strong>Website:</strong> <a href="https://www.creativestaffings.com/" target="_blank">https://www.creativestaffings.com/</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/creative_staffing_agency/" target="_blank">Instagram</a>, 
+												<a href="https://www.facebook.com/CreativeStaffingAgency/" target="_blank">Facebook</a>
+											</section>
+											<section><strong>Address:</strong> 6 Strand Street, Montego Bay, St. James, Jamaica</section>
+											<section><strong>Branch Offices:</strong> USA, 5850 Waterloo Road, Columbia, MD 21045</section>
+											<section><strong>Location:</strong> <span class="location-tag">Montego Bay, St. James, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Jacqueline Tummings - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Dako Global Services</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-469-9969, 876-589-1908, 876-492-1604</section>
+											<section><strong>Email:</strong> <a href="mailto:dakotravel.jm@gmail.com">dakotravel.jm@gmail.com</a></section>
+											<section><strong>Website:</strong> <a href="https://www.dakoglobalservices.com" target="_blank">https://www.dakoglobalservices.com</a></section>
+											<section><strong>Social Media:</strong> Not found</section>
+											<section><strong>Address:</strong> Suite #1, Oxford Place, 22G Old Hope Road, Kingston, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong> H-2B</section>
+											<section><strong>Other Services:</strong> 
+												Employment-based Green Card assistance,  H-2B visa programs for temporary non-agricultural jobs, 
+												Visa applications for the United States, Canada, United Kingdom, and Europe, 
+												Skilled worker recruitment and executive search, Worker registration and internship placement.
+											</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Oral Rose - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Dallas Employment Agency</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-319-6764, (876) 781-2260</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong> Not found</section>
+											<section><strong>Address:</strong> Pink Plaza, Tower Isle, St. Mary, Jamaica</section>
+											<section><strong>Branch Offices:</strong> 11 Warner St, Port Maria</section>
+											<section><strong>Location:</strong> <span class="location-tag">St. Mary, Jamaica</span></section>
+											<section><strong>Services:</strong>  H-2B</section>
+											<section><strong>Hours:</strong> Mon-Fri: 9:30 AM - 5:00 PM, Sat-Sun: Closed</section>
+											<section><strong>Personnel:</strong> Ms. Novelette Dallas - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Dallas Employment Agency</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-793-8032, 876-781-2260, 876-508-0954</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong> Not found</section>
+											<section><strong>Address:</strong> Pink Plaza, Tower Isle, St. Mary, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Tower Isle, St. Mary, Jamaica</span></section>
+											<section><strong>Services:</strong>  H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Novelette Dallas - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+									
+									<div class="agency-info compact">
+										<header>
+											<h3 align="center">Destin VIP Employment Services</h3>
+										</header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-476-6357</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong> Not found</section>
+											<section><strong>Address:</strong> Shop #19, Screen Dat Plaza, Porus P.O., Manchester, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Manchester, Jamaica</span></section>
+											<section><strong>Services:</strong>  H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Advira Turner - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header>
+											<h3 align="center">DJ Consulting Services</h3>
+										</header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-551-8576, +1 929-359-3494</section>
+											<section><strong>Email:</strong> <a href="mailto:professorjohnson@djconsultingservices.co">professorjohnson@djconsultingservices.co</a></section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/djconsultingservices/" target="_blank">Instagram</a>, 
+												<a href="https://www.facebook.com/djconsultingservices/" target="_blank">Facebook</a>
+											</section>
+											<section><strong>Address:</strong> Shop #4, Mom Village Plaza, Runaway Bay, St. Ann, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">St. Ann, Jamaica</span></section>
+											<section><strong>Services:</strong> Employment agency services, specializing in connecting individuals with job opportunities locally and overseas.</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Ms. Daren Johnson - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header>
+											<h3 align="center">Dorryus Recruitment &amp; Employment Agency</h3>
+										</header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-425-0616, 876-728-3425</section>
+											<section><strong>Email:</strong> <a href="mailto:j1coor@dorryus.com">j1coor@dorryus.com</a>, <a href="mailto:mgrdirector@dorryus.com">mgrdirector@dorryus.com</a></section>
+											<section><strong>Website:</strong> <a href="http://www.dorryus.com" target="_blank">http://www.dorryus.com</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/dorryus_recruitment/" target="_blank">Instagram</a>, 
+												<a href="tel:18764250616">WhatsApp</a>
+											</section>
+											<section><strong>Address:</strong> 674 Half Moon Road, Coral Gardens, Rose Hall, St. James, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">St. James, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1,  H-2B</section>
+											<section><strong>Hours:</strong> Mon-Fri: 9:00 AM - 5:00 PM, Sat-Sun: Closed</section>
+											<section><strong>Personnel:</strong> Mr. Jahraski Young - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Applicants must meet specific requirements for  J-1 and  H-2B programs, such as educational qualifications or work experience.</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header>
+											<h3 align="center">E-JAM Employment Jamaica Ltd</h3>
+										</header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-974-3526, 876-899-6173</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> <a href="http://www.ejamjobs.com" target="_blank">http://www.ejamjobs.com</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.facebook.com/ejamjobs/" target="_blank">Facebook</a>, 
+												<a href="https://twitter.com/eJAMJOBS/" target="_blank">X (formerly Twitter)</a>, 
+												<a href="https://www.linkedin.com/company/e-jam-jobs/" target="_blank">LinkedIn</a>, 
+												<a href="https://www.instagram.com/ejamjobs/" target="_blank">Instagram</a>
+											</section>
+											<section><strong>Address:</strong> 73 Main Street, Shop #8, Simmond Plaza, Ocho Rios, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Ocho Rios, Jamaica</span></section>
+											<section><strong>Services:</strong> J-1,  H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Mrs. Yvonne Russell - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header>
+											<h3 align="center">Explore Work &amp; Travel Int'l Ltd</h3>
+										</header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-428-1600, 876-238-5112</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> <a href="http://www.exploreworkandtravel.com" target="_blank">http://www.exploreworkandtravel.com</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/exp.loreworkandtravel876/" target="_blank">Instagram</a>, 
+												<a href="https://www.facebook.com/exploreworkandtravelinternational/" target="_blank">Facebook</a>
+											</section>
+											<section><strong>Address:</strong> Shop #6, Squeeze Eye Plaza, Main Street, Moneague, St. Ann, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">St. Ann, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1</section>
+											<section><strong>Hours:</strong> Mon-Fri: 9:00 AM - 4:30 PM, Sat-Sun: Closed</section>
+											<section><strong>Personnel:</strong> Mr. Jafari Reid - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header>
+											<h3 align="center">Explore Your World Ltd</h3>
+										</header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-483-8205, 876-898-5001</section>
+											<section><strong>Email:</strong> <a href="mailto:info@goexploreyourworld.org">info@goexploreyourworld.org</a></section>
+											<section><strong>Website:</strong> <a href="http://www.goexploreyourworld.org" target="_blank">http://www.goexploreyourworld.org</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/exploreyourworld.jm/" target="_blank">Instagram</a>
+											</section>
+											<section><strong>Address:</strong> 237 Old Hope Road, TIC Building, University of Technology, Kingston 6, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1</section>
+											<section><strong>Hours:</strong> Mon-Thu: 10:00 AM - 4:00 PM, Fri: 10:00 AM - 12:00 PM, Sat-Sun: Closed</section>
+											<section><strong>Personnel:</strong> Ms. Morene James - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header>
+											<h3 align="center">Faith Placement Services</h3>
+										</header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-926-9138</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong> Not found</section>
+											<section><strong>Address:</strong> 18 Chisholm Avenue, Kingston 10, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong> J-1,  H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Ms. Indiana Willis - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+										<div class="agency-info compact">
+											<header>
+												<h3 align="center">First Class Cultural Travel Experience Ltd</h3>
+											</header>
+											<div class="info-container">
+												<section><strong>Contact:</strong> 876-598-1339, 876-387-6621</section>
+												<section><strong>Email:</strong> <a href="mailto:info@firstclasstravelexp.com">info@firstclasstravelexp.com</a></section>
+												<section><strong>Website:</strong> <a href="https://www.firstclasstravelexp.com" target="_blank">https://www.firstclasstravelexp.com</a></section>
+												<section><strong>Social Media:</strong>
+													<a href="https://www.instagram.com/first_class_exp/" target="_blank">Instagram</a>
+												</section>
+												<section><strong>Address:</strong> Shop #35, The Pulse Centre, 38A Trafalgar Road, Kingston 10, Jamaica</section>
+												<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+												<section><strong>Services:</strong>  J-1</section>
+												<section><strong>Hours:</strong>
+													Monday-Thursday: 9:30 AM – 4:00 PM,
+													Friday: 9:00 AM – 3:00 PM,
+													Saturday &amp; Sunday: CLOSED
+												</section>
+												<section><strong>Personnel:</strong> Sanjay Anderson - Contact for queries</section>
+												<section><strong>Eligibility:</strong>
+													<ul>
+														<li>Must be between 18 – 28 years old</li>
+														<li>Full-time college student taking 12 or more credits each semester</li>
+														<li>Valid passport that expires after March 31, 2025</li>
+														<li>Must pass swim test (for lifeguarding)</li>
+													</ul>
+												</section>
+												<section><strong>Fees (subject to change):</strong> Not found</section>
+											</div>
+										</div>
+
+										<div class="agency-info compact">
+											<header>
+												<h3 align="center">Flyer Zone Placement Services</h3>
+											</header>
+											<div class="info-container">
+												<section><strong>Contact:</strong> 876-474-3027</section>
+												<section><strong>Email:</strong> <a href="mailto:info@flyerzone.org">info@flyerzone.org</a></section>
+												<section><strong>Website:</strong> <a href="http://www.flyerzone.org" target="_blank">http://www.flyerzone.org</a></section>
+												<section><strong>Social Media:</strong>
+													<a href="https://www.instagram.com/flyerzoneps/" target="_blank">Instagram</a>,
+													<a href="https://www.linkedin.com/company/flyer-zone-placement-services/" target="_blank">LinkedIn</a>,
+													<a href="https://wa.me/18764743027" target="_blank">WhatsApp</a>,
+													<a href="https://www.facebook.com/FlyerZonePlacementServices/" target="_blank">Facebook</a>
+												</section>
+												<section><strong>Address:</strong> Shop #104, 2 West Park, May Pen, Clarendon, Jamaica</section>
+												<section><strong>Location:</strong> <span class="location-tag">Clarendon, Jamaica</span></section>
+												<section><strong>Services:</strong>  J-1,  H-2B, Au Pair</section>
+												<section><strong>Hours:</strong> Mon-Thu: 9:00 AM - 5:00 PM, Fri: 9:00 AM - 3:00 PM, Sat-Sun: Closed</section>
+												<section><strong>Personnel:</strong> Ms. Brendalyn Sewell - Contact for queries</section>
+												<section><strong>Eligibility:</strong> Not found</section>
+												<section><strong>Fees (subject to change):</strong> Not found</section>
+											</div>
+										</div>
+
+										<div class="agency-info compact">
+											<header>
+												<h3 align="center">Gamma International Work &amp; Travel Agency</h3>
+											</header>
+											<div class="info-container">
+												<section><strong>Contact:</strong> 876-388-6527</section>
+												<section><strong>Email:</strong> Not found</section>
+												<section><strong>Website:</strong> Not found</section>
+												<section><strong>Social Media:</strong> Not found</section>
+												<section><strong>Address:</strong> 16 West Palm Avenue, Port Antonio, Portland, Jamaica</section>
+												<section><strong>Location:</strong> <span class="location-tag">Portland, Jamaica</span></section>
+												<section><strong>Services:</strong> Employment agency services, specializing in connecting individuals with overseas job opportunities.</section>
+												<section><strong>Hours:</strong> Not found</section>
+												<section><strong>Personnel:</strong> Ms. Edna McCarthy - Contact for queries</section>
+												<section><strong>Eligibility:</strong> Not found</section>
+												<section><strong>Fees (subject to change):</strong> Not found</section>
+											</div>
+										</div>
+
+										<div class="agency-info compact">
+											<header>
+												<h3 align="center">Global Insight International Exchange</h3>
+											</header>
+											<div class="info-container">
+												<section><strong>Contact:</strong> 876-433-2544, 876-779-4634</section>
+												<section><strong>Email:</strong> <a href="mailto:globalinsightqueries@gmail.com">globalinsightqueries@gmail.com</a></section>
+												<section><strong>Website:</strong> <a href="http://www.globalinsightexchanges.com" target="_blank">http://www.globalinsightexchanges.com/a&gt;</a></section>
+												<section><strong>Social Media:</strong>
+													<a href="https://www.facebook.com/GlobalInsightInternationalExchangeLtd/" target="_blank">Facebook</a>,
+													<a href="https://www.instagram.com/globalinsightig/" target="_blank">Instagram</a>
+												</section>
+												<section><strong>Address:</strong> Unit 2, 35 Hope Road, Kingston 6, Jamaica</section>
+												<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+												<section><strong>Services:</strong> J-1</section>
+												<section><strong>Hours:</strong> Mon-Fri: 9:00 AM - 3:00 PM, Sat-Sun: Closed</section>
+												<section><strong>Personnel:</strong> Ms. Georgia Cobran - Contact for queries</section>
+												<section><strong>Eligibility:</strong>
+													<ul>
+														<li>Passport-size photo (no older than 6 months, not certified)</li>
+														<li>Original passport and expired passport (if containing US visa[s])</li>
+														<li>Photocopy of passport sections (Validity, Name, Date of birth, Visa details)</li>
+														<li>Valid Skype ID (Mandatory for interviews)</li>
+														<li>1-page resume (Required for all applicants)</li>
+														<li>Vaccination card (Mandatory)</li>
+														<li>Original and photocopy of school ID card</li>
+														<li>Job Offer Form (For self-arranged applicants)</li>
+														<li>Documents submission deadline: Mid-January of each program year</li>
+														<li>School status letter confirming year, full-time status, and course of study</li>
+														<li>Transcript required for Embassy interview (Apply from January for timely availability)</li>
+													</ul>
+												</section>
+												<section><strong>Fees (subject to change):</strong> Not found</section>
+											</div>
+										</div>
+									
+									<div class="agency-info compact">
+										<header><h3 align="center">Golden Luxe Travel and Employment Agency</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-334-5786</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/goldenluxetravelagency/" target="_blank">Instagram</a>, 
+												<a href="https://www.tiktok.com/@GoldenLuxeTravelEmploymentAgency/" target="_blank">TikTok</a>
+											</section>
+											<section><strong>Address:</strong> Shop #7, Glamorous Plaza, Chudleigh P.A., Christiana, Manchester, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Manchester, Jamaica</span></section>
+											<section><strong>Services:</strong>  H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Ashneak Russell - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">GTG Recruiting Agency Limited</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-317-3219</section>
+											<section><strong>Email:</strong> <a href="mailto:pennyroyal920@gmail.com">pennyroyal920@gmail.com</a></section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong> Not found</section>
+											<section><strong>Address:</strong> Shop #16, 2 School Street, Black River, St. Elizabeth, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Black River, St. Elizabeth, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1,  H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Patricia Clarke - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">HR Elite Limited</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-963-5480</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong>
+												<a href="https://hreliteco.com/" target="_blank">https://hreliteco.com/</a>
+											</section>
+											<section><strong>Social Media:</strong> Not found</section>
+											<section><strong>Address:</strong> 7 Oxford Park Avenue, Kingston, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>J-1,  H-2B, Teach China Program.</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Cavalee Freeman - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">InterExchange (Sponsor)</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 1-800-621-1202</section>
+											<section><strong>Email:</strong> <a href="mailto:worktravel@interexchange.org">worktravel@interexchange.org</a></section>
+											<section><strong>Website:</strong>
+												<a href="https://www.interexchange.org/programs/work-travel-usa/international-staff/jamaica/how-it-works/" target="_blank">https://www.interexchange.org/programs/work-travel-usa/international-staff/jamaica/how-it-works/</a>
+											</section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/interexchange/" target="_blank">Instagram</a>, 
+												<a href="https://www.linkedin.com/company/interexchange/" target="_blank">LinkedIn</a>, 
+												<a href="https://www.youtube.com/user/interexchange" target="_blank">YouTube</a>
+											</section>
+											<section><strong>Address:</strong> 100 Wall Street Suite 301, New York, New York 10005</section>
+											<section><strong>Location:</strong> <span class="location-tag">New York, USA</span></section>
+											<section><strong>Services:</strong>  J-1, Au Pair.</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Not found</section>
+											<section><strong>Eligibility:</strong> 
+												<ul>
+													<li>Applicants must be between 18 and 28 years old.</li>
+													<li>Must be enrolled full-time at an accredited post-secondary institution in Jamaica.</li>
+													<li>Must have completed at least one semester of study.</li>
+													<li>Must be proficient in English (verified through a video interview).</li>
+													<li>Must intend to participate in cultural aspects of the program.</li>
+												</ul>
+											</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">International Career Development &amp; Exchange Limited (ICDE)</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-412-3997</section>
+											<section><strong>Email:</strong> <a href="mailto:info@icdejm.com">info@icdejm.com</a></section>
+											<section><strong>Website:</strong> <a href="http://www.icdejm.com" target="_blank">http://www.icdejm.com</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.linkedin.com/company/icdejm/" target="_blank">LinkedIn</a>, 
+												<a href="https://www.instagram.com/icdejm/" target="_blank">Instagram</a>, 
+												<a href="https://www.facebook.com/InternationalCareerDevelopmentExchangeLimited/" target="_blank">Facebook</a>
+											</section>
+											<section><strong>Address:</strong> 22B Old Hope Road, Kingston 5, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1 </section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Ms. Sonya Muschett - Contact for queries</section>
+											<section><strong>Eligibility:</strong>
+												<ul>
+													<li>Must be a full-time student pursuing a bachelor's/associate degree or a three-year diploma program</li>
+													<li>Age requirement: 18-30 years</li>
+													<li>Minimum G.P.A of 2.0</li>
+													<li>Must have completed at least one semester</li>
+												</ul>
+											</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">International Recruiting Staffing Solutions Inc. Ltd (I.R.S.S)</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-754-1832, 876-754-1836</section>
+											<section><strong>Email:</strong> <a href="mailto:irss@irssworktravel.com">irss@irssworktravel.com</a></section>
+											<section><strong>Website:</strong> <a href="https://www.irssworktravel.com" target="_blank">https://www.irssworktravel.com</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/irssltd/" target="_blank">Instagram</a>, 
+												<a href="https://www.facebook.com/InternationalRecruitingStaffingSolutions/" target="_blank">Facebook</a>
+											</section>
+											<section><strong>Address:</strong>
+												<strong>Kingston Office:</strong> 3A Paisley Avenue, Suite #1, Kingston 5, Jamaica <br/>
+												<strong>St. Ann Office:</strong> Shop #3, Mom's Village Plaza, Runaway Bay, St. Ann, Jamaica
+											</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston &amp; St. Ann, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1</section>
+											<section><strong>Hours:</strong>
+												<ul>
+													<li><strong>Kingston Office:</strong>
+														<ul>
+															<li>Monday to Thursday: 10:00 AM - 3:00 PM</li>
+															<li>Friday: 10:00 AM - 2:00 PM</li>
+															<li>Saturday and Sunday: Closed</li>
+														</ul>
+													</li>
+													<li><strong>St. Ann Office:</strong>
+														<ul>
+															<li>Monday to Friday: 10:00 AM - 3:00 PM</li>
+															<li>Saturday and Sunday: Closed</li>
+														</ul>
+													</li>
+												</ul>
+											</section>
+											<section><strong>Personnel:</strong> Sherrian Thomas - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+									
+									<div class="agency-info compact">
+										<header>
+											<h3 align="center">International Recruiting Staffing Solutions Inc. Ltd (I.R.S.S)</h3>
+										</header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-754-1832, 876-754-1836</section>
+											<section><strong>Email:</strong> <a href="mailto:irss@irssworktravel.com">irss@irssworktravel.com</a></section>
+											<section><strong>Website:</strong> <a href="https://www.irssworktravel.com" target="_blank">https://www.irssworktravel.com</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/irssltd/" target="_blank">Instagram</a>, 
+												<a href="https://www.facebook.com/InternationalRecruitingStaffingSolutions/" target="_blank">Facebook</a>
+											</section>
+											<section><strong>Address:</strong>
+												<strong>Kingston Office:</strong> 3A Paisley Avenue, Suite #1, Kingston 5, Jamaica <br/>
+												<strong>St. Ann Office:</strong> Shop #3, Mom's Village Plaza, Runaway Bay, St. Ann, Jamaica
+											</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston &amp; St. Ann, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1</section>
+											<section><strong>Hours:</strong><br/>
+												<ul>
+													<li><strong>Kingston Office:</strong>
+														<ul>
+															<li>Monday to Thursday: 10:00 AM - 3:00 PM</li>
+															<li>Friday: 10:00 AM - 2:00 PM</li>
+															<li>Saturday and Sunday: Closed</li>
+														</ul>
+													</li>
+													<li><strong>St. Ann Office:</strong>
+														<ul>
+															<li>Monday to Friday: 10:00 AM - 3:00 PM</li>
+															<li>Saturday and Sunday: Closed</li>
+														</ul>
+													</li>
+												</ul>
+											</section>
+											<section><strong>Personnel:</strong> Sherrian Thomas - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header>
+											<h3 align="center">International Travel &amp; Cultural Exchange (I.T.C.E)</h3>
+										</header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-631-9852</section>
+											<section><strong>Email:</strong> <a href="mailto:social@goitce.com">social@goitce.com</a></section>
+											<section><strong>Website:</strong>
+												<a href="https://www.goitce.com/" target="_blank">https://www.goitce.com/</a>
+											</section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/goitce/" target="_blank">Instagram</a>, 
+												<a href="https://www.facebook.com/goitce/" target="_blank">Facebook</a>
+											</section>
+											<section><strong>Address:</strong> Suite 1A, Ardenne House, 11 Ardenne Road, Kingston 10, St. Andrew, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1</section>
+											<section><strong>Hours:</strong> 
+ 
+												Monday to Friday: 9:00 AM – 4:00 PM <br/>
+												Saturday and Sunday: Closed
+											</section>
+											<section><strong>Personnel:</strong> Poye Robinson - Contact for queries</section>
+											<section><strong>Eligibility:</strong> <br/>
+												<ul>
+													<li>Full-time university or college students</li>
+													<li>Associate degree students or higher</li>
+												</ul>
+											</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header>
+											<h3 align="center">Island Plus Multi-Services Limited</h3>
+										</header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-754-6558, 876-368-8588</section>
+											<section><strong>Email:</strong> <a href="mailto:islandplusplacements@gmail.com">islandplusplacements@gmail.com</a></section>
+											<section><strong>Website:</strong> <a href="https://islandplusms.com/" target="_blank">https://islandplusms.com/</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/islandplusmulti/" target="_blank">Instagram</a>, 
+												<a href="https://www.facebook.com/IslandplusMultiServicesLtd/" target="_blank">Facebook</a>, 
+												<a href="https://wa.me/" target="_blank">WhatsApp</a>
+											</section>
+											<section><strong>Address:</strong> Shop #11, Lyndhurst Park Business Complex, 2B Rousseau Road, Kingston 5, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1,  H-2B, Q-1</section>
+											<section><strong>Hours:</strong> 
+												Monday to Friday: 9:00 AM - 3:00 PM,
+												Saturday and Sunday: Closed
+											</section>
+											<section><strong>Personnel:</strong> Denise Mohan-Daley - Contact for queries</section>
+											<section><strong>Eligibility:</strong> <br/>
+												<ul>
+													<li>At least 18 years of age</li>
+													<li>Currently enrolled in a University or College full-time</li>
+													<li>Able to speak English well</li>
+													<li>Flexible, open-minded, and hardworking</li>
+													<li>Willing to participate in an entry-level/unskilled service job</li>
+												</ul>
+											</section>
+											<section><strong>Registration Steps:</strong> <br/>
+												<ul>
+													<li>Pay a non-refundable/non-transferable registration fee</li>
+													<li>Pay a non-refundable/non-transferable commitment fee</li>
+													<li>Register online</li>
+													<li>Submit a color copy of your school ID card and Status Letter</li>
+													<li>Submit a copy of your resume</li>
+													<li>Submit a color copy of the information pages of your passport</li>
+													<li>Submit two (2) passport-size pictures</li>
+													<li>Provide a copy of Police Record</li>
+													<li>Medical report (upon request)</li>
+													<li>Official school transcript (by March each year)</li>
+													<li>Submit two references (Forms are online)</li>
+												</ul>
+											</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+									
+									<div class="agency-info compact">
+										<header><h3 align="center">IWTS Company Ltd</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-560-6426</section>
+											<section><strong>Email:</strong> <a href="mailto:itravelservices@yahoo.com">itravelservices@yahoo.com</a></section>
+											<section><strong>Website:</strong> <a href="https://iwtscompanylimited.com/" target="_blank">https://iwtscompanylimited.com/</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/iwts.company.limited/" target="_blank">Instagram</a>, 
+												<a href="https://www.facebook.com/IWTSCompanyLimited/" target="_blank">Facebook</a>
+											</section>
+											<section><strong>Address:</strong> District 360, 16 Cargill Avenue, Kingston 10, Jamaica</section>
+											<section><strong>Branch Offices:</strong> 19 Cargill Avenue</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1,  H-2B</section>
+											<section><strong>Hours:</strong> Mon-Fri: 9:00 AM - 5:00 PM</section>
+											<section><strong>Personnel:</strong> Mr. Wayne Harrison - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">J &amp; H Recruiting</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-622-7631</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/jhrecruitmentagency/" target="_blank">Instagram</a>
+											</section>
+											<section><strong>Address:</strong> Suite #5, Sagicor Commercial Centre, Howard Cooke Boulevard, Montego Bay, St. James, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Montego Bay, St. James, Jamaica</span></section>
+											<section><strong>Services:</strong>  H-2B </section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Henry Duncan - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">J.D &amp; Associates</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-704-5100, 876-899-4502</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/jdandassociates/" target="_blank">Instagram</a>
+											</section>
+											<section><strong>Address:</strong> 3 Beechwood Avenue, Kingston 10, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1,  H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong>
+												<ul>
+													<li>Dezrene Jones - Contact for queries</li>
+													<li>Desrene Sutherland - Recruiting Manager</li>
+												</ul>
+											</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Jab Work &amp; Travel International</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-414-4296</section>
+											<section><strong>Email:</strong>
+												<a href="mailto:jabworktravel@gmail.com">jabworktravel@gmail.com</a>, 
+												<a href="mailto:INFO@JABCULTURE.COM">INFO@JABCULTURE.COM</a>
+											</section>
+											<section><strong>Website:</strong> <a href="https://www.jabculture.com" target="_blank">https://www.jabculture.com</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.facebook.com/JABWorkandTravelInternationalLtd/" target="_blank">Facebook</a>, 
+												<a href="https://www.instagram.com/jabworktravel/" target="_blank">Instagram</a>
+											</section>
+											<section><strong>Address:</strong> 34 Lady Musgrave Road, Kingston 10, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong> J-1,  H-2B</section>
+											<section><strong>Hours:</strong> Mon-Fri: 8:00 AM - 5:00 PM</section>
+											<section><strong>Personnel:</strong> Ms. Joanna Blake - Contact for queries</section>
+											<section><strong>Eligibility:</strong>
+												<ul>
+													<li>Must be between the ages of 18-28</li>
+													<li>Must be a full-time student</li>
+													<li>Must be enrolled in an accredited tertiary level institution (UWI-Mona &amp; Mobay, UTech, NCU, CMU, Edna, EXCED, Moneague, CASE, etc.)</li>
+													<li>Must complete Semester One</li>
+													<li>GPA must be 2.0 or above</li>
+													<li>Must be pursuing 12 credits per semester</li>
+													<li>Must present current and previous valid passport(s) and visa(s)</li>
+													<li>Both transcript and progress report must be delivered directly from school's administrative staff</li>
+													<li>Must speak English fluently and display good work ethics</li>
+													<li>Must not have traveled on the S.W.T program more than 3 times</li>
+													<li>Must have never stolen, canceled, or been denied a visa</li>
+													<li>Must list social media handles (required by U.S. Embassy)</li>
+													<li>All fees must be paid in full at the bank and receipts presented</li>
+													<li>Must state major illnesses</li>
+												</ul>
+											</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Joyst Youth Exchange International Limited</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> Kingston: (876) 968-2124 / 7176, Mandeville: (876) 727-2900 / 2899</section>
+											<section><strong>Email:</strong> <a href="mailto:info@joystyouthexchangeintl.org">info@joystyouthexchangeintl.org</a></section>
+											<section><strong>Website:</strong> <a href="https://joystyouthexchangeintl.org/" target="_blank">https://joystyouthexchangeintl.org/</a></section>
+											<section><strong>Social Media:</strong> Not found</section>
+											<section><strong>Address:</strong>
+												<strong>Kingston Office:</strong> 5 Melmac Avenue, Kingston 5, St. Andrew, Jamaica <br/>
+												<strong>Mandeville Branch:</strong> Shop L4, Central Dealers Mall (Formerly Caledonia Mall), 3 1/2 Caledonia Road, Mandeville, Jamaica
+											</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston &amp; Mandeville, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1 , Au Pair, Internship Program (USA &amp; UK).</section>
+											<section><strong>Hours:</strong>
+												<strong>Hours:</strong>
+												Monday - Thursday: 9:00 AM - 4:00 PM,
+												Friday: 9:00 AM - 2:00 PM,
+												Saturday &amp; Sunday: Closed
+											</section>
+											<section><strong>Personnel:</strong> Charmaine Hutchinson - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Laconic Cultural Work &amp; Travel Limited</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-439-1276, 876-491-9845</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.facebook.com/LaconicCulturalWorkTravel/" target="_blank">Facebook</a>, 
+												<a href="https://www.instagram.com/laconiccultural/" target="_blank">Instagram</a>, 
+												<a href="https://wa.link/sh7mje" target="_blank">WhatsApp</a>
+											</section>
+											<section><strong>Address:</strong> Unit #1, 70 ½ Molynes Road, Kingston 10, St. Andrew, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1,  H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Laika Blake - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Len-Clair Recruiting Agency</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-318-0140, 876-882-7601</section>
+											<section><strong>Email:</strong> <a href="mailto:lenclairrecruitingagency@gmail.com">lenclairrecruitingagency@gmail.com</a></section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/lenclairrecruitingagency/" target="_blank">Instagram</a>, 
+												<a href="https://www.facebook.com/LenClairRecruitingAgency/" target="_blank">Facebook</a>
+											</section>
+											<section><strong>Address:</strong>
+												<strong>Main Office:</strong> 23 Williams Avenue, May Pen, Clarendon, Jamaica <br/>
+												<strong>Branch Office:</strong> Golf View Shopping Complex, Mandeville, Manchester, Jamaica
+											</section>
+											<section><strong>Location:</strong> <span class="location-tag">Clarendon &amp; Manchester, Jamaica</span></section>
+											<section><strong>Services:</strong>  H-2B </section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Elsie Douglas-Sinclair - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+									
+									<div class="agency-info compact">
+										<header><h3 align="center">Lil’s Travel Agency Recruitment Services</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-508-4720, 876-918-9291</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> <a href="https://lilstravel.inteletravel.com/booktravel.cfm" target="_blank">https://lilstravel.inteletravel.com/booktravel.cfm</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.facebook.com/LILSTravelAgency/" target="_blank">Facebook</a>
+											</section>
+											<section><strong>Address:</strong> New Green Island Square, Green Island, Hanover, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Hanover, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1,  H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Lelith Callam-Andrews - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">M &amp; H International Employment Agency</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-885-1080</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> <a href="https://www.mhinternationalemploymentagency.com/?fbclid=PAZXh0bgNhZW0CMTEAAadKy1iRt6oNa2exU14QezsybEmZVfPa_HVrBF-OogdZEisi6jc4fZ_sHEFNJA_aem_BdRuVUWBGrH4ZGuVwRWlAA" target="_blank">https://www.mhinternationalemploymentagency.com/</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/mhemploymentagency_ja/" target="_blank">Instagram</a>
+											</section>
+											<section><strong>Address:</strong> 22B Old Hope Road, Kingston 5, St. Andrew, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Tina Miller - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Max J Employment Services</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> (876) 908-2232</section>
+											<section><strong>Email:</strong> <a href="mailto:maxjintlagency@yahoo.com">maxjintlagency@yahoo.com</a></section>
+											<section><strong>Website:</strong> <a href="https://maxjemploymentagency.com/lander" target="_blank">https://maxjemploymentagency.com/lander</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.facebook.com/MaxJEmploymentAgency/" target="_blank">Facebook</a>
+											</section>
+											<section><strong>Address:</strong> 32 Courtney Walsh Drive, Kingston 10, St. Andrew, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1,  H-2B</section>
+											<section><strong>Hours:</strong> 
+												Monday - Thursday: 9:30 AM – 5:00 PM,
+												Friday: 9:30 AM – 4:30 PM,
+												Saturday &amp; Sunday: Closed
+											</section>
+											<section><strong>Personnel:</strong> Annette Maxwell - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">May’Fos Work &amp; Travel Employment Agency</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-979-1457, 876-335-2118, 876-419-3720</section>
+											<section><strong>Email:</strong> <a href="mailto:info@mayfosworktravel.net">info@mayfosworktravel.net</a></section>
+											<section><strong>Website:</strong>
+												<a href="https://www.mayfosworktravel.net/" target="_blank">https://www.mayfosworktravel.net/</a>
+											</section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/mayfosworkandtravel/" target="_blank">Instagram</a>, 
+												<a href="https://www.facebook.com/mayfosworkandtravel/" target="_blank">Facebook</a>
+											</section>
+											<section><strong>Address:</strong> 46 Market Street, Shop #7, U&amp;I Plaza, Montego Bay, St. James, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Montego Bay, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1</section>
+											<section><strong>Hours:</strong> 
+												Monday to Friday: 10:00 AM – 4:00 PM,
+												Saturday and Sunday: Closed
+											</section>
+											<section><strong>Personnel:</strong> Dwayne Muirhead - Contact for queries</section>
+											<section><strong>Eligibility:</strong> 
+												<ul>
+													<li>Between the ages of 18 and 32</li>
+													<li>Should have a GPA of 2.0 or above</li>
+													<li>Full-time students actively pursuing a degree and have completed at least one semester</li>
+													<li>Proficient in spoken and written English</li>
+													<li>Excited to learn about American culture while sharing their own</li>
+												</ul>
+											</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">McLean’s Travel Agency For Students Limited</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-835-0673, 876-841-0858 (WhatsApp Only)</section>
+											<section><strong>Email:</strong> <a href="mailto:mcleanstravelagency21@yahoo.com">mcleanstravelagency21@yahoo.com</a></section>
+											<section><strong>Website:</strong> <a href="https://mcleanstravel.com" target="_blank">https://mcleanstravel.com</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/mcleanstravelagency/" target="_blank">Instagram</a>
+											</section>
+											<section><strong>Address:</strong> 67 Old Hope Road, Kingston 5, St. Andrew, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1</section>
+											<section><strong>Hours:</strong> 
+												Monday to Friday: 9:00 AM - 4:00 PM,
+												Saturday and Sunday: Closed
+											</section>
+											<section><strong>Personnel:</strong> Kirk McLean - Contact for queries</section>
+											<section><strong>Eligibility:</strong> 
+												<ul>
+													<li>Students must be 18-28 years of age</li>
+													<li>Enrolled in a full-time program at a college or university (2-4 years pursuing a Bachelor's Degree, Diploma/Associate Degree)</li>
+													<li>GPA must not be below 2.0</li>
+													<li>Official transcript must be provided and stamped by the institution</li>
+													<li>M.T. Agency signed contract</li>
+													<li>Status letter from school</li>
+													<li>Passport-size photos (2)</li>
+													<li>Copy of school ID</li>
+												</ul>
+											</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+									
+									<div class="agency-info compact">
+										<header><h3 align="center">Overseas Work &amp; Travel</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> (876) 283-8835</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> <a href="https://overseasworkandtravel.com/" target="_blank">https://overseasworkandtravel.com/</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/owtja/" target="_blank">Instagram</a>
+											</section>
+											<section><strong>Address:</strong> Suite #5, 137 Maxfield Avenue, Kingston 10, St. Andrew, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1</section>
+											<section><strong>Hours:</strong> 
+												Monday - Friday: 9:00 AM - 5:00 PM
+											</section>
+											<section><strong>Personnel:</strong> Euel Morgan - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Patriots Travel Limited</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-818-9641, 876-907-3288</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong> Not found</section>
+											<section><strong>Address:</strong> 25 Cumberland Road, Spanish Town, St. Catherine, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Spanish Town, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1,  H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Sandor Martin - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Platinum Employment Agency &amp; Internet Café</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-541-0553</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.tiktok.com/@platinumbossandrine/" target="_blank">TikTok</a>, 
+												<a href="https://www.instagram.com/platinum_internet_cafe/" target="_blank">Instagram</a>
+											</section>
+											<section><strong>Address:</strong> Wynter’s Pen Road, Spanish Town, St. Catherine, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Spanish Town, Jamaica</span></section>
+											<section><strong>Services:</strong>  H-2B</section>
+											<section><strong>Hours:</strong> 
+												Monday to Friday: 9:00 AM – 5:00 PM
+											</section>
+											<section><strong>Personnel:</strong> Andrine Lewis - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Polaris Travel &amp; Placement Services</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-320-1441, (876) 517-5074</section>
+											<section><strong>Email:</strong> <a href="mailto:info@polarisja.com">info@polarisja.com</a></section>
+											<section><strong>Website:</strong>
+												<a href="https://www.polarisja.com/" target="_blank">https://www.polarisja.com/</a>
+											</section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/polaristravel/" target="_blank">Instagram</a>, 
+												<a href="https://www.facebook.com/polaristravel/" target="_blank">Facebook</a>
+											</section>
+											<section><strong>Address:</strong> Shop #19, Brumalia Town Centre, 2 Perth Road, Mandeville, Manchester, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Mandeville, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Steven Bramwell - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+									
+									<div class="agency-info compact">
+										<header><h3 align="center">Practical Hospitality Services Limited</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> (876) 584-8175</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> <a href="https://www.practicalhospitalityservices.com/" target="_blank">https://www.practicalhospitalityservices.com/</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/phs.ltd/" target="_blank">Instagram</a>
+											</section>
+											<section><strong>Address:</strong> Unit #1, Suite B, 7 Oxford Park Avenue, Kingston 5, St. Andrew, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Sandra Forrest-Brown - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Pro-Gressive Travel Agency Limited</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-232-7341</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong> Not found</section>
+											<section><strong>Address:</strong> Shop #4, Cargar’s Plaza, West Gate Hill, Montego Bay, St. James, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Montego Bay, Jamaica</span></section>
+											<section><strong>Services:</strong>  H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Odaine Johnson - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Seaview Employment Solutions Limited</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-446-0556</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong> Not found</section>
+											<section><strong>Address:</strong> Seaview Shopping Complex, Market Street, Whitehouse P.O., Westmoreland, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Whitehouse, Westmoreland, Jamaica</span></section>
+											<section><strong>Services:</strong>  H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Nicole Samuels-Ewart - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Seramil Company Limited</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-828-3080</section>
+											<section><strong>Email:</strong> <a href="mailto:seramilcompanylimited@yahoo.com">seramilcompanylimited@yahoo.com</a></section>
+											<section><strong>Website:</strong> <a href="https://seramil.com/" target="_blank">https://seramil.com/</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/seramilcompanylimited/" target="_blank">Instagram</a>
+											</section>
+											<section><strong>Address:</strong> 22B Old Hope Road, Kingston 5, St. Andrew, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong> J-1,  H-2B</section>
+											<section><strong>Hours:</strong> 
+												Monday to Friday: 10:00 AM – 3:00 PM <br/>
+												Saturday and Sunday: Closed
+											</section>
+											<section><strong>Personnel:</strong> Carl Campbell - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> JM$5,000 deposit required to start the process</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Skills Acquisition Services</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-883-4142</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> <a href="https://skillsacquisitionservices.com/" target="_blank">https://skillsacquisitionservices.com/</a></section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/skillsacquisitionservices/" target="_blank">Instagram</a>
+											</section>
+											<section><strong>Address:</strong> 22B Old Hope Road, Kingston 5, St. Andrew, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1,  H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Mahalia Campbell-Myers - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">STEEP International Limited</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-370-1315, 876-791-0021, 876-754-7005</section>
+											<section><strong>Email:</strong>
+												<a href="mailto:steepinternational@gmail.com">steepinternational@gmail.com</a>, 
+												<a href="mailto:programs@steepinternational.com">programs@steepinternational.com</a>
+											</section>
+											<section><strong>Website:</strong>
+												<a href="https://steepinternational.com/" target="_blank">https://steepinternational.com</a>
+											</section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/steepinternational/?hl=en" target="_blank">Instagram</a>, 
+												<a href="https://x.com/steepintl" target="_blank">X (formerly known as Twitter)</a>
+											</section>
+											<section><strong>Address:</strong> 34-36 Old Hope Road, Kingston 5, St. Andrew, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1</section>
+											<section><strong>Hours:</strong> 
+												Monday to Friday: 9:00 AM – 5:00 PM
+											</section>
+											<section><strong>Personnel:</strong> Denise Minott - Contact for queries</section>
+											<section><strong>Eligibility:</strong> 
+												<ul>
+													<li>Full-Time Student</li>
+													<li>18-28 Years Old</li>
+													<li>2.0 GPA and above</li>
+													<li>Completing a minimum of 12 credits</li>
+													<li>Pursuing a Bachelor's or Associate Degree</li>
+												</ul>
+											</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+									
+									<div class="agency-info compact">
+										<header><h3 align="center">Student Networking Opportunities Worldwide (S.N.O.W)</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-299-9626, 876-615-5245, 876-208-0811, 876-846-3619</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong>
+												<a href="https://snowjm.com/" target="_blank">https://snowjm.com/</a>
+											</section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/snowworkandtravel/" target="_blank">Instagram</a>, 
+												<a href="https://www.facebook.com/SNOWWorkAndTravel/" target="_blank">Facebook</a>
+											</section>
+											<section><strong>Address:</strong> Suite #303, 11 Melmac Avenue, Kingston 5, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1</section>
+											<section><strong>Hours:</strong> 
+												Monday to Thursday: 11:00 AM – 4:00 PM <br/>
+												Friday: 11:00 AM – 3:00 PM
+											</section>
+											<section><strong>Personnel:</strong> Dorlan Hunter - Contact for queries</section>
+											<section><strong>Eligibility:</strong> <br/>
+												<ul>
+													<li>Must be sufficiently proficient in English.</li>
+													<li>Applicants must be enrolled full-time in and actively pursuing a Bachelor's, Associate, Diploma, or Master's degree.</li>
+													<li>Applicants must have a minimum G.P.A of 2.0.</li>
+													<li>Participants should be completing a minimum of 15 credits per semester.</li>
+													<li>Eligible applicants must be between 18 and 29 years old.</li>
+												</ul>
+											</section>
+											<section><strong>Fees (subject to change):</strong> <br/>
+												<ul>
+													<li>Registration Fee: JA$2,500.00 - Non-Refundable</li>
+													<li>Visa Application Fee: JA$3000.00 - Payable immediately after receiving the DS-2019 Form</li>
+													<li>Program Fee:
+														<ul>
+															<li>US $1,750</li>
+															<li>US $1,850 After November 30th</li>
+														</ul>
+													</li>
+													<li>Lifeguard Program Fee: US$1,000</li>
+													<li>Lifeguard Training Fee: JM $10,000</li>
+													<li>US Embassy Visa Application Fee: US$185.00</li>
+												</ul>
+											</section>
+											<section><strong>Note:</strong> Program Fee payment includes job placement, four months medical insurance, mandatory SEVIS fee, and the DS-2019 form required for obtaining the  J-1 visa. It does not include airfare, Visa voucher fee, and housing deposit.</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Students Overseas Recruiting Agency (S.O.R.A)</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-665-0213, 876-618-3661</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong>
+												<a href="http://soraworkandtravel.com/" target="_blank">http://soraworkandtravel.com/</a>
+											</section>
+											<section><strong>Social Media:</strong> Not found</section>
+											<section><strong>Address:</strong> Suite #21, Papine Plaza, 216 Old Hope Road, Kingston 6, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Jason Harvey - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Summer Choice Work &amp; Travel</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-422-8556, 876-820-2844</section>
+											<section><strong>Email:</strong> <a href="mailto:summerchoiceworkandtravel@outlook.com">summerchoiceworkandtravel@outlook.com</a></section>
+											<section><strong>Website:</strong>
+												<a href="https://summerchoiceworkandtravel.com/" target="_blank">https://summerchoiceworkandtravel.com/</a>
+											</section>
+											<section><strong>Social Media:</strong> Not found</section>
+											<section><strong>Address:</strong> Shop #7, Jerkies Plaza, Runaway Bay, St. Ann, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Runaway Bay, St. Ann, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1</section>
+											<section><strong>Hours:</strong> 
+												Monday to Friday: 9:00 AM – 4:00 PM
+											</section>
+											<section><strong>Personnel:</strong> Craig Edwards - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+									
+									<div class="agency-info compact">
+										<header><h3 align="center">SWAT Productions Limited</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-445-2700, 876-581-0933, 876-348-7855, 876-328-7855, 876-534-2254</section>
+											<section><strong>Email:</strong> <a href="mailto:swatinfo@swatltd.com">swatinfo@swatltd.com</a></section>
+											<section><strong>Website:</strong>
+												<a href="https://swatltd.com/" target="_blank">https://swatltd.com/</a>
+											</section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/swatproductions/" target="_blank">Instagram</a>, 
+												<a href="https://www.facebook.com/SWATProductionsLimited/" target="_blank">Facebook</a>
+											</section>
+											<section><strong>Address:</strong> UWI Mona Campus, Kingston 7, St. Andrew, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1</section>
+											<section><strong>Hours:</strong> 
+												Monday to Friday: 10:00 AM – 3:00 PM
+											</section>
+											<section><strong>Personnel:</strong> Mark Foster - Contact for queries</section>
+											<section><strong>Eligibility:</strong> 
+												<ul>
+													<li>Be enrolled in one of the following programs:
+														<ul>
+															<li>Full-Time Degree</li>
+															<li>Associate Degree</li>
+															<li>Masters</li>
+														</ul>
+													</li>
+													<li>Diplomas accepted from tertiary institutions</li>
+													<li>Students must be between 18-30 years old</li>
+												</ul>
+											</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Tander Travels</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-408-6675, 876-415-5248</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong>
+												<a href="https://tandertravels.com/" target="_blank">https://tandertravels.com/</a>
+											</section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.tiktok.com/@tandertravels/" target="_blank">TikTok</a>, 
+												<a href="https://www.threads.net/@tandertravels/" target="_blank">Threads</a>, 
+												<a href="https://www.linkedin.com/company/tandertravels/" target="_blank">LinkedIn</a>, 
+												<a href="https://www.instagram.com/tandertravels/" target="_blank">Instagram</a>
+											</section>
+											<section><strong>Address:</strong> 8 Mountain View Avenue, Kingston 2, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1</section>
+											<section><strong>Hours:</strong> 
+												Monday to Thursday: 10:00 AM – 4:00 PM,
+												Friday: 10:00 AM – 3:00 PM,
+												Saturday &amp; Sunday: Closed
+											</section>
+											<section><strong>Personnel:</strong> Tricia Anderson - Contact for queries</section>
+											<section><strong>Eligibility:</strong> 
+												<ul>
+													<li>Must be between the ages 18-30</li>
+													<li>Must be a full-time student of a tertiary institution pursuing either a Degree, Master's or Associates' Degree</li>
+													<li>Must be registered in both semesters of the current academic year pursuing at least 12 credits per semester</li>
+												</ul>
+											</section>
+											<section><strong>Fees (subject to change):</strong> 
+												<ul>
+													<li>Registration Fee: $2,500.00 JMD</li>
+													<li>Program Fee: $1,750.00 USD</li>
+												</ul>
+											</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">The Passport Work &amp; Travel Services Limited</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-514-4909, 876-725-3142</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong>
+												<a href="https://thepassportja.com/" target="_blank">https://thepassportja.com/</a>
+											</section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/thepassport_ja/" target="_blank">Instagram</a>
+											</section>
+											<section><strong>Address:</strong> Shop #3, Biscayne Plaza, 51 Slipe Road, Kingston 5, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Andre Heslop - Contact for queries</section>
+											<section><strong>Eligibility:</strong> 
+												<ul>
+													<li>Be 18-28 years old.</li>
+													<li>Be registered as a full-time student at an accredited university or other recognized post-secondary institution.</li>
+													<li>The degree/diploma course must be at least 2 years in duration, with at least one semester completed.</li>
+													<li>Post-graduate students enrolled in programs under two years (e.g., master's courses) are eligible.</li>
+													<li>"Gap year" students or high school graduates are not eligible.</li>
+													<li>Undergo an interview conducted by LifeTRAVELED staff or a partner organization.</li>
+													<li>Provide proof of intent to return home at the end of the program.</li>
+													<li>Be able to pay the following fees:
+														<ul>
+															<li>Registration Fee: $2,500 JMD</li>
+															<li>Program Fee: $1,860 USD</li>
+														</ul>
+													</li>
+												</ul>
+											</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+									
+									<div class="agency-info compact">
+										<header><h3 align="center">Thelia’s International Employment Agency</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-334-7081</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong> Not found</section>
+											<section><strong>Address:</strong> 237 Old Hope Road, Kingston 5, St. Andrew, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong>  J-1</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Siemonie McCarthy - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Trailes Hospitality Training, Events &amp; Consultant Services</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-810-3846</section>
+											<section><strong>Email:</strong> <a href="mailto:tht2000consultant.services@gmail.com">tht2000consultant.services@gmail.com</a></section>
+											<section><strong>Website:</strong> Not found</section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/traileshospitality/" target="_blank">Instagram</a>, 
+												<a href="https://www.facebook.com/traileshospitality/" target="_blank">Facebook</a>, 
+												<a href="https://www.tiktok.com/@traileshospitality/" target="_blank">TikTok</a>
+											</section>
+											<section><strong>Address:</strong> 14 Trelawny Street, Falmouth, Trelawny, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Falmouth, Jamaica</span></section>
+											<section><strong>Services:</strong>  H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Ricordo Traile - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Travelaire Employment Services</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-631-1518, 876-545-8386</section>
+											<section><strong>Email:</strong> <a href="mailto:info@travelaireemployment.com">info@travelaireemployment.com</a></section>
+											<section><strong>Website:</strong>
+												<a href="https://www.travelaireemployment.com/" target="_blank">https://www.travelaireemployment.com/</a>
+											</section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.facebook.com/travelaireemployment/" target="_blank">Facebook</a>, 
+												<a href="https://www.tiktok.com/@travelaireemployment/" target="_blank">TikTok</a>
+											</section>
+											<section><strong>Address:</strong> Shop #48, 74 Main Street, Ocho Rios, St. Ann, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Ocho Rios, Jamaica</span></section>
+											<section><strong>Services:</strong>  H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Willious Reid - Contact for queries</section>
+											<section><strong>Eligibility:</strong> 
+												<ul>
+													<li>Copy of Passport</li>
+													<li>Updated Resume</li>
+													<li>2 passport photographs (no white shirt or eye glasses)</li>
+													<li>Complete Registration Form (Please take a pen)</li>
+													<li>Registration and Assessment Fee (cost varies for New H2B, Returnee or J1 - card payment preferred)</li>
+													<li>Police Record (The office will inform when to start this process)</li>
+													<li>Must be able to Read/Write and do basic Mathematics</li>
+													<li>Ages 18 to 55</li>
+												</ul>
+											</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+
+									<div class="agency-info compact">
+										<header><h3 align="center">Trevor Hamilton &amp; Associates-Centre for Excellence</h3></header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-631-9675</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong>
+												<a href="https://www.devex.com/organizations/trevor-hamilton-associates-58878" target="_blank">https://www.devex.com/organizations/trevor-hamilton-associates-58878</a>
+											</section>
+											<section><strong>Social Media:</strong> Not found</section>
+											<section><strong>Address:</strong> 17A Farringdon Heights, Jackson Hill, Kingston 6, St. Andrew, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong> H-1B </section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Trevor Hamilton - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+									
+									<div class="agency-info compact">
+										<header>
+											<h3 align="center">Work Abroad Jamaica</h3>
+										</header>
+										<div class="info-container">
+											<section><strong>Contact:</strong> 876-507-3148, 876-665-7999</section>
+											<section><strong>Email:</strong> Not found</section>
+											<section><strong>Website:</strong>
+												<a href="https://www.workabroadjamaica.com/" target="_blank">https://www.workabroadjamaica.com/</a>
+											</section>
+											<section><strong>Social Media:</strong>
+												<a href="https://www.instagram.com/workabroadjamaica/" target="_blank">Instagram</a>
+											</section>
+											<section><strong>Address:</strong> Shop #3, 7 Eureka Crescent, Kingston 5, Jamaica</section>
+											<section><strong>Location:</strong> <span class="location-tag">Kingston, Jamaica</span></section>
+											<section><strong>Services:</strong> J-1,  H-2B</section>
+											<section><strong>Hours:</strong> Not found</section>
+											<section><strong>Personnel:</strong> Collin Coley - Contact for queries</section>
+											<section><strong>Eligibility:</strong> Not found</section>
+											<section><strong>Fees (subject to change):</strong> Not found</section>
+										</div>
+									</div>
+							</article>
+						</div>
+					</section>
+				</div>
+
+				<section id="footer" class="wrapper">
+					<div class="title">No contact Info</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-6 col-12-medium">
+
+								<!-- Contact Form -->
+									<section>
+										<form method="post" action="#">
+											<div class="row gtr-50">
+												<div class="col-6 col-12-small">
+													<input type="text" name="name" id="contact-name" placeholder="Name">
+												</div>
+												<div class="col-6 col-12-small">
+													<input type="text" name="email" id="contact-email" placeholder="Email">
+												</div>
+												<div class="col-12">
+													<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
+												</div>
+												<div class="col-12">
+													<ul class="actions">
+														<li><input type="submit" class="style1" value="Send"></li>
+														<li><input type="reset" class="style2" value="Reset"></li>
+													</ul>
+												</div>
+											</div>
+										</form>
+									</section>
+
+							</div>
+							<div class="col-6 col-12-medium">
+
+								<!-- Contact -->
+									<section class="feature-list small">
+										<div class="row">
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-home">Mailing Address</h3>
+													<p>
+														Jamaica<br>
+														1234 Somewhere Rd<br>
+													</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-comment">Social</h3>
+													<p>
+														<a href="https://www.instagram.com/jamwathq?utm_source=qr&amp;igsh=MWgxdTlpY3NpcWx3bw==" target="_blank">instagram/JamWatHQ</a><br>
+														<a href="https://www.facebook.com/profile.php?id=61575307395932" target="_blank">facebook.com/JamWat</a>
+													</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-envelope">Email</h3>
+													<p>
+														<a href="#">jamwathq@outlook.com</a>
+													</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-phone">Phone</h3>
+													<p>
+														(876) 555-0000
+													</p>
+												</section>
+											</div>
+										</div>
+									</section>
+
+							</div>
+						</div>
+						<div id="copyright">
+							<ul>
+								<li>© JamWatHQ.</li>
+							</ul>
+						</div>
+					</section>
+			</div>
+			<style>
+				#footer {
+					margin-bottom: 0;
+				}
+			</style>
+					<!-- Scripts -->
+						<script src="assets/js/jquery.min.js"></script>
+						<script src="assets/js/jquery.dropotron.min.js"></script>
+						<script src="assets/js/browser.min.js"></script>
+						<script src="assets/js/breakpoints.min.js"></script>
+						<script src="assets/js/util.js"></script>
+						<script src="assets/js/main.js"></script>
+	</body>
+</html>
+	<script>
+		function filterAgencies() {
+		const searchInput = document.getElementById('searchAgencyForm').value.toLowerCase();
+		const locationFilter = document.getElementById('locationForm').value.toLowerCase();
+		const servicesFilter = document.getElementById('servicesForm').value.toLowerCase();
+		const agencies = document.querySelectorAll('.agency-info');
+
+		agencies.forEach(agency => {
+			const agencyName = agency.querySelector('header h3')?.textContent.toLowerCase() || '';
+			const location = agency.querySelector('.location-tag')?.textContent.toLowerCase() || '';
+			const services = Array.from(agency.querySelectorAll('section')).find(section =>
+				section.textContent.toLowerCase().includes('services:')
+			)?.textContent.toLowerCase() || '';
+
+			if (
+				(agencyName.includes(searchInput) || !searchInput) &&
+				(location.includes(locationFilter) || !locationFilter) &&
+				(services.includes(servicesFilter) || !servicesFilter)
+			) {
+				agency.style.display = '';
+			} else {
+				agency.style.display = 'none';
+			}
+		});
+	}
+
+	function clearFilters() {
+		// Reset all input fields
+		document.getElementById('searchAgencyForm').value = '';
+		document.getElementById('locationForm').value = '';
+		document.getElementById('servicesForm').value = '';
+
+		// Display all agencies
+		const agencies = document.querySelectorAll('.agency-info');
+		agencies.forEach(agency => {
+			agency.style.display = '';
+		});
+	}
+	</script>
